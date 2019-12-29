@@ -1,0 +1,309 @@
+﻿@charset "utf-8";
+/* Font Style */
+@font-face {font-family:ntsk; font-style:normal; font-weight:300; src:url('/html/fonts/NotoSansKR-Light-Hestia.eot'); src:local(ntsk), url('/html/fonts/NotoSansKR-Light-Hestia.woff') format('woff');}
+@font-face {font-family:ntsk; font-style:normal; font-weight:400; src:url('/html/fonts/NotoSansKR-Regular-Hestia.eot'); src:local(ntsk), url('/html/fonts/NotoSansKR-Regular-Hestia.woff') format('woff');}
+@font-face {font-family:ntsk; font-style:normal; font-weight:500; src:url('/html/fonts/NotoSansKR-Medium-Hestia.eot'); src:local(ntsk), url('/html/fonts/NotoSansKR-Medium-Hestia.woff') format('woff');}
+@font-face {font-family:ntsk; font-style:normal; font-weight:700; src:url('/html/fonts/NotoSansKR-Bold-Hestia.eot'); src:local(ntsk), url('/html/fonts/NotoSansKR-Bold-Hestia.woff') format('woff');}
+
+/* Default Style */
+* {margin:0; padding:0;}
+html, body {width:100%;}
+html {-ms-touch-action:none;}
+body {background:#fff; color:#666; font-size:12px; font-family:Dotum, sans-serif; line-height:1.5; letter-spacing:-.5px;}
+article, aside, hgroup, header, footer, figure, figcaption, nav, section {display: block;}
+ul, ol, li {list-style:none;}
+img, hr {border:none;}
+img {vertical-align:top; border:0;}
+small {font-size:70%;}
+
+/* Link Style */
+a {color:#666; text-decoration:none; -webkit-tap-highlight-color:transparent;}
+
+/* Table Style */
+table {width:100%; border-collapse:separate; border-spacing:0; table-layout:fixed; font-family:Dotum, sans-serif;}
+table th {font-weight:400;}
+table td img {vertical-align:middle;}
+
+/* Tag all font-size set */
+em,span {
+	font-family:inherit;
+	color:inherit;
+	font-size:inherit;
+	line-height:inherit;
+}
+
+/* From Style */
+textarea {width:100%; padding:7px 10px; background-color:#fff; color:#666; font-size:12px; font-family:Dotum, sans-serif; line-height:1.7; resize:none;}
+input {vertical-align:middle;}
+input.txts {padding:0 5px; border:1px solid #e2e2e2; background-color:#fff; color:#666; font-size:12px; font-family:Dotum, sans-serif;}
+input.chk {margin:-1px 5px 0 0;}
+input.rdo {margin:-1px 5px 0 0;}
+button {padding-bottom:2px; border:0; background-color:#fff; color:#666; vertical-align:middle; font-weight:100; font-size:12px; font-family:Dotum, sans-serif; cursor:pointer;}
+select {color:#666; vertical-align:middle; font-size:12px; font-family:Dotum, sans-serif;}
+hr, caption {display:none;}
+address,cite,em,i {font-style:normal;}
+fieldset {border:0; padding:0;}
+legend {overflow:hidden; position:absolute; height:0; text-indent:-999999px; font-size:0px; line-height:0;}
+label {cursor:pointer;}
+
+input::-webkit-input-placeholder {color:#999 !important;}
+input:-moz-placeholder {color:#999 !important;}
+input::-moz-placeholder {color:#999 !important;}
+input:-ms-input-placeholder {color:#999 !important;}
+
+p{
+	font-family:ng, dotum, Arial, sans-serif;
+	color:#5e5e5e;
+	font-size:12px;
+	line-height:120%;
+}
+
+/* Hide Set */
+.hide {overflow:hidden; position:absolute; left:-1000% !important; top:0; width:1px; height:1px; font-size:0.1%; line-height:0.1%;}
+
+#header * {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-text-size-adjust:none; word-break:keep-all;}
+.tmp_box * {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-text-size-adjust:none; word-break:keep-all;}
+#main_bottom * {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-text-size-adjust:none; word-break:keep-all;}
+
+/* Main */
+#main_class {position:relative; z-index:1; width:100%; height:100%;}
+#header {position:relative; z-index:55; height:199px; background:#fff url('http://www.ssen.com/html/images/main/bg_header.png') repeat-x;}
+#header .headerInner {position:relative; width:1060px; margin:0 auto;}
+#header h1 {position:absolute; top:58px; left:50%; z-index:3; margin-left:-65px;}
+#header h1 a {display:block;}
+#header .sCutArea {overflow:hidden; height:30px;}
+#header .sCutArea a {position:relative; float:left; padding:9px 18px 10px 20px;}
+#header .sCutArea a img {display:block;}
+#header .sCutArea a:after {position:absolute; top:9px; left:0; z-index:-2; width:1px; height:9px; background:#dfdfdf; content:'';}
+#header .sCutArea a:first-child:after {display:none;}
+#header .sCutArea a:first-child {padding-left:0;}
+#header .sCutArea a.last {padding-right:0;}
+#header .sCutArea a.on:before {position:absolute; top:0; right:0; bottom:-2px; left:0; z-index:-1; border-width:1px 1px 0; border-style:solid; border-color:#e2e2e2; background:#fff; content:'';}
+#header .sCutArea .left {float:left;}
+#header .sCutArea .right {float:right;}
+#header .utllArea {overflow:hidden; margin-top:1px;}
+#header .utllArea .loginBox {float:left; padding-top:5px; font-size:0;}
+#header .utllArea .loginBox input.txts {width:107px; height:20px; margin-right:4px; font-size:11px;}
+#header .utllArea .loginBox .idSave {margin:5px 0 0 11px; vertical-align:middle; font-size:11px;}
+#header .utllArea .loginBox .idSave span {margin-left:7px;}
+#header .utllArea .loginBox_after {float:left; padding-top:5px; font-size:0;}
+#header .utllArea .loginBox_after span {font-size:11px; margin-right:12px; display:inline-block; line-height:20px; vertical-align:middle;}
+#header .utllArea .loginBox_after span em {color:#4dc513;}
+#header .utllArea .linkBox {float:left; margin-left:30px; padding-top:7px;}
+#header .utllArea .linkBox a {float:left; margin-left:20px; padding-left:8px; background:url('http://www.ssen.com/html/images/main/bu_arrow.png') no-repeat 0 42%; font-size:11px; color:#666; text-decoration:none;}
+#header .utllArea .linkBox a:first-child {margin-left:0;}
+#header .utllArea .linkBox a em {color:#4dc513; font-weight:bold; text-decoration:underline; display:inline-block; padding:0 1px; vertical-align:top;}
+#header .utllArea .bannerBox {float:right; margin-top:4px;}
+.fx #wrap {padding-top:199px;}
+.fx #header {position:fixed; top:-122px; right:0; left:0; min-width:1260px;}
+
+#gnb {overflow:hidden; position:relative; margin-top:92px; font-size:0;}
+#gnb a {position:relative; float:left; padding:14px 15px 16px 16px;}
+#gnb a img {display:block;}
+#gnb a:after {position:absolute; top:16px; left:0; width:1px; height:10px; background:#bbb; content:'';}
+#gnb a:first-child:after {display:none;}
+#gnb a:first-child {padding-left:0;}
+#gnb a.last {padding-right:0;}
+#gnb .left {float:left;}
+#gnb .right {float:right;}
+
+#hdSlider {position:absolute; top:30px; left:0; width:250px; height:90px; background:#f60;}
+#hdSlider .slider li a {display:block;}
+#hdSlider .bx-controls {position:absolute; top:0; right:0; left:0; z-index:2;}
+#hdSlider .bx-controls .bx-controls-direction a {position:absolute; top:0; width:7px; height:90px; background-color:#fff; background-repeat:no-repeat; background-position:50% 50%; text-indent:-99999px;}
+#hdSlider .bx-controls .bx-prev {left:0; background-image:url('/html/images/main/btn_prev.png');}
+#hdSlider .bx-controls .bx-next {right:0; background-image:url('/html/images/main/btn_next.png');}
+
+#search {position:absolute; top:59px; right:0; width:280px; height:32px; padding:0 44px 0 14px; border:1px solid #e2e2e2; background:#fff; -webkit-border-radius:16px; -moz-border-radius:16px; border-radius:16px;}
+#search input.txts {display:block; width:100%; border:0; height:30px; padding:3px 5px 0 5px; outline:0;}
+
+#container .containerInner {overflow:hidden; position:relative; width:1060px; margin:0 auto; padding:0 0 80px;}
+#container .secInner {width:1060px; margin:0 auto;}
+
+/* MAIN */
+.main .secInner {position:relative; width:1060px; margin:0 auto;}
+.main .sTit {text-align:center;}
+.main .visualArea {overflow:hidden; margin-top:22px;}
+.main .visualArea .banner {float:left; width:310px; height:410px;}
+.main .visualArea .banner a {display:block;}
+.main .visualArea .slideWrap {overflow:hidden; float:left; width:750px; height:420px;}
+.main .visualArea .slideWrap .actionArea {overflow:hidden; position:relative; z-index:1;}
+.main .visualArea .slideWrap .actionArea:after {position:absolute; top:0; left:0; z-index:2; width:51px; height:373px; background:url('/html/images/main/img_shadow.png') no-repeat; content:'';}
+.main .visualArea .slideWrap .actionArea .objWrap {clear:both; overflow:hidden; position:relative; z-index:1; width:750px; height:373px;}
+.main .visualArea .slideWrap .actionArea .objWrap li {display:none; position:absolute; top:0; left:0; z-index:1; width:750px; height:373px;}
+.main .visualArea .slideWrap .actionArea .objWrap li a {display:block;}
+.main .visualArea .slideWrap .actionArea .objWrap li.on {display:block; z-index:2;}
+.main .visualArea .slideWrap .botArea {position:relative; width:100%; height:47px; padding-right:89px;}
+.main .visualArea .slideWrap .botArea .navArea {position:relative; width:100%;}
+.main .visualArea .slideWrap .botArea .navArea .nav {display:block; overflow:hidden; position:relative; z-index:1; width:100%; height:47px;}
+.main .visualArea .slideWrap .botArea .navArea .nav p {display:none; overflow:hidden; position:absolute; top:0; right:0; left:0; z-index:1;}
+.main .visualArea .slideWrap .botArea .navArea .nav p.on {display:block; z-index:2;}
+.main .visualArea .slideWrap .botArea .navArea .nav span {float:left; position:relative; z-index:1; width:221px; height:47px; margin-left:-1px; border:1px solid #dedede; background:#f3f3f3; color:#999; text-align:center; font-size:13px; line-height:46px; cursor:pointer; transition:border .5s, color .5s;}
+.main .visualArea .slideWrap .botArea .navArea .nav span:first-child {margin-left:0;}
+.main .visualArea .slideWrap .botArea .navArea .nav span.on {z-index:2; border:1px solid #222; background:#fff; color:#222; font-weight:bold;}
+.main .visualArea .slideWrap .botArea .navArea .nav span.on a {color:#222;}
+.main .visualArea .slideWrap .botArea .navArea .nav span.remove {background:#ccc;}
+.main .visualArea .slideWrap .botArea .btnSet {position:absolute; top:0; right:0; z-index:2; width:89px; height:47px; border-width:1px 1px 1px 0; border-style:solid; border-color:#dedede; background:#fff; font-size:0;}
+.main .visualArea .slideWrap .botArea .btnSet button {width:25px; height:44px; background-repeat:no-repeat; background-position:50% 50%; outline:0; text-indent:-99999px;}
+.main .visualArea .slideWrap .botArea .btnSet button.btnPrev {background-image:url('/html/images/main/btn_prev.png');}
+.main .visualArea .slideWrap .botArea .btnSet button.btnNext {background-image:url('/html/images/main/btn_next.png');}
+.main .visualArea .slideWrap .botArea .btnSet .sldChk {display:inline-block; width:38px; vertical-align:middle; text-align:center; font-size:13px; font-family:Verdana; line-height:44px;}
+.main .visualArea .slideWrap .botArea .btnSet .sldChk b {color:#222;}
+
+.main .barBanner {margin:20px 0 30px;}
+
+.main .tmp_box .lecture {overflow:hidden; padding:40px 0 45px; background:#f3f3f3;}
+.main .tmp_box .lecture .slideWrap {position:relative; margin-top:20px; padding-top:42px;}
+.main .tmp_box .lecture .bx-viewport {height:275px;}
+.main .tmp_box .lecture .bx-controls {overflow:hidden; position:absolute; top:0; right:0; left:0; height:42px;}
+.main .tmp_box .lecture .bx-controls .bx-pager-item a {float:left; position:relative; z-index:1; width:266px; height:42px; border:1px solid #e2e2e2; background-color:#f3f3f3; margin-left:-1px; background-repeat:no-repeat; background-position:50% 50%; text-indent:-99999px; }
+.main .tmp_box .lecture .bx-controls .bx-pager-item:first-child a {width:265px; margin-left:0;}
+.main .tmp_box .lecture .bx-controls .bx-pager-item a.active {z-index:2; border-color:#444; background-color:#fff;}
+.main .tmp_box .lecture .bx-controls .nav1 a {background-image:url('/html/images/m/main/tab_lecture_01.png');}
+.main .tmp_box .lecture .bx-controls .nav2 a {background-image:url('/html/images/m/main/tab_lecture_02.png');}
+.main .tmp_box .lecture .bx-controls .nav3 a {background-image:url('/html/images/m/main/tab_lecture_03.png');}
+.main .tmp_box .lecture .bx-controls .nav4 a {background-image:url('/html/images/m/main/tab_lecture_04.png');}
+.main .tmp_box .lecture .bx-controls .nav1 a.active {background-image:url('/html/images/m/main/tab_lecture_01_on.png');}
+.main .tmp_box .lecture .bx-controls .nav2 a.active {background-image:url('/html/images/m/main/tab_lecture_02_on.png');}
+.main .tmp_box .lecture .bx-controls .nav3 a.active {background-image:url('/html/images/m/main/tab_lecture_03_on.png');}
+.main .tmp_box .lecture .bx-controls .nav4 a.active {background-image:url('/html/images/m/main/tab_lecture_04_on.png');}
+.main .tmp_box .lecture .hiddenArea {display:block; overflow:hidden; position:relative; height:275px; padding:36px 0 0 100px; background:url('/html/images/m/main/bg_lecture.png') no-repeat 0 100%;}
+.main .tmp_box .lecture .bookView {display:inline-block; position:relative; width:156px; height:211px; margin-left:20px;}
+.main .tmp_box .lecture .bookView:after {position:absolute; top:100%; right:-41px; z-index:2; width:34px; height:18px; margin-top:-6px; background:url('/html/images/m/main/img_mouse.png') no-repeat; content:'';}
+.main .tmp_box .lecture .bookView .bookSjb {overflow:hidden; position:absolute; top:15px; left:215px; width:745px; text-align:left;}
+.main .tmp_box .lecture .bookView .bookSjb span {float:left; color:#333; vertical-align:middle; font-weight:bold; font-size:28px; line-height:30px; letter-spacing:-.25px;}
+.main .tmp_box .lecture .bookView .bookSjb a {float:left; margin-left:20px; vertical-align:middle;}
+.main .tmp_box .lecture .bookView .thumb {position:absolute; top:0; left:0; z-index:1; width:156px; height:211px; background:url('/html/images/m/main/bg_book.png') no-repeat;}
+.main .tmp_box .lecture .bookView .thumb:after {position:absolute; top:-13px; left:-36px; z-index:2; width:86px; height:103px; background:url('/html/images/m/main/img_headphone.png') no-repeat; content:'';}
+.main .tmp_box .lecture .bookView .thumb:before {position:absolute; top:100%; left:-23px; z-index:2; width:158px; height:20px; margin-top:-5px; background:url('/html/images/m/main/img_keyboard.png') no-repeat; content:'';}
+.main .tmp_box .lecture .bookView .thumb p {overflow:hidden; width:153px; height:211px;}
+.main .tmp_box .lecture .bookView .thumb img {width:153px; height:211px;}
+.main .tmp_box .lecture .bookList {display:inline-block; position:absolute; top:104px; margin-left:60px;}
+.main .tmp_box .lecture .bookList ul {font-size:0;}
+.main .tmp_box .lecture .bookList ul li {display:inline-block; margin-left:12px; margin-bottom:8px; vertical-align:bottom;}
+.main .tmp_box .lecture .bookList ul li:first-child {margin-left:0;}
+.main .tmp_box .lecture .bookList ul li .sbj {height:18px; margin-bottom:6px; color:#444; text-align:center; font-size:12px;}
+.main .tmp_box .lecture .bookList ul li .thumb {position:relative; border-right:2px solid #d3d3d3;}
+.main .tmp_box .lecture .bookList ul li .thumb .icon {position:absolute; top:-10px; right:-10px;}
+.main .tmp_box .lecture .bookList ul li .thumb a {display:block;}
+.main .tmp_box .lecture .bookList ul li .thumb a img {width:71px; height:99px;}
+.main .tmp_box .lecture .bookList ul li.on .thumb {margin-bottom:-11px; border:3px solid #33ab1f;}
+.main .tmp_box .lecture .bookList ul li.on .thumb a img {width:81px; height:115px;}
+.main .tmp_box .lecture .btnBox {margin-top:20px; text-align:center;}
+
+.main .teacher {overflow:hidden; margin-top:40px;}
+.main .teacher ul {overflow:hidden;}
+.main .teacher ul li {overflow:hidden; float:left; position:relative; width:20%; padding-top:247px; text-align:center;}
+.main .teacher ul li a {position:absolute; top:0; right:0; bottom:0; left:0; z-index:5; text-indent:-99999px;}
+.main .teacher ul li .badge {display:block; position:absolute; bottom:16px; left:50%; z-index:3; width:194px; height:34px; margin-left:-97px; padding-top:5px; background:#ff7800; color:#fff;}
+.main .teacher ul li .icon {position:absolute; top:25px; right:20px; z-index:5;}
+.main .teacher ul li .photo {position:absolute; top:35px; left:0; width:100%; height:211px;}
+.main .teacher ul li .photo:before {position:absolute; bottom:0; left:50%; z-index:4; width:212px; height:211px; margin-left:-106px; background:url('/html/images/m/main/img_mask.png') no-repeat; content:'';}
+.main .teacher ul li .photo:after {position:absolute; top:0; left:50%; width:192px; height:192px; margin-left:-96px; border:1px solid #e3e3e3; border-radius:50%; transition:border-color .3s; content:'';}
+.main .teacher ul li .photo span {display:block; position:absolute; bottom:16px; left:50%; z-index:2; width:194px; margin-left:-97px;}
+.main .teacher ul li .photo span img {width:90%; -webkit-transition:all .3s; -moz-transition:all .3s; transition:all .3s;}
+.main .teacher ul li .name {position:relative; margin-top:8px; padding-top:4px; text-indent:22px;}
+.main .teacher ul li .name:after {position:absolute; top:0; left:50%; width:110px; height:1px; margin-left:-55px; background:#e2e2e2; content:'';}
+.main .teacher ul li .name span {display:inline-block; width:128px; height:20px; background-repeat:no-repeat; text-indent:-99999px; -webkit-transition:background .3s; -moz-transition:background .3s; transition:background .3s;}
+.main .teacher ul li .name span.name1 {background-image:url('/html/images/m/main/name_teacher_01.png');}
+.main .teacher ul li .name span.name2 {background-image:url('/html/images/m/main/name_teacher_02.png');}
+.main .teacher ul li .name span.name3 {background-image:url('/html/images/m/main/name_teacher_03.png');}
+.main .teacher ul li .name span.name4 {background-image:url('/html/images/m/main/name_teacher_04.png');}
+.main .teacher ul li .name span.name5 {background-image:url('/html/images/m/main/name_teacher_05.png');}
+.main .teacher ul li.on .photo:after {border:3px solid #33ac1f; width:188px; height:188px;}
+.main .teacher ul li.on .photo span img {width:100%;}
+.main .teacher ul li.on .name span.name1 {background-image:url('/html/images/m/main/name_teacher_01_on.png');}
+.main .teacher ul li.on .name span.name2 {background-image:url('/html/images/m/main/name_teacher_02_on.png');}
+.main .teacher ul li.on .name span.name3 {background-image:url('/html/images/m/main/name_teacher_03_on.png');}
+.main .teacher ul li.on .name span.name4 {background-image:url('/html/images/m/main/name_teacher_04_on.png');}
+.main .teacher ul li.on .name span.name5 {background-image:url('/html/images/m/main/name_teacher_05_on.png');}
+
+/* 메인 하단(공지, CS) */
+.main .mainBot {overflow:hidden; margin-top:70px;}
+.main .mainBot dl {float:left; width:525px;}
+.main .mainBot dl dt {height:21px;}
+.main .mainBot dl dd {height:164px; margin-top:20px;}
+.main .mainBot dl.notice dd {border-width:1px 0; border-style:solid; border-color:#e2e2e2;}
+.main .mainBot dl.notice dd ul {padding:0 13px 0 5px;}
+.main .mainBot dl.notice dd ul li {position:relative; height:18px; margin-top:12px; padding:0 80px 0 70px; background:url('/html/images/main/bu_gray.png') no-repeat 0 7px;}
+.main .mainBot dl.notice dd ul li em {position:absolute; top:0; left:10px;}
+.main .mainBot dl.notice dd ul li span {position:absolute; top:0; right:0; color:#999;}
+.main .mainBot dl.notice dd ul li a {display:inline-block; overflow:hidden; max-width:100%; text-overflow:ellipsis; white-space:nowrap;}
+.main .mainBot dl.cs {margin-left:10px;}
+.main .mainBot dl.cs dd {position:relative; border:1px solid #e2e2e2; padding-right:173px;}
+.main .mainBot dl.cs dd ul {overflow:hidden;}
+.main .mainBot dl.cs dd ul li {float:left; border-right:1px solid #e2e2e2;}
+.main .mainBot dl.cs dd ul li a {display:block;}
+.main .mainBot dl.cs dd ul li.bdb {border-bottom:1px solid #e2e2e2;}
+.main .mainBot dl.cs dd p {position:absolute; top:0; right:0;}
+
+/* 하단 전체 메뉴 */
+.main .allMenu {margin-top:70px;}
+.allMenu {position:relative; height:327px; margin:0 0 20px; background:#f2f9ed; line-height:1;}
+.allMenu .secInner {position:relative; padding:50px 0 0 120px;}
+.allMenu .secInner:after {position:absolute; top:0; right:0; width:160px; height:45px; margin-right:-80px; background:url('/html/images/main/bg_allmenu.png') no-repeat; content:'';}
+.allMenu .secInner > ul {overflow:hidden; padding-top:2px;}
+.allMenu .secInner > ul > li {float:left;}
+.allMenu .secInner ul li p {margin-top:20px;}
+.allMenu .secInner ul li p:first-child {margin-top:0;}
+.allMenu .secInner ul li p a {color:#111; font-size:14px;}
+.allMenu .secInner ul li a {display:inline-block;}
+.allMenu .secInner ul li a:hover {color:#33ac1f;}
+.allMenu .secInner ul li ul li {margin-top:13px;}
+.allMenu .secInner ul li.allM2 {margin-left:55px;}
+.allMenu .secInner ul li.allM3 {margin-left:65px;}
+.allMenu .secInner ul li.allM4 {margin-left:95px;}
+.allMenu .secInner ul li.allM5 {margin-left:85px;}
+.allMenu .secInner ul li.allM6 {margin-left:60px;}
+.allMenu .secInner ul li .icon {padding-left:22px; background-repeat:no-repeat; background-position:0 50%; line-height:16px;}
+.allMenu .secInner ul li .icon.fb {background-image:url('/html/images/main/icon_fb.png');}
+.allMenu .secInner ul li .icon.blog {background-image:url('/html/images/main/icon_blog.png');}
+.allMenu .secInner ul li .icon.cafe {background-image:url('/html/images/main/icon_cafe.png');}
+
+/* footer */
+#footer {position:relative; height:210px; background:url('http://www.ssen.com/html/images/main/bg_footer.gif') repeat-x 0 0;}
+#footer .footerInner {position:relative; width:1060px; margin:0 auto;}
+#footer .footerInner .botMenu {overflow:hidden; height:22px; padding-top:10px;}
+#footer .footerInner .botMenu .menu {float:left; line-height:8px;}
+#footer .footerInner .botMenu .menu li {float:left; padding:0 8px; background:url('http://www.ssen.com/html/images/main/list_bar.gif') left center no-repeat;}
+#footer .footerInner .botMenu .menu li:first-child {padding-left:0; background:none;}
+#footer .footerInner .botMenu .menu li a {display:inline-block;}
+#footer .footerInner .botMenu .siteList {position:absolute; top:0; right:0;}
+#footer .footerInner .botMenu .siteList a {display:block;}
+#footer .footerInner .botMenu .siteList a.site {width:170px; height:31px; padding:9px 7px 3px 0; border:solid 1px transparent; text-align:right;}
+#footer .footerInner .botMenu .siteList a.on {border:solid 1px #d5d5d5; background:#f8f8f8;}
+#footer .footerInner .botMenu .siteList .siteOver {display:none; position:absolute; z-index:5; bottom:100%; right:0; width:170px; margin-bottom:-1px; padding:15px; border:solid 1px #d5d5d5; background:#fff;}
+#footer .footerInner .botMenu .siteList .siteOver li {padding:6px 0 6px 10px; background:url('http://www.ssen.com/html/images/main/icon_sitedot.gif') no-repeat 0 50%; margin-left:0; line-height:1;}
+#footer .footerInner .botMenu .siteList .siteOver li a {color:#666; transition:color .5s;}
+#footer .footerInner .botMenu .siteList .siteOver li:hover a {color:#34a106; text-decoration:underline;}
+#footer .footerInner .copyright {position:relative; padding-top:25px;}
+#footer .footerInner .copyright address {padding-top:8px;}
+#footer .footerInner .copyright .insurance {position:absolute; top:23px; right:35px;}
+#footer .footerInner .markList {overflow:hidden; margin-top:35px; text-align:center; font-size:0;}
+#footer .footerInner .markList li {display:inline-block; padding:0 10px;}
+
+/* BUTTON */
+.btnCenter {clear:both; width:100%; text-align:center; font-size:0;}
+.btnCenter button {outline:0;}
+.btnCenter.st2 {margin-top:45px;}
+.btnRight {clear:both; width:100%; margin-top:40px; text-align:right; font-size:0;}
+.btnRight button {margin-left:10px;}
+.btnRight button:first-child {margin-left:0;}
+.btnRight.st2 {margin-top:0;}
+
+.btnSch {position:absolute; top:0; right:14px; width:30px; height:30px; background:url('/html/images/main/btn_sch.png') no-repeat 50% 50%; text-indent:-99999px; outline:0;}
+.btnLogin {width:57px; height:20px; background:#666; color:#fff; font-size:11px;}
+.btnLogin2 {width:120px; height:75px; background:url('/html/images/main/btn_login.png') no-repeat; text-indent:-99999px;}
+.btnLogin3 {width:120px; height:75px; background:url('/html/images/main/btn_login_02.png') no-repeat; text-indent:-99999px;}
+.btnClose {position:absolute; top:0; right:0; width:42px; height:42px; background:#333 url('/html/images/main/btn_close_02.png') no-repeat 50% 50%; text-indent:-99999px;}
+
+.btnNavy {width:110px; height:30px; background:#424654; color:#fff; text-align:center;}
+.btnNavy2 {width:80px; height:28px; background:#424654; color:#fff; text-align:center; font-size:11px;}
+.btnGray {width:60px; height:28px; border:1px solid #e2e2e2; background:#f6f6f6; color:#666; font-size:11px;}
+.btnGray2 {width:57px; height:20px; background:#aaa; color:#fff; font-size:11px; margin-left:3px;}
+
+.btnOrg {width:57px; height:20px; background:#ff5919; color:#fff; font-size:11px;}
+
+/* quick*/
+#quick1 {position:absolute; top:0; right:50%; margin-right:545px; z-index:2;}
+#quick2 {position:absolute; top:0; left:50%; margin-left:545px; z-index:2;}

@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+/* 보고싶다! 바운스 */
+@keyframes bounce {
+    0% { transform: scale(1) translateY(0); }
+    10% { transform: scale(1.1,.9) translateY(0); }
+    30% { transform: scale(.9,1.1) translateY(-20px); }
+    50% { transform: scale(1.05,.95) translateY(0); }
+    56% { transform: scale(1)      translateY(0); }
+    74% { transform: scale(1)      translateY(0); }
+    75% { transform: scale(1)      translateY(0); }
+    100% { transform: scale(1)      translateY(0); }
+}
+
+/* shine motion */
+@keyframes shine{
+	0%{background-position:100%}
+	100%{background-position:-100%}
+}
+
+/* 문지영 모션 */
+@keyframes sample {
+	0% {
+		top: 100px;
+		transform: scale(1.5)
+	}
+
+	100% {
+		top: 214px;
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes sample {
+	0% {
+		top: 100px;
+		transform: scale(1.5)
+	}
+
+	100% {
+		top: 214px;
+		transform: scale(1);
+	}
+}
+
+@keyframes sample2 {
+	0% {
+		opacity: 0;
+		transform: scale(1)
+	}
+
+	50% {
+		opacity: 0;
+		transform: scale(1.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes sample2 {
+	0% {
+		opacity: 0;
+		transform: scale(1)
+	}
+
+	50% {
+		opacity: 0;
+		transform: scale(1.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* 메인 네모상자 */
+@-webkit-keyframes title_top {
+  0% {
+	top: -110px;
+	left: -200px; 
+	opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate(0,5px);
+  }
+
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@-ms-keyframes title_top {
+  0% {
+	top: -110px;
+	left: -200px; 
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate(0,5px);
+  }
+
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@-webkit-keyframes title_bottom {
+	0% {
+	  right: -200px;
+	  bottom: -110px; 
+	  opacity: 0;
+	}
+  
+	60% {
+	  opacity: 1;
+	  transform: translate(20px,5px);
+	}
+  
+	100% {
+	  transform: translate(0,0);
+	}
+  }
+  
+  @-ms-keyframes title_bottom {
+	0% {
+	  right: -200px;
+	  bottom: -110px; 
+	  opacity: 0;
+	}
+  
+	60% {
+	  opacity: 1;
+	  transform: translate(20px, 5px);
+	}
+  
+	100% {
+	  transform: translate(0,0);
+	}
+  }
+
+/* 혜인 애니메이션  */
+@keyframes spotShine {
+	0% {
+		opacity: .3;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	100% {
+		opacity: .3;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+}
+
+@-webkit-keyframes spotShine {
+	0% {
+		opacity: .3;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	100% {
+		opacity: .3;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+}
+
+@keyframes spotLightSmMove {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+
+	20% {
+		-webkit-transform: translateX(180px);
+		transform: translateX(180px)
+	}
+	40% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+	60% {
+		-webkit-transform: translateX(-180px);
+		transform: translateX(-180px)
+	}
+	80% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+}
+
+@-webkit-keyframes spotLightSmMove {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+
+	30% {
+		-webkit-transform: translateX(150px);
+		transform: translateX(150px)
+	}
+	40% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+	60% {
+		-webkit-transform: translateX(-150px);
+		transform: translateX(-150px)
+	}
+	80% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+}
+
+@keyframes spotLightLgMove {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+
+	20% {
+		-webkit-transform: translateX(-130px);
+		transform: translateX(-130px)
+	}
+	40% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+	60% {
+		-webkit-transform: translateX(150px);
+		transform: translateX(150px)
+	}
+
+	80% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+}
+
+@-webkit-keyframes spotLightLgMove {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+
+	20% {
+		-webkit-transform: translateX(-130px);
+		transform: translateX(-130px)
+	}
+	40% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+	60% {
+		-webkit-transform: translateX(150px);
+		transform: translateX(150px)
+	}
+	80% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+}

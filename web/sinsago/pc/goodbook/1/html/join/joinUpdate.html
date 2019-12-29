@@ -1,0 +1,897 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<LINK rel="SHORTCUT ICON" type="image/x-icon" href="../../images/icon/sinsago.ico" />
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<meta name="robots" content="nofollow" />
+	<title>나를 바꾸는 힘! 좋은책신사고</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!-- 180903 추가 -->
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><!-- 180903 추가 -->
+	<script type="text/javascript" src="../../js/_common.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../js/lib.ssgfront.js"></script>
+	<script type="text/javascript" src="../../js/lib.validate.js"></script>
+	<script type="text/javascript" src="../../js/jquery.bxslider.min.js"></script>
+
+	<!-- htsim 08/30 까지 페이스북 픽셀코드 유지 -->
+	<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			}; if (!f._fbq) f._fbq = n;
+			n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+		}(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+		fbq('init', '1739713569608244');
+		fbq('track', "PageView");
+	</script>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+		//해당 메뉴 미선택 시 0
+		var gnbDepth = '';
+		var gnbDepth1 = ''; // gnb depth 1
+		var gnbDepth2 = ''; // gnb depth 2
+		var lnbDepth1 = ''; // lnb depth 1
+		var lnbDepth2 = ''; // lnb depth 2
+	</script>
+	<div id="join_wrap">
+		<div id="skipNav">
+			<a href="#content">본문 바로가기</a>
+		</div>
+		<div id="header">
+			<h1><a href="http://truebook.sinsago.co.kr/main/main.aspx" target="_blank"><img src="http://truebook.sinsago.co.kr/images/common/img_logo.gif" alt="좋은책 신사고" /></a></h1>
+			<!-- s : 180903 공통사용중인 join_gnbMenu 영역 변경 -->
+			<ul class="join_gnbMenu">
+				<!-- [D] 180903 각 해당하는 페이지 li요소에 on클래스 추가 -->
+				<li><a href="./joinCreate.html">회원가입</a></li>
+				<li class="on"><a href="./joinUpdate.html">회원정보수정</a></li>
+				<li><a href="./search.html">아이디/비밀번호 찾기</a></li>
+				<li><a href="#;">회원탈퇴</a></li>
+				<li><a href="./clause.html">이용약관</a></li>
+				<li><a href="./privacy.html">개인정보처리방침</a></li>
+			</ul>
+			<!-- e : 180903 공통사용중인 join_gnbMenu 영역 변경 -->
+		</div>
+		<script type="text/javascript">
+			//<![CDATA[
+			var user_div = 'H';
+
+			$(document).ready(function () {
+
+				// 학부모
+				if (user_div == "P") {
+					$(".user_div_p").show();
+
+					SetFormValue('form1', 'child_kind', '', ',');
+					SetFormValue('form1', 'child_details', '', ',');
+
+					// 자녀현황 처리
+					if ($("input[name=child_details][value^=C]:checked").length > 0) {
+						$("#infant0").removeAttr("disabled").attr("checked", "checked");
+					}
+
+					if ($("input[name=child_details][value^=S]:checked").length > 0) {
+						$("#elementary0").removeAttr("disabled").attr("checked", "checked");
+					}
+
+					if ($("input[name=child_details][value^=M]:checked").length > 0) {
+						$("#middle0").removeAttr("disabled").attr("checked", "checked");
+					}
+
+					if ($("input[name=child_details][value^=H]:checked").length > 0) {
+						$("#high0").removeAttr("disabled").attr("checked", "checked");
+					}
+				}
+
+				if (user_div == "M" || user_div == "H" || user_div == "T" || user_div == "S") {
+					$(".user_div_school").show();
+				}
+
+				if (user_div == "S" || user_div == "M" || user_div == "H") {
+					$(".user_div_grade").show();
+
+					if (user_div == "S") {
+
+					}
+				}
+
+				if (user_div == "T" || user_div == "E") {
+					$(".user_div_subject").show();
+				}
+
+				if (user_div == "E") {
+					$(".user_div_academy").show();
+				}
+
+				$("#new_user_div").val(user_div).attr("checked", true);
+			});
+
+			// 15-03-02 htsim 회원정보 변경시
+			function fnUserDivChange(div) {
+				$(".user_div_p, .user_div_school, .user_div_subject, .user_div_grade, .user_div_academy").hide();
+
+				if (div == "P") {
+					$(".user_div_p").show();
+
+					SetFormValue('form1', 'child_kind', '', ',');
+					SetFormValue('form1', 'child_details', '', ',');
+
+					// 자녀현황 처리
+					if ($("input[name=child_details][value^=C]:checked").length > 0) {
+						$("#infant0").removeAttr("disabled").attr("checked", "checked");
+					}
+
+					if ($("input[name=child_details][value^=S]:checked").length > 0) {
+						$("#elementary0").removeAttr("disabled").attr("checked", "checked");
+					}
+
+					if ($("input[name=child_details][value^=M]:checked").length > 0) {
+						$("#middle0").removeAttr("disabled").attr("checked", "checked");
+					}
+
+					if ($("input[name=child_details][value^=H]:checked").length > 0) {
+						$("#high0").removeAttr("disabled").attr("checked", "checked");
+					}
+				}
+
+				if (div == "M" || div == "H" || div == "T" || div == "S") {
+					$(".user_div_school").show();
+				}
+
+				if (div == "S" || div == "M" || div == "H") {
+					$("select[name=grade] option").remove();
+					$("select[name=grade]").append("<option value=''>선택</option><option value='1'>1학년</option><option value='2'>2학년</option><option value='3'>3학년</option>");
+
+					$(".user_div_grade").show();
+
+					if (div == "S") {
+						$("select[name=grade]").append("<option value='4'>4학년</option><option value='5'>5학년</option><option value='6'>6학년</option>");
+					}
+				}
+
+				if (div == "T" || div == "E") {
+					$(".user_div_subject").show();
+				}
+
+				if (div == "E") {
+					$(".user_div_academy").show();
+				}
+			}
+
+			// 15-03-02 회원정보변경시 학년 유효성 검사
+			function fnGradeValidate() {
+				var f = document.forms["form1"];
+				/* 회원구분 수정가능하게 할 시 다시 적용 CS에도 유효성체크 추가 */
+				if (f.new_user_div.value == "S" || f.new_user_div.value == "M" || f.new_user_div.value == "H") {
+					if (f.grade.value == "") {
+						return "학년을 선택해주세요.";
+					}
+				}
+
+				return true;
+			}
+
+			// 이메일 중복확인
+			function fnEmailCheck() {
+				var f = document.forms["form1"];
+
+				if (f.email1.value == "" || f.email2.value == "") {
+					alert("이메일을 입력해주세요.");
+					return;
+				}
+				else {
+					var email = f.email1.value + "@" + f.email2.value;
+					var pattern = /^[_a-zA-Z0-9-\.]+@[\.a-zA-Z0-9-]+\.[a-zA-Z]+$/;
+					if (!pattern.test(email)) {
+						alert("이메일을 잘못 입력 하였습니다.");
+						f.email1.focus();
+						return;
+					}
+					else if (email.length <= 6) {
+						alert("이메일은 최소 6자 이상으로 입력해주세요.");
+						return;
+					}
+					else {
+						$.get("/join/ajaxCheckEmail.aspx?email=" + email, function (cnt) {
+							if (cnt == "0") {
+								alert(email + "은(는) 등록가능한 이메일입니다.");
+								f.mail_check_yn.value = "Y";
+								f.origin_email.value = email;
+								return;
+							}
+							else {
+								alert(email + "은(는) 이미 등록된 이메일 입니다.\n\n다른 이메일을 입력해주세요.");
+								f.mail_check_yn.value = "N";
+								return;
+							}
+						});
+					}
+				}
+			}
+
+			// 이메일 중복확인 검사 유무
+			function fnEmailValidate() {
+				var f = document.forms["form1"];
+				var originEmail = 'cool6700@naver.com';
+				var email = f.email1.value + "@" + f.email2.value;
+
+				if (originEmail != email && f.mail_check_yn.value == "N") {
+					if (f.mail_check_yn.value == "N") {
+						return "이메일 중복 확인을 해주세요.";
+					}
+				}
+				else {
+					var origin_email = f.origin_email.value;
+					var email = f.email1.value + "@" + f.email2.value;
+
+					if (origin_email != email) {
+						return "이메일 중복 확인을 해 주세요.";
+					}
+				}
+
+				return true;
+			}
+
+			// 이메일 선택
+			function fnEmailSelect(name, domain) {
+				if (domain != "") {
+					if (domain != "1") {		// 직접입력
+						$("input[name=" + name + "]").attr("readonly", "readonly").val(domain);
+					}
+					else {
+						$("input[name=" + name + "]").removeAttr("readonly").val("").focus();
+					}
+				}
+			}
+
+			// 비밀번호 동일 확인
+			function fnPasswdValidate() {
+				var f = document.forms["form1"];
+
+				if (f.passwd.value != "" || f.passwd_confirm.value != "") {
+					if (f.passwd_confirm.value == "") {
+						return "비밀번호 확인을 입력해주세요.";
+					}
+
+					if (f.user_id.value == f.passwd.value) {
+						return "아이디와 동일한 비밀번호를 사용할 수 없습니다.";
+					}
+
+					if (f.passwd.value != f.passwd_confirm.value) {
+						return "비밀번호를 정확하게 다시 입력해주세요.";
+					}
+
+					var chk1 = /^[a-z0-9]{10,20}$/;
+					var chk2 = /[a-z]/;
+					var chk3 = /[0-9]/;
+
+					if (!(chk1.test(f.passwd.value) && chk2.test(f.passwd.value) && chk3.test(f.passwd.value))) {
+						return "비밀번호는 10~20자의 영문 소문자와 숫자 조합으로 입력해주세요.";
+					}
+				}
+
+				return true;
+			}
+
+			// 이름 확인
+			function fnNameValidate() {
+				var f = document.forms["form1"];
+				var pattern = /^[가-힝]*$/;
+
+				if (!pattern.test(f.user_name.value)) {
+					return "이름은 한글로 입력해주세요.";
+				}
+
+				if (f.user_name.value.length < 2) {
+					return "이름은 2자리 이상, 10자리 이내로 입력해주세요.";
+				}
+
+				return true;
+			}
+
+			// 전화번호 확인
+			function fnTelValidate() {
+				var f = document.forms['form1'];
+				var tel_no1 = f['tel_no1'].value;
+				var tel_no2 = f['tel_no2'].value;
+				var tel_no3 = f['tel_no3'].value;
+
+				var mobile_no1 = f['mobile_no1'].value;
+				var mobile_no2 = f['mobile_no2'].value;
+				var mobile_no3 = f['mobile_no3'].value;
+
+				var tel_no = tel_no1 + tel_no2 + tel_no3;
+				var mobile_no = mobile_no1 + mobile_no2 + mobile_no3;
+
+				if ((tel_no1 == "" || tel_no2 == "" || tel_no3 == "") && (mobile_no1 == "" || mobile_no2 == "" || mobile_no3 == "")) {
+					return "전화번호 또는 휴대폰번호를 입력하세요.";
+				}
+				else {
+					if (tel_no1 != "" && tel_no2 != "" && tel_no3 != "") {
+						if (tel_no.length < 8 && tel_no.length > 1) {
+							return "전화번호를 입력하세요.";
+						}
+						if (tel_no3 != "" && tel_no3.length != 4) {
+							return "전화번호를 4자로 입력하세요.";
+						}
+						/*
+						if((tel_no.indexOf("0000") != -1) || (tel_no.indexOf("1111") != -1) || (tel_no.indexOf("2222") != -1) || (tel_no.indexOf("3333") != -1) || (tel_no.indexOf("4444") != -1) || (tel_no.indexOf("5555") != -1) || (tel_no.indexOf("6666") != -1) || (tel_no.indexOf("7777") != -1) || (tel_no.indexOf("8888") != -1) || (tel_no.indexOf("9999") != -1) || (tel_no.indexOf("1234") != -1))
+						{
+							return "전화번호를 정확하게 입력했는지 확인해 주세요.\r\n전화번호가 정확한데도 회원정보 수정이 안되면 고객센터(☎1661-5590)로 문의주시기 바랍니다.";
+						}
+						*/
+
+					}
+					if (mobile_no1 != "" && mobile_no2 != "" && mobile_no3 != "") {
+						if (mobile_no.length < 8 && mobile_no.length > 1) {
+							return "휴대폰번호를 입력하세요.";
+						}
+
+						if (f['mobile_no3'].value != "" && f['mobile_no3'].value.length != 4) {
+							return "휴대폰번호를 4자로 입력하세요.";
+						}
+
+						if (f['mobile_check_yn'].value != "Y") {
+							return "휴대폰번호가 인증되지 않았습니다.";
+						}
+						else {
+							if (f["origin_mobile_no"].value != (mobile_no1 + "" + mobile_no2 + "" + mobile_no3)) {
+								f["mobile_check_yn"].value = "N";
+								return "휴대폰번호가 변경되었습니다. 다시 휴대폰번호를 인증하여 주시기 바랍니다.";
+							}
+						}
+					}
+				}
+
+				return true;
+			}
+
+			// 과목 확인
+			function fnSubjectValidate() {
+				var f = document.forms["form1"];
+				var cnt = 0;
+				/*
+				if (f['user_div'].value == "T" || f['user_div'].value == "E") {
+					if (f['subject_korea'].checked == true) cnt++;
+					if (f['subject_english'].checked == true) cnt++;
+					if (f['subject_math'].checked == true) cnt++;
+					if (f['subject_socity'].checked == true) cnt++;
+					if (f['subject_science'].checked == true) cnt++;
+					if (cnt < 1) return "담당과목을 선택 하세요.";
+				}*/
+				return true;
+			}
+
+
+			// 회원수정
+			function fnFormSubmit() {
+				var f = document.forms["form1"];
+				if (validate(f)) {
+					if (confirm("수정하시겠습니까?")) {
+						f.submit();
+					}
+				}
+			}
+
+			// 휴대폰 인증
+			function fnConfirmMobileAuth() {
+				var f = document.forms["form1"];
+				var mobile_no1 = f.mobile_no1.value;
+				var mobile_no2 = f.mobile_no2.value;
+				var mobile_no3 = f.mobile_no3.value;
+
+				if (mobile_no1 == "" || mobile_no2 == "" || mobile_no3 == "") {
+					alert("휴대폰번호를 입력하세요.");
+				}
+				else {
+					var mobile_no = mobile_no1 + mobile_no2 + mobile_no3;
+					var smsAuth = OpenWindow("/join/smsAuth.aspx?mobile_no=" + mobile_no + "&confirm_string=update_id", "smsAuth", "300", "150");
+
+					if (smsAuth) {
+						smsAuth.focus();
+					}
+				}
+
+			}
+
+			function chkKind(element) {
+				if (element.value == "K1") {
+					document.form1.child_kind[0].disabled = true;
+					for (var i = 0; i < document.form1.child_details.length; i++) {
+						if (document.form1.child_details[i].value.substring(0, 1) == "C")
+							document.form1.child_details[i].checked = false;
+					}
+				}
+				if (element.value == "K2") {
+					document.form1.child_kind[1].disabled = true;
+					for (var i = 0; i < document.form1.child_details.length; i++) {
+						if (document.form1.child_details[i].value.substring(0, 1) == "S")
+							document.form1.child_details[i].checked = false;
+					}
+				}
+				if (element.value == "K3") {
+					document.form1.child_kind[2].disabled = true;
+					for (var i = 0; i < document.form1.child_details.length; i++) {
+						if (document.form1.child_details[i].value.substring(0, 1) == "M")
+							document.form1.child_details[i].checked = false;
+					}
+				}
+				if (element.value == "K4") {
+					document.form1.child_kind[3].disabled = true;
+					for (var i = 0; i < document.form1.child_details.length; i++) {
+						if (document.form1.child_details[i].value.substring(0, 1) == "H")
+							document.form1.child_details[i].checked = false;
+					}
+				}
+			}
+			function chkDetails(value) {
+				var C_cnt = 0;
+				var S_cnt = 0;
+				var M_cnt = 0;
+				var H_cnt = 0;
+
+				for (var i = 0; i < document.form1.child_details.length; i++) {
+					if (document.form1.child_details[i].checked) {
+						if (document.form1.child_details[i].value.substring(0, 1) == "C") {
+							C_cnt = C_cnt + 1;
+							document.form1.child_kind[0].disabled = false;
+							document.form1.child_kind[0].checked = true;
+
+						}
+						else if (document.form1.child_details[i].value.substring(0, 1) == "S") {
+							S_cnt = S_cnt + 1;
+							document.form1.child_kind[1].disabled = false;
+							document.form1.child_kind[1].checked = true;
+						}
+						else if (document.form1.child_details[i].value.substring(0, 1) == "M") {
+							M_cnt = M_cnt + 1;
+							document.form1.child_kind[2].disabled = false;
+							document.form1.child_kind[2].checked = true;
+						}
+						else if (document.form1.child_details[i].value.substring(0, 1) == "H") {
+							H_cnt = H_cnt + 1;
+							document.form1.child_kind[3].disabled = false;
+							document.form1.child_kind[3].checked = true;
+						}
+					}
+
+					if (C_cnt == 0) {
+						document.form1.child_kind[0].disabled = true;
+						document.form1.child_kind[0].checked = false;
+					}
+					if (S_cnt == 0) {
+						document.form1.child_kind[1].disabled = true;
+						document.form1.child_kind[1].checked = false;
+					}
+					if (M_cnt == 0) {
+						document.form1.child_kind[2].disabled = true;
+						document.form1.child_kind[2].checked = false;
+					}
+					if (H_cnt == 0) {
+						document.form1.child_kind[3].disabled = true;
+						document.form1.child_kind[3].checked = false;
+					}
+				}
+
+			}
+
+			// SMS 수신 설정
+			function fnSmsCheckValidate() {
+				var f = document.forms["form1"];
+				var mobile_no1 = f.mobile_no1.value;
+				var mobile_no2 = f.mobile_no2.value;
+				var mobile_no3 = f.mobile_no3.value;
+
+				if (f.sms_yn.checked) {
+					if (mobile_no1 == "" || mobile_no2 == "" || mobile_no3 == "") {
+						alert("휴대폰 번호를 입력해 주세요.");
+						f.sms_yn.checked = false;
+					}
+				}
+			}
+			//]]>
+		</script>
+		<form name="form1" method="post">
+			<input type="hidden" name="user_id" value="cool6700" />
+			<input type="hidden" name="user_div" value="H" />
+			<input type="hidden" name="school_code" value="H2001" />
+			<input type="hidden" name="mail_check_yn" value="N" />
+			<input type="hidden" id="mobile_check_yn" name="mobile_check_yn" value="Y" />
+			<input type="hidden" id="origin_mobile_no" name="origin_mobile_no" value="01042627627" />
+			<input type="hidden" id="origin_email" name="origin_email" value="cool6700@naver.com" />
+			<!-- s : 180903 -->
+			<div id="content">
+				<div class="title">
+					<h2><img src="../../images/join/180903/title_joinUpdate.png" alt="회원정보 수정" /></h2>
+				</div>
+				<div class="member_info">
+					<h3 class="sub_title">필수정보</h3>
+					<table class="table_type3 v2">
+						<caption>필수정보 수정</caption>
+						<colgroup>
+							<col width="160" />
+							<col width="auto" />
+						</colgroup>
+						<tr>
+							<th scope="row">아이디</th>  
+							<td>sinsago12348</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="passwd">비밀번호</label></th>
+							<td><span class="input_confirm_wrap" style="width:252px"><input type="password" name="passwd" id="passwd" class="txt confirm" maxlength="20"></span><span class="text_caution">10~20자 영문 소문자와 숫자 조합만 가능합니다</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="passwd_confirm">비밀번호 확인</label></th>
+							<td><span class="input_confirm_wrap" style="width:252px"><input type="password" name="passwd_confirm" id="passwd_confirm" class="txt confirm" maxlength="20"></span><span class="text_caution">비밀번호가 일치하지 않습니다</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="nser_name">이름</label></th>
+							<td>홍길동</td>
+						</tr>
+						<tr>
+							<th scope="row">생년월일</th>
+							<td>2002년 09월 12일</td>
+						</tr>
+						<tr>
+							<th scope="row">회원구분</th>
+							<td>
+								고등학생 1학년
+								<span class="select_basic"  style="margin-left:30px">
+								<label for="type_grade" class="blind">회원 유형 선택</label>
+								<!-- [D] 180903 유아/학생인경우 select요소에 disabled 속성 추가 -->
+								<select name="type_grade" id="type_grade">
+									<option value="">선택</option>
+									<option value="" selected>학부모</option>
+									<option value="">학교 선생님</option>
+									<option value="">학원 선생님</option>
+									<option value="">일반</option>
+								</select>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">전화번호</th>
+							<td>
+								<div class="number">
+									<p>
+										<strong>자택</strong>
+										<span class="select_basic number_phone">
+											<select title="국번선택" name="tel_no1">
+												<option value="">선택</option>
+												<option value="02" selected>02</option>
+												<option value="031">031</option>
+												<option value="032">032</option>
+												<option value="033">033</option>
+												<option value="041">041</option>
+												<option value="042">042</option>
+												<option value="043">043</option>
+												<option value="051">051</option>
+												<option value="052">052</option>
+												<option value="053">053</option>
+												<option value="054">054</option>
+												<option value="055">055</option>
+												<option value="061">061</option>
+												<option value="062">062</option>
+												<option value="063">063</option>
+												<option value="064">064</option>
+												<option value="070">070</option>
+												<option value="080">080</option>
+												<option value="044">044</option>
+											</select>
+										</span>
+										<input type="text" title="중간자리 입력" class="txt" style="width:62px" name="tel_no2" maxlength="4" value="1234" onkeyup="if ( isNaN(this.value) ) { alert('숫자만 입력가능합니다.');this.value='';}"/><input type="text" title="뒷자리 입력" class="txt" style="width:62px" name="tel_no3" maxlength="4" value="1234" onkeyup="if ( isNaN(this.value) ) { alert('숫자만 입력가능합니다.');this.value='';}"/>
+									</p>
+									<p class="mt5">
+										<strong>휴대폰</strong>
+										<span class="select_basic number_phone">
+											<select title="국번선택" name="mobile_no1">
+												<option value="">선택</option>
+												<option value="010" selected>010</option>
+												<option value="011">011</option>
+												<option value="016">016</option>
+												<option value="017">017</option>
+												<option value="018">018</option>
+												<option value="019">019</option>
+											</select>
+										</span>
+										<input type="text" title="중간자리 입력" class="txt" style="width:62px" name="mobile_no2" maxlength="4" value="1234" onkeyup="if ( isNaN(this.value) ) { alert('숫자만 입력가능합니다.');this.value='';}"/><input type="text" title="뒷자리 입력" class="txt" style="width:62px" name="mobile_no3" maxlength="4" value="1234" onkeyup="if ( isNaN(this.value) ) { alert('숫자만 입력가능합니다.');this.value='';}"/>
+										<button type="button" class="btn_basic green size_sm btn_sms_confirm"><span>인증하기</span></button>
+										<button type="button" class="btn_basic size_sm disabled hide"><span>인증 완료</span></button>
+									</p>
+									<div class="check_agree">
+										<span class="checkbox_basic">
+											<label for="sms_agree">SMS 수신동의(100씽 추가 적립)</label>
+											<input type="checkbox" name="sms_agree" id="sms_agree">
+										</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">이메일</th>
+							<td>
+								<input type="text" id="Text3" name="email1" title="이메일 입력" class="txt" style="width:149px" maxlength="20" value="sinsago12348"/><span class="space">@</span><input type="text" id="Text4" name="email2" title="도메인 입력" class="txt email_domain" style="width:104px" value="hanmail.net" />
+								<span class="select_basic">
+									<select title="도메인 선택" style="width:93px" onchange="fnEmailSelect('email2', this.value);" name="email_select">
+										<option value="">선택</option>
+										<option value="1">직접입력</option>
+										<option value="naver.com">네이버</option>
+										<option value="hanmail.net">다음(한메일)</option>
+										<option value="nate.com">네이트</option>
+										<option value="gmail.com">구글(G메일)</option>
+									</select>
+								</span>
+								<button type="button" class="btn_basic green size_sm btn_email_confirm"><span>인증하기</span></button>
+								<button type="button" class="btn_basic size_sm disabled"><span>인증 완료</span></button>
+								<span class="text_caution">이미 등록된 이메일입니다</span>
+								<div class="check_agree">
+									<span class="checkbox_basic">
+										<label for="email_agree">이메일 수신동의(100씽 추가 적립)</label>
+										<input type="checkbox" name="email_agree" id="email_agree" checked>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="member_info">
+					<h3 class="sub_title">선택정보</h3>
+					<p class="text_caution">필수정보 외 선택정보를 추가 입력하시면 회원님을 위한 맞춤 정보 서비스를 더 편리하게 이용하실 수 있습니다.</p>
+					<table class="table_type3 v2">
+						<caption>선택정보 수정</caption>
+						<colgroup>
+							<col width="160" />
+							<col width="auto" />
+						</colgroup>
+						<tr>
+							<th scope="row"><label for="school_name">학교명</label></th>  
+							<td><input type="text" name="school_name" id="school_name" class="txt" style="width:236px;" value="신사고초등학교"><button type="button" class="btn_basic green size_sm" style="margin-left:12px"><span>검색</span></button></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="edu_name">학원명</label></th>
+							<td><input type="text" name="edu_name" id="edu_name" class="txt" style="width:236px"></td>
+						</tr>
+						<tr>
+							<th scope="row">담당과목</th>
+							<td>
+								<ul class="list_check_option">
+									<li>
+										<span class="checkbox_basic">
+											<label for="child_check1">국어</label>
+											<input type="checkbox" name="child_check" id="child_check1">
+										</span>
+										<span class="checkbox_basic">
+											<label for="child_check2">영어</label>
+											<input type="checkbox" name="child_check" id="child_check2">
+										</span>
+										<span class="checkbox_basic">
+											<label for="child_check3">수학</label>
+											<input type="checkbox" name="child_check" id="child_check3">
+										</span>
+										<span class="checkbox_basic">
+											<label for="child_check4">사회</label>
+											<input type="checkbox" name="child_check" id="child_check4">
+										</span>
+										<span class="checkbox_basic">
+											<label for="child_check5">과학</label>
+											<input type="checkbox" name="child_check" id="child_check5">
+										</span>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+						<th scope="row">자녀 현황</th>
+						<td>
+							<ul class="list_check_option">
+								<li>
+									<strong class="label_check_option">유아</strong>
+									<span class="checkbox_basic"><label for="age_child1">1세</label><input type="checkbox" id="age_child1" name="age_child"></span>
+									<span class="checkbox_basic"><label for="age_child2">2세</label><input type="checkbox" id="age_child2" name="age_child"></span>
+									<span class="checkbox_basic"><label for="age_child3">3세</label><input type="checkbox" id="age_child3" name="age_child"></span>
+									<span class="checkbox_basic"><label for="age_child4">4세</label><input type="checkbox" id="age_child4" name="age_child"></span>
+									<span class="checkbox_basic"><label for="age_child5">5세</label><input type="checkbox" id="age_child5" name="age_child"></span>
+									<span class="checkbox_basic"><label for="age_child6">6세</label><input type="checkbox" id="age_child6" name="age_child"></span>
+									<span class="checkbox_basic"><label for="age_child7">7세</label><input type="checkbox" id="age_child7" name="age_child"></span>
+								</li>
+								<li>
+									<strong class="label_check_option">초등학생</strong>
+									<span class="checkbox_basic"><label for="grade_elementary1">1학년</label><input type="checkbox" id="grade_elementary1" name="grade_elementary"></span>
+									<span class="checkbox_basic"><label for="grade_elementary2">2학년</label><input type="checkbox" id="grade_elementary2" name="grade_elementary" checked></span>
+									<span class="checkbox_basic"><label for="grade_elementary3">3학년</label><input type="checkbox" id="grade_elementary3" name="grade_elementary"></span>
+									<span class="checkbox_basic"><label for="grade_elementary4">4학년</label><input type="checkbox" id="grade_elementary4" name="grade_elementary"></span>
+									<span class="checkbox_basic"><label for="grade_elementary5">5학년</label><input type="checkbox" id="grade_elementary5" name="grade_elementary"></span>
+									<span class="checkbox_basic"><label for="grade_elementary6">6학년</label><input type="checkbox" id="grade_elementary6" name="grade_elementary"></span>
+								</li>
+								<li>
+									<strong class="label_check_option">중학생</strong>
+									<span class="checkbox_basic"><label for="grade_middle1">1학년</label><input type="checkbox" id="grade_middle1" name="grade_middle"></span>
+									<span class="checkbox_basic"><label for="grade_middle2">2학년</label><input type="checkbox" id="grade_middle2" name="grade_middle"></span>
+									<span class="checkbox_basic"><label for="grade_middle3">3학년</label><input type="checkbox" id="grade_middle3" name="grade_middle"></span>
+								</li>
+								<li>
+									<strong class="label_check_option">고등학생</strong>
+									<span class="checkbox_basic"><label for="grade_high1">1학년</label><input type="checkbox" id="grade_high1" name="grade_high"></span>
+									<span class="checkbox_basic"><label for="grade_high2">2학년</label><input type="checkbox" id="grade_high2" name="grade_high"></span>
+									<span class="checkbox_basic"><label for="grade_high3">3학년</label><input type="checkbox" id="grade_high3" name="grade_high"></span>
+								</li>
+							</ul>
+						</td>
+						</tr>
+						<tr>
+							<th scope="row">주소</th>
+							<td>
+								<p>
+									<label for="postcode"><span class="blind">우편번호</span><input type="text" name="postcode" id="postcode" class="txt" style="width:62px" readonly></label><button type="button" class="btn_basic green size_sm" style="margin-left:12px"><span>우편번호 찾기</span></button>
+								</p>
+								<p class="mt5">
+									<label for="address1" class="blind">기본주소</label><input type="text" name="address1" id="address1" class="txt" style="width:305px"><input type="text" name="address2" id="address2" class="txt" style="width:305px"><label for="address2" class="blind">상세주소</label>
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="join_btn_area">
+					<button type="submit" class="btn_basic green size_lg" onclick="event.preventDefault(); location.href='./joinUpdateConfirm.html'">수정 완료</button>
+				</div>
+			</div>
+			<!-- e : 180903 -->
+		</form>
+
+
+		<!-- <style type="text/css">
+			#footer {
+				height: 180px;
+			}
+
+				#footer ul {
+					overflow: hidden;
+					border-width: 1px 1px 1px 0;
+					border-style: solid;
+					border-color: #d3d3d3 #d3d3d3 #d3d3d3 transparent;
+				}
+
+				#footer li {
+					float: left;
+					border-left: solid 1px #d3d3d3;
+					font-size: 0;
+				}
+
+					#footer li a {
+						float: left;
+					}
+
+				#footer .copyright {
+					margin-top: 15px;
+					text-align: center;
+				}
+		</style> -->
+
+		<!-- s : 180903 공통영역 수정 -->
+		<div id="footer">
+			<ul class="list_familysite">
+				<li><a href="http://truebook.sinsago.co.kr/main/main.aspx" target="_blank"><img src="../../images/join/footer/180903/img_banner1.png" alt="좋은책신사고" /></a></li>
+				<li>
+					<a href="http://textbook.sinsago.co.kr" target="_blank"><img src="../../images/join/footer/180903/img_banner2_1.png" alt="좋은책신사고 교과서 자료실" /></a>
+					<a href="http://teacher.sinsago.co.kr" target="_blank"><img src="../../images/join/footer/180903/img_banner2_2.png" alt="좋은책신사고 선생님 자료실" /></a>
+				</li>
+				<li><a href="http://www.ssen.com" target="_blank"><img src="../../images/join/footer/180903/img_banner3.png" alt="쎈닷컴" /></a></li>
+				<li><a href="http://children.sinsago.co.kr" target="_blank"><img src="../../images/join/footer/180903/img_banner4.png" alt="좋은책어린이" /></a></li>			
+				<li><a href="http://english.sinsago.co.kr" target="_blank"><img src="../../images/join/footer/180903/img_banner5.png" alt="english sinsago" /></a></li>
+			</ul>
+			<p class="copyright">COPYRIGHTⓒ(주)좋은책신사고 ALL RIGHTS RESERVED.</p>
+		</div>
+		<!-- e : 180903 공통영역 수정 -->
+		<!-- s : 180903 이메일 인증번호 입력 팝업 -->
+		<div class="new_popup hide">
+			<div class="new_align_center">
+				<!-- sms -->
+				<div class="new_popup_wrap pop_sms hide" style="width:350px">
+					<div class="popup_header">
+						<strong class="popup_title">인증번호 입력</strong>
+					</div>
+					<div class="popup_content">
+						<p>SMS 인증번호가<br><span class="text_email">010-12340-5678</span>로<br>전송되었습니다.</p>
+						<div class="confirm_number_wrap">
+							<input type="text" name="confirm_number" id="confirm_number" class="placeholder_input">
+							<label for="confirm_number">인증번호 입력</label>
+						</div>
+						<div class="pop_btn_area  text_center">
+							<button type="button" class="btn_basic orange size_sm"><span>인증하기</span></button>
+						</div>
+					</div>
+					<button type="button" class="btn_pop_close"><span class="blind">닫기</span></button>
+				</div>
+				<!-- email -->
+				<div class="new_popup_wrap pop_email hide" style="width:350px">
+					<div class="popup_header">
+						<strong class="popup_title">인증번호 입력</strong>
+					</div>
+					<div class="popup_content">
+						<p>이메일 인증번호가<br><span class="text_email">sinsago1234@sinsago.com</span>로<br>전송되었습니다.</p>
+						<div class="confirm_number_wrap">
+							<input type="text" name="confirm_number_email" id="confirm_number_email" class="placeholder_input">
+							<label for="confirm_number_email">인증번호 입력</label>
+						</div>
+						<div class="pop_btn_area  text_center">
+							<button type="button" class="btn_basic orange size_sm"><span>인증하기</span></button>
+						</div>
+					</div>
+					<button type="button" class="btn_pop_close"><span class="blind">닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- e : 180903 이메일 인증번호 입력 팝업 -->
+	</div>
+	<SCRIPT LANGUAGE='JavaScript'>
+		function __setElement(el, v, a) { if(v) v = v.replace(/__&LT__/g, '<').replace(/__&GT__/g, '>'); if(typeof(el) != 'object') return; if(v != null) switch(el.type) { case 'text': case 'hidden': case 'password': case 'file': el.value = v; break; case 'textarea': el.value = v; break; case 'checkbox': case 'radio': if(el.value == v) el.checked = true; else el.checked = false; break; case 'select-one': for(var i=0; i
+		<el.options.length; i++)=i++) if(el.options[i].value=if(el.options[i].value =v) el.options[i].selected=true; break;=break; default:=default for(var=for(var i=0; i=i<el.length; i++) if(el[i].value == v) el[i].checked = true; el = el[0]; break; } if(typeof(a) == 'object') { if(el.type != 'select-one' && el.length > 1) el = el[0]; for(i in a) el.setAttribute(i, a[i]); } }
+if(_f = document.forms['form1']) {
+	__setElement(_f['passwd'], null, {hname:'비밀번호'});
+	__setElement(_f['passwd_confirm'], null, {hname:'비밀번호 확인', func:'fnPasswdValidate'});
+	__setElement(_f['user_name'], null, {hname:'이름', func:'fnNameValidate'});
+	__setElement(_f['birthday_yyyy'], null, {hname:'생년월일(년)'});
+	__setElement(_f['birthday_mm'], null, {hname:'생년월일(월)'});
+	__setElement(_f['birthday_dd'], null, {hname:'생년월일(일)'});
+	__setElement(_f['sex'], ' ', {hname:'성별'});
+	__setElement(_f['zipcode1'], '07946', {hname:'주소'});
+	__setElement(_f['addr1'], '서울특별시 양천구 공항대로 542 (목동, 양서빌딩)', {hname:'주소'});
+	__setElement(_f['addr2'], '507호', {hname:'주소'});
+	__setElement(_f['email1'], 'cool6700', {hname:'이메일', required:'Y', func:'fnEmailValidate'});
+	__setElement(_f['email2'], 'naver.com', {hname:'이메일', required:'Y'});
+	__setElement(_f['mail_yn'], 'N', {hname:'이메일동의'});
+	__setElement(_f['tel_no1'], null, {hname:'전화번호', option:'number', func:'fnTelValidate'});
+	__setElement(_f['tel_no2'], null, {hname:'전화번호', option:'number', minbyte:'3', maxbyte:'4'});
+	__setElement(_f['tel_no3'], null, {hname:'전화번호', option:'number', minbyte:'3', maxbyte:'4'});
+	__setElement(_f['mobile_no1'], '010', {hname:'휴대폰번호', option:'number', func:'fnTelValidate'});
+	__setElement(_f['mobile_no2'], '4262', {hname:'휴대폰번호', option:'number', minbyte:'3', maxbyte:'4'});
+	__setElement(_f['mobile_no3'], '7627', {hname:'휴대폰번호', option:'number', minbyte:'3', maxbyte:'4'});
+	__setElement(_f['sms_yn'], 'N', {hname:'SMS동의'});
+	__setElement(_f['subject_korea'], '0', {hname:'담당과목(국어)', func:'fnSubjectValidate'});
+	__setElement(_f['subject_english'], '0', {hname:'담당과목(영어)'});
+	__setElement(_f['subject_math'], '0', {hname:'담당과목(수학)'});
+	__setElement(_f['subject_socity'], '0', {hname:'담당과목(사회)'});
+	__setElement(_f['subject_science'], '0', {hname:'담당과목(과학)'});
+	if(!_f.onsubmit) _f.onsubmit = function() { return validate(this); };
+}
+	</SCRIPT>
+	<script type="text/javascript">
+	//<![CDATA[
+
+		var join_gnb = '02';
+
+		$(document).ready(function () {
+			if (join_gnb != "") {
+				$("#join_gnb" + join_gnb).attr("src", $("#join_gnb" + join_gnb).attr("src").replace("off", "on"));
+			}
+		});
+
+	//]]>
+	</script>
+
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-9763427-17', 'sinsago.co.kr');
+		ga('send', 'pageview');
+	</script>
+
+</body>
+</html>
+
+<!-- LAYOUT : layout\layout_join.html -->
+<!-- BODY : join\joinUpdate.html -->
+<!-- EXECUTION TIME : 00:00:00.0937597 -->

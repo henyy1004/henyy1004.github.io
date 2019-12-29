@@ -1,0 +1,331 @@
+@charset "utf-8";
+/* Malgun Web Standard Team PJS */
+
+body.no_scroll {overflow-y: hidden; }
+
+/* [공통] 컨탠츠 내용 넓이 설정 */
+.content_area {position: relative; width: 1000px; margin: 0 auto; }
+
+/* [공통] 사이트 내 이미지 */
+.sticker_img {position: absolute; z-index: 1; }
+.tc { text-align: center;}
+
+/* [공통] 팝업 딤드 */
+.dimmed {position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 10; background-color: rgba(0,0,0,0.8); overflow-y: auto;}
+#wrap {min-width: 1200px; position: relative; background-color: #fff; }
+
+/* [공통] 하단 */
+
+#footer {padding: 65px 0 77px; background-color: #f2f2f2}
+
+/* 알아두세요 목록 */
+.list_footer_notice {margin-top: 31px; }
+.list_footer_notice li {font-size: 15px; color: #888; letter-spacing: -0.03em; }
+.list_footer_notice li + li {margin-top: 8px; }
+.list_footer_notice li span {font-weight: bold; color: #000; text-decoration: underline; }
+
+/* 회원정보 확인버튼 */
+.check_myinfo {
+	width: 130px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff !important;
+	background-color: #433f3e;
+	text-align: center;
+	border-radius: 25px;
+	position: absolute;
+	top: -2px;
+	left: 175px;
+	z-index: 1;
+}
+.event_info {text-align: center; margin-top: 49px; }
+
+/* TOP 버튼 */
+.go_top {position: fixed; right: 20px; z-index: 4; opacity: 0; }
+
+/*************************이벤트 *************************/
+
+/* 메인 */
+#main {
+	padding: 101px 0 64px;
+	background: #5662df url(../img/main_bg.jpg) no-repeat center;
+}
+
+#main .logo {
+	position: absolute;
+	top: -70px;
+	right: 0;
+}
+
+.main_tltie2 {
+	animation-delay: .5s;
+}
+
+.main_title_sub {
+	animation-delay: .4s;
+	animation-duration: 1.3s;
+}
+
+@keyframes fire {
+	0% {
+		-ms-transform: scale(0.3);
+		-webkit-transform: scale(0.3);
+		transform: scale(0.3);
+		opacity: 0;
+	}
+
+	50% {
+		-ms-transform: scale(1);
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		-ms-transform: scale(1);
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes fire {
+	0% {
+		-ms-transform: scale(0.3);
+		-webkit-transform: scale(0.3);
+		transform: scale(0.3);
+		opacity: 0;
+	}
+
+	50% {
+		-ms-transform: scale(1);
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		-ms-transform: scale(1);
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+[class*=main_fire] {
+	animation-name: fire;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+
+.main_fire1 {
+	animation-delay: 1s;
+	animation-duration: 2s;
+}
+
+.main_fire2 {
+	animation-delay: 2s;
+	animation-duration: 2.5s;
+}
+
+.main_fire3 {
+	animation-delay: 2.5s;
+	animation-duration: 2.5s;
+}
+
+
+.main_balloon {
+	animation-delay: 2s;
+}
+
+.main_item {
+	position: relative;
+	margin:50px 0 0 16px;
+}
+
+.main_fire1 {
+	top: -33px;
+	left: 344px;
+}
+
+.main_fire2 {
+    top: 46px;
+	right: 263px;
+}
+
+.main_fire3 {
+    top: 103px;
+	right: 385px;
+}
+
+.main_balloon {
+	z-index: 5;
+	top: 88px;
+	right: 152px;
+}
+
+/* 이벤트 참여 순서! (step) */
+.evt_step {
+	padding: 70px 79px;
+	background-color: #eadeff;
+}
+
+/* url 입력 */
+.form_evt_url {
+	margin: 60px 0 40px;
+}
+
+.form_evt_url > label {
+	display: block;
+}
+
+.form_evt_url > label + label {
+	margin-top: 10px;
+}
+
+.form_evt_url > label input {
+	display: block;
+	width: 796px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	line-height: 1;
+	height: 66px;
+	box-sizing: border-box;
+	padding: 20px 19px;
+	border: 3px solid #baa8f3;
+	border-radius: 3px;
+	background-color: #fff;
+	font-size: 18px;
+}
+
+/* 2019 새책! */
+.evt_book {
+	padding: 59px 0 85px;
+	background-color: #d1f1ff;
+}
+
+/*************************팝업 영역 *************************/
+
+.layer_pop {
+	width: 790px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -395px;
+}
+
+.pop_header {
+	position: relative;
+	background-color: #7250fe;
+	padding: 17px 0 7px;
+	border-radius: 27px 27px 0 0;
+}
+
+.pop_header_shaow {
+	position: absolute;
+	left: 80px;
+	top: 0;
+}
+
+/* 팝업 컨텐츠 */
+.pop_content_wrap {padding: 22px 49px 50px; background-color: #fff; border-radius: 0 0 27px 27px; }
+.pop_title {margin-bottom: 4px; font-size: 16px; font-weight: bold; }
+.pop_title .pop_title_sub {
+	display: inline-block;
+	margin-left: 12px;
+	font-size: 13px;
+	color: #222;
+	vertical-align: top;
+	margin-top: 2px;
+	font-weight: normal;
+}
+
+.btn_pop_login {
+	display: inline-block;
+	width: 74px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	background-color: #646464;
+	font-weight: 600;
+	font-size: 14px;
+	color: #fff !important;
+	border-radius: 5px;
+	vertical-align: top;
+	margin-left: 5px;
+}
+
+/* 팝업 닫기 */
+.close_pop {
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	width: 56px;
+	height: 56px;
+	background-image: url(../img/pop_close.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+}
+
+/* 팝업 동의 영역 */
+.agree_box {border: 1px solid #ddd; margin-bottom: 16px; }
+.agree_box + .pop_title {
+	margin-top: 29px;
+}
+.agree_info {padding: 13px 30px 9px; color: #666; }
+.agree_info > p {margin-bottom: 10px; line-height: 1.45;  }
+.agree_info li {line-height: 1.65; }
+.agree_box .check_agree {display: block; padding: 8px 0; text-align: center; border-top: 1px solid #ddd; background-color: #f0f0f0; box-sizing: border-box; }
+.agree_box .check_agree input {width: 22px; height: 22px; margin: -2px 2px 0 0 ; vertical-align: middle; }
+.agree_box .check_agree span {font-weight:bold; }
+
+.table_basic {width: 100%; border: 1px solid #ddd; }
+.table_basic tr {border-top: 1px solid #ddd; }
+.table_basic th {padding: 11px 0 11px 30px; background-color: #f0f0f0; text-align: left; font-size: 15px; color: #333; }
+.table_basic td {padding: 5px 37px 5px 40px; vertical-align: middle; }
+.table_basic input[type="text"],
+.table_basic select {width: 110px; height: 32px; line-height: 31px; padding: 5px 10px; border: 1px solid #ddd; box-sizing: border-box; }
+.inputViewbox {height: 32px; padding: 5px 10px; border: 1px solid #ddd; box-sizing: border-box; color: #666;}
+.table_basic .pop_btn {display: inline-block; padding: 0 17px; line-height: 31px; height: 32px; margin-left: 8px; border: 0; background-color: #00b6fb; color: #fff; font-weight: bold; vertical-align: top; cursor: pointer;}
+
+.list_text {margin-top: 17px; }
+.list_text li {font-size: 13px; color: #888; line-height: 1.5; }
+
+.pop_btn_area {margin-top: 40px; text-align: center; }
+.pop_btn_area .pop_btn {cursor: pointer;}
+.pop_desc_sns {margin-top: 5px; font-size: 13px; color: #6a32df; }
+.pop_form_dash{
+	display: inline-block;
+	width: 20px;
+	vertical-align: middle;
+	margin-top: -2px;
+	text-align: center;
+}
+
+.pop_alarm_info {
+	margin-top: 35px;
+}
+
+.pop_alarm_info >  strong {
+	color: #333;
+	display: block;
+}
+
+.pop_alarm_info > ul {
+	margin-top: 5px;
+}
+
+.pop_alarm_info > ul li {
+	position: relative;
+	padding-left: 15px;
+	color: #888;
+	line-height: 1.55;
+}
+
+.pop_alarm_info > ul li:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '※';
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>쎈닷컴 개편 인덱스 페이지</title>
+	<style>
+		ul>li+li{
+			margin-top:8px;
+		}
+
+		.guide_label{width:10px;height:10px;border-radius:50%;display:inline-block;vertical-align:middle;margin-left:20px;}
+		.guide_label_complete{background-color:green;}
+		.guide_label_modify{background-color:red;}
+		.guide_label_ing{background-color:yellow;border: 4px solid orange}
+
+		.guide_label_list{overflow: hidden;}
+		.guide_label_list li{padding:0;margin:0;width:100px;list-style:none;float:left;margin-right:20px;}
+		.guide_label_list .guide_label{margin:0;}
+	</style>
+</head>
+<body>
+	<h1>목차</h1>
+	<ul class="guide_label_list">
+		<li>
+			검수요청 : <span class="guide_label guide_label_ing"></span>
+		</li>
+		<li>
+			수정중 : <span class="guide_label guide_label_modify"></span>
+		</li>
+		<li>
+			완료 : <span class="guide_label guide_label_complete"></span>
+		</li>
+	</ul>
+	<ul>
+		<li><h2>메인</h2>
+			<ul>
+				<li><a target="_blank" href="src/page/guide.html">디자인공통가이드(참고용)</a></li>
+				<li><a target="_blank" href="src/page/main/intro.html">인트로<span class="guide_label guide_label_complete"></span></a></li>
+				<li><a target="_blank" href="src/page/main/main.html">메인<span class="guide_label guide_label_complete"></span></a></li>
+				<li><a target="_blank" href="src/page/main/main_menu_open.html">슬라이딩 메뉴 오픈<span class="guide_label guide_label_complete"></span></a></li>
+				<li><a target="_blank" href="src/page/main/main_menu_open_logout.html">슬라이딩 메뉴 오픈 (로그아웃)<span class="guide_label guide_label_complete"></span></a></li>
+				<li><a target="_blank" href="src/page/main/main_visual_list.html">메인 이벤트배너 전체보기(코드작업)<span class="guide_label guide_label_complete"></span></a></li>
+				<li><a target="_blank" href="src/page/main/main_visual_list2.html">메인 이벤트배너 전체보기(이미지작업)<span class="guide_label guide_label_ing"></span></a></li>
+			</ul>
+		</li>
+		<li><h2>강좌찾기</h2>
+			<ul>
+				<li><a target="_blank" href="src/page/course/course_search_nodata.html">검색결과없음<span class="guide_label guide_label_complete"></span></a></li>
+				<li><a target="_blank" href="src/page/course/course_search_package.html">패키지<span class="guide_label guide_label_complete"></span></a></li>
+				<li><a target="_blank" href="src/page/course/course_search_all.html">전범위<span class="guide_label guide_label_complete"></span></a></li>
+				<li><a target="_blank" href="src/page/course/course_search_unit.html">단원<span class="guide_label guide_label_complete"></span></a></li>
+				<li><a target="_blank" href="src/page/course/course_search_question.html">문항<span class="guide_label guide_label_ing"></span></a></li>
+				<li><a target="_blank" href="src/page/course/course_search_special.html">특강<span class="guide_label guide_label_ing"></span></a></li>
+			</ul>
+		</li>
+		<li><h2>강좌결제</h2>
+			<ul>
+				<li><a target="_blank" href="src/page/course/course_pay_select.html">패키지강좌결제_패키지선택<span class="guide_label guide_label_complete"></span></a></li>
+				<li><a target="_blank" href="src/page/course/course_pay.html">패키지강좌결제_패키지일반<span class="guide_label guide_label_complete"></span></a></li>
+				<li><a target="_blank" href="src/page/course/course_pay_question.html">패키지강좌결제_문항선택<span class="guide_label guide_label_complete"></span></a></li>
+
+			</ul>
+		</li>
+		<li><h2>추천강좌</h2>
+			<ul>
+				<li><a target="_blank" href="src/page/course/course_recommend.html">추천강좌<span class="guide_label guide_label_ing"></span></a></li>
+			</ul>
+		</li>
+		<li><h2>쿠폰함</h2>
+			<ul>
+				<li><a target="_blank" href="src/page/coupon/coupon.html">쿠폰함<span class="guide_label guide_label_complete"></span></a></li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

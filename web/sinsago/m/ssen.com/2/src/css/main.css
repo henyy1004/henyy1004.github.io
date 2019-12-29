@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+/* Intro */
+.intro_wrap .footer_wrap{border-top:0}
+.intro_content{background-color:#fdd119;text-align:center}
+.list_link_intro{padding-bottom:55px;text-align: center;}
+.list_link_intro li{display:inline-block;width:18%;}
+.list_link_intro li+li{margin-left:8px}
+.list_link_intro li a{display:block}
+
+/* Main */
+/* Main Visual */
+.main_visual{position:relative}
+.loc_banner_page{display:inline-block;position:absolute;right:10px;bottom:10px;z-index:10}
+.loc_banner_page .swiper-pagination{width:70px;height:22px;padding:0 24px 0 10px;background:rgba(0,1,36,.2);box-sizing:border-box;font-size:13px;color:#fff;line-height:23px;border-radius:11px}
+.loc_morebanner{position:absolute;top:50%;right:10px;width:10px;height:10px;margin-top:-5px}
+.loc_morebanner:after,.loc_morebanner:before{position:absolute;z-index:20;background:#fff;content:'';border-radius:5px}
+.loc_morebanner:after{top:50%;left:0;width:100%;height:2px;margin-top:-1px}
+.loc_morebanner:before{top:0;left:50%;width:2px;height:100%;margin-left:-1px}
+
+/* Main Banner */
+.main_banner{margin: 16px 16px 0;}
+.main_banner .box_banner{background-color:#e4e4e4;font-size:15px;color:#000;line-height:1.4;text-align:center;letter-spacing:-.05em}
+.main_banner .box_banner span{display:inline-block;margin-top:4px;}
+.main_banner .box_banner+.box_banner{border-left:1px solid #fff}
+.main_banner .box_banner.bg_red{background-color:#ff6969}
+.main_banner .box_banner.bg_green{background-color:#3dc9d0}
+.main_banner .box_banner.bg_blue{background-color:#019cdb}
+.main_banner .box_banner.bg_yellow{background-color:#ffc149}
+.main_banner .top_banner_area .box_banner{height:80px;color:#fff}
+.main_banner .top_banner_area .box_banner.bg_yellow{color:#000}
+.main_banner .middle_banner_area .box_banner{display:block;border-top:1px solid #fff;border-bottom:1px solid #fff}
+.main_banner .bottom_banner_area .box_banner{height:50px}
+.main_banner .bottom_banner_area [class*="icon_"]{margin-right:4px;}
+.main_banner .bottom_banner_area .ico_best{margin-top:2px;}
+.main_banner .bottom_banner_area .icon_search_sm_black{margin-top:2px;}
+.main_banner .bottom_banner_area .icon_play_balck{margin-top:4px;}
+.main_banner .bottom_banner_area img{display: block}
+/* Main Board */
+.main_board{margin:8px 16px 0}
+.main_board .board_list_type1{margin: 0 -16px;padding:16px 16px 0;}
+/* Main 하단링크 */
+.main_link_bottom{overflow:hidden;margin:16px 16px 18px}
+.main_link_bottom > a{display:block;width:49.8%;padding:18px 10px 14px; border: 1px solid #e4e4e4; box-sizing:border-box;color:#000;line-height:1.1;}
+.main_link_bottom > a .text_cscall{color:#60bb46;float:right}
+.main_link_bottom > a .icon_download_sm{margin-top:-1px;float: right}
+
+/* Main visual list */
+#container_banner_all{
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index: 999;
+    overflow-y:auto;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.banner_all_wrap{position: relative}
+
+.banner_all_wrap .term_event {
+    display: inline-block;
+    height: 19px;
+    padding: 0 11px;
+    margin-top: 12px;
+    background: #fff;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #666;
+    line-height: 21px;
+    text-align: center;
+    min-width: 140px;
+    letter-spacing: 0;
+    border-radius: 10px;
+}
+
+.banner_all_wrap > a {
+    display:block;
+    height:100%;
+}
+
+.img_point_banner{
+    position: absolute;
+    top:40px;
+    right:0;
+    width:122px;
+    height:auto;
+}
+
+.detail_banner_event {
+    position: absolute;
+    top:30px;
+    left:16px;;
+}
+
+.title_banner_event{
+    font-size:15px;
+    color:#fff;
+    line-height: 1.2;
+    letter-spacing: -.05em;
+}
+
+.title_banner_event strong{
+    display:block;
+    font-size: 23px;
+}
+
+.title_banner_event  .text_sub_top{
+    display: block;
+    margin-bottom: 6px;
+}
+
+.title_banner_event strong{
+    margin-bottom: 6px;
+}
+
+.loc_spot_close{
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    z-index: 20;
+    width: 36px;
+    height: 36px;
+    margin-left: -18px;
+}
+
+.btn_spot_close{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+   background: url(../images/common/btn_close_circle.png) no-repeat 0 0;
+   background-size: 100% auto;
+}
+
+/* 미디어쿼리 - 아이폰 5/5se 대응 */
+@media all and (max-width:320px){
+/* Main Banner */
+.main_banner .box_banner{font-size:14px;letter-spacing:-.1em}
+/* Main 하단링크 */
+.main_link_bottom > a{padding:18px 8px 14px;font-size:14px}
+}

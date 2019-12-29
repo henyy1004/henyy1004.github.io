@@ -1,0 +1,41 @@
+@charset "euc-kr";
+	
+
+#support_link{ margin-left:340px; }
+
+.interview2_3{padding:0 0 0 30px; width:575px;  margin-bottom:42px;}
+.interview2_4{padding:0 0 0 30px; margin-bottom:273px; width:575px; }
+.fr_mt{margin-top:-21px; float:right; }
+
+.boardlist table thead tr th {padding:10px 0 8px 0; text-align:center; background:url("../../images/m/board/line.jpg") left 14px no-repeat;}
+.boardlist2 table thead tr th {padding:8px 0 8px 0; text-align:center; background:url("../../images/m/board/line.jpg") left 12px no-repeat;}
+
+.open_class table tbody tr.close td{ border-bottom:1px solid #cccccc;  }
+
+.table_type2 thead tr th {padding:6px 0 2px 0; height:13px;}
+/*.table_type1 {padding-top:2px; }*/
+
+.table_type11 table tbody tr td {line-height:18px; padding:6px 0 3px 0;  }
+.table_type12 table tbody tr td {line-height:12px; color:#666666; padding:4px 0 2px 0;   }
+.table_type13 {padding-top:2px; }
+
+h4.classroom_h4 {background:url("../../images/m/comm/bul/bullet_arrow05.jpg") no-repeat left top; line-height:14px;  padding:1px 0 0 18px;}
+
+.choiceQuestion li{height:21px; padding:4px 0 3px 0; }
+.choiceQuestion02{margin:20px 0 10px 0;}
+
+.calendar tbody td.sun div p span.class{width:45px; }
+.calendar tbody td div p span.class{width:49px;}
+
+/* 내공부방메인 라우드처리 20101111 */
+#content_classroom  #contentin02 .box01{left:24px; }
+#content_classroom  #contentin02 .box02{left:24px; }
+
+/* 서브메인 배너 버튼 20110404 */
+.btn_order{position:absolute; left:5px; top:125px; margin-top:-13px}
+#event_banner, #teacher_banner, #lecture_banner{margin-top:-13px}
+
+.teacherProfile{display:none}
+
+/* 11-06-14 htsim@sinsago.co.kr 학부모 콘텐츠 추가로 인한 CSS */
+#mentor {margin-bottom:0px}

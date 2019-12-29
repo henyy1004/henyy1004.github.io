@@ -1,0 +1,130 @@
+﻿@charset "utf-8";
+/* Malgun Web Standard Team KKS */
+
+/* 폰트 :: [컨텐츠 공통] */
+@font-face{font-family:'Noto';font-style:normal;font-weight:100;src:url('../../font/notokr-light.eot');src:url('../../font/notokr-light.eot?#iefix') format('embedded-opentype'),url('../../font/notokr-light.woff2') format('woff2'),url('../../font/notokr-light.woff') format('woff')}
+@font-face{font-family:'Noto';font-style:normal;font-weight:300;src:url('../../font/notokr-regular.eot');src:url('../../font/notokr-regular.eot?#iefix') format('embedded-opentype'),url('../../font/notokr-regular.woff2') format('woff2'),url('../../font/notokr-regular.woff') format('woff')}
+@font-face{font-family:'Noto';font-style:normal;font-weight:500;src:url('../../font/notokr-medium.eot');src:url('../../font/notokr-medium.eot?#iefix') format('embedded-opentype'),url('../../font/notokr-medium.woff2') format('woff2'),url('../../font/notokr-medium.woff') format('woff')}
+@font-face{font-family:'Noto';font-style:normal;font-weight:700;src:url('../../font/notokr-bold.eot');src:url('../../font/notokr-bold.eot?#iefix') format('embedded-opentype'),url('../../font/notokr-bold.woff2') format('woff2'),url('../../font/notokr-bold.woff') format('woff')}
+
+/* 단락 :: [컨텐츠 공통] */
+.section{position:relative;zoom:1}
+.section:after{display:block;clear:both;content:''}
+.section.v10{margin-bottom:10px}
+.section.v20{margin-bottom:20px}
+.section.v25{margin-bottom:25px} 
+.section.v30{margin-bottom:30px}
+.section.v35{margin-bottom:35px}
+
+/* 컨텐츠 공통 */
+.evt_wrap{position:relative}
+.evt_wrap img{vertical-align:top}
+.blind{overflow:hidden;position:absolute;top:0;left:-999em;line-height:0}
+.evt_inner{position:relative;width:1060px;margin:0 auto}
+.tit_spot{position:relative;text-align:center}
+.tit_spot span{display:block;overflow:hidden;position:absolute;text-indent:-999em}
+.fixed{overflow:hidden !important}
+.show{display:block !important}
+
+/* 팝업 */
+.layer_wrap{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:99;background:rgba(0, 0, 0, 0.3)}
+.layer_content{position:relative;top:50%;width:400px;height:530px;margin:-280px auto 0;padding-top:30px;background-color:#444}
+.btn_pop_close{position:absolute;top:3px;right:7px;padding:5px;background:none}
+.btn_pop_close img {left:0}
+.link_coupon {position:absolute;right:52px;bottom:86px;width:100px;height:20px}
+
+/* header */
+.evt_header{position:relative;background:#3adaec url(../../images/event/bg_check_pattern.png) repeat-x}
+.evt_spot{height:763px;background:url(../../images/event/bg_spot.png) no-repeat}
+.h2_spot_v1{width:296px;height:139px;top:146px;left:95px;background:url(../../images/event/h2_spot_v1.png) no-repeat}
+.h2_spot_v1.bounceIn{animation-delay: .5s}
+.h2_spot_v2{width:273px;height:169px;top:134px;left:413px;z-index:3;background:url(../../images/event/h2_spot_v2.png) no-repeat}
+.h2_spot_v2.bounceIn{animation-delay: .7s}
+.h2_spot_v3{width:201px;height:123px;top:158px;left:703px;z-index:3;background:url(../../images/event/h2_spot_v3.png) no-repeat}
+.h2_spot_v3.bounceIn{animation-delay: .9s}
+
+/* 스탬프 */
+.stamp {position:absolute;top:167px;right:30px;z-index:3;width:200px;height:188px}
+.img_stamp{position:absolute;top:0;right:0;width:150px;height:146px;background:url(../../images/event/img_stamp.png) no-repeat;animation:stampMotion .6s 1.5s forwards ease-in-out}
+.img_marking{position:absolute;left:0;bottom:0;width:100px;height:100px;background:url(../../images/event/img_marking.png) no-repeat;opacity:0;animation:stampMarkingMotion 1s 2s forwards ease-in}
+:root .img_marking{opacity:1 \0/IE9}/* ie9에서 스탬프 마킹 보이기 */
+
+@keyframes stampMotion {
+  0% {}
+  70% {
+    transform: scale(1.2);
+    transform-origin: 50% 50%;
+    top:-37px;
+    right:-57px;
+  }
+  100% {}
+}
+
+@keyframes stampMarkingMotion {
+  0% {}
+  20% {
+    transform-origin: 50% 50%;
+    transform: rotate(-15deg) scale(2);
+  }
+  100% {
+    opacity:1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+/* 별 아이콘 */
+.shine_star1, .shine_star2 {position:absolute;top:0;left:0}
+.shine_star1{animation:shineStar 2.5s 1s infinite}
+.shine_star2{animation:shineStar 2.5s 1.8s infinite}
+
+@keyframes shineStar {
+  0% {}
+  50% {opacity:0}
+  100% {opacity:1}
+}
+
+/* 출첵 이벤트 혜택 */
+.intro_evt1{position:relative;background:#00c0d7 url(../../images/event/bg_evt1.png) no-repeat 50% -10px}
+.content_evt1{height:736px;background:url(../../images/event/cont_evt1.png) no-repeat 50% 0}
+
+/* 출석체크 현황 */
+.intro_evt2{position:relative;background:#a2f0f9 url(../../images/event/bg_check_pattern.png) repeat}
+.content_evt2{height:1010px;background:url(../../images/event/cont_evt2.png) no-repeat 50% 0}
+/* 출석체크 버튼 */
+.btn_check{position:absolute;top:77px;left:0;right:0;width:594px;height:68px;margin: 0 auto;background:url(../../images/event/btn_check.gif) no-repeat}
+.text_date:after{display:inline-block;margin-top:3px;width:216px;height:24px;background:url(../../images/event/text_after_date.png) no-repeat;content:'';vertical-align:top}
+.text_day_count, .text_day_logout{color:#e70000}
+.text_day_count:after{display:inline-block;margin-top:3px;width:75px;height:24px;background:url(../../images/event/text_after_day.png) no-repeat;content:'';vertical-align:top}
+/* 출석체크 캘린더 */
+.check_calendar_area{width:910px;margin:0 auto;padding-top:360px}
+.check_calendar {width:100%;margin-left:-1px}
+.check_calendar td {width:130px;height:114px}
+.check_calendar td > div{position:relative}
+/* 출석체크 완료 도장 */
+.stamp_complete{position:absolute;left:0;right:0;top:0;bottom:0;width:79px;height:80px;margin:auto;background:url(../../images/event/stamp_complete.png) no-repeat}
+
+/* 꿀이벤트 친구에게 공유하기 */
+.intro_evt3{position:relative;background-color:#93f4c3}
+.content_evt3{height:408px;background: url(../../images/event/cont_evt3.png) no-repeat}
+
+/* 남은 방학 알차게 2학기 수학 쎈닷컴에서 완벽대비! */
+.intro_evt4{position:relative;background:#6ae9f4 url(../../images/event/bg_slash_pattern.png) repeat-x}
+.content_evt4{height:732px;background:url(../../images/event/cont_evt4.png) no-repeat 50% 0}
+.list_class{position:absolute;top:248px;left:74px}
+.list_class>li{position:relative;width:442px;height:414px;float:left}
+.list_class>li+li{margin-left:26px}
+.list_class .btn_class{position:absolute;bottom:30px;right:0;left:0;width:395px;margin:0 auto}
+
+/* 이벤트 유의사항 */
+.intro_evt5{position:relative;background-color:#f5f5f5}
+.content_evt5{height:328px;background: url(../../images/event/cont_evt5.png) no-repeat}
+.check_status{position:absolute;top:244px;width:100%;font-family: 'Noto';font-size:24px;font-weight:500;color:#262626;text-align:center}
+.link_notice, .link_member{position:absolute;top:227px;width:54px;height:17px}
+.link_notice{left:326px}
+.link_member{left:526px}
+
+/* 미디어쿼리 */
+@media all and (max-width:360px){
+
+}
+

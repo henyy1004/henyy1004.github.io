@@ -1,0 +1,784 @@
+@charset "utf-8";
+
+html,body {
+	height: 100%;
+}
+
+#wrap {
+	position: relative;
+	min-width: 1000px;
+}
+
+button {
+	cursor: pointer;
+}
+
+body.no_scroll {
+	overflow-y: hidden;
+}
+
+/* [공통] 컨탠츠 내용 넓이 설정 */
+.content_area {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/* 팝업 */
+.modal_screen {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	display: none;
+	overflow-y: scroll;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.popup_item {
+	position: relative;
+	display: none;
+	width: 790px;
+	margin: 80px auto;
+	border-radius: 27px;
+	background-color: #fff;
+}
+
+.pop_header {
+	padding: 10px 84px 16px 79px;
+	border-radius: 27px 27px 0 0;
+	background-color: #bab5ef;
+    text-align: center;
+}
+
+.btn_close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 10px;
+}
+
+.pop_btn_area {
+	text-align: center;
+}
+
+/* 팝업 컨텐츠 */
+.pop_content {
+	padding: 19px 50px 46px; 
+	border-radius: 0 0 27px 27px; 
+	background-color: #fff; 
+}
+
+.pop_title {
+	margin-bottom: 4px;
+	color: #231916; 
+	font-size: 16px; 
+	font-weight: bold;
+}
+
+.pop_title.point {
+	color: #e4282f;
+}
+
+.popup_item .pop_btn {
+	display: inline-block;
+    height: 32px;
+    margin-left: 10px;
+    padding: 0 12px;
+    border: 0;
+    background-color: #646464;
+    color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+    line-height: 31px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.popup_item .pop_btn.v2 {
+	padding: 0 15px;
+}
+
+.point_color {
+	margin-bottom: 18px;
+	color: #e4282f !important;
+}
+
+/* 개인정보 수집 동의 */
+.agree_box {
+	margin-bottom: 3px; 
+	border: 1px solid #ddd; 
+}
+
+.agree_info {
+	padding: 10px 30px 13px; 
+	color: #666;
+}
+
+.agree_info > p {
+	margin-bottom: 10px; 
+}
+
+.agree_info li {
+	line-height: 1.55; 
+	letter-spacing: -0.5px;
+}
+
+.agree_box .check_agree {
+	display: block; 
+	box-sizing: border-box; 
+	height: 38px; 
+	padding: 7px 0 0; 
+	border-top: 1px solid #ddd; 
+	background-color: #f0f0f0; 
+	text-align: center; 
+}
+
+.agree_box .check_agree input {
+	width: 24px; 
+	height: 24px; 
+	margin: -2px 0 0 0 ;
+	vertical-align: middle; 
+}
+
+.agree_box .check_agree span { 
+	color: #333;
+	font-weight:bold;
+}
+
+.table_basic {
+	width: 100%; 
+	border: 1px solid #ddd; 
+}
+
+.table_basic tr {
+	border-top: 1px solid #ddd; 
+}
+
+.table_basic th {
+	padding: 10px 0 10px 30px; 
+	background-color: #fff1f2; 
+	color: #333; 
+	font-size: 15px; 
+	text-align: left; 
+}
+
+.table_basic td {
+	padding: 5px 37px 4px 40px;
+	vertical-align: middle; 
+}
+
+.table_basic input[type="text"],
+.table_basic select { 
+	box-sizing: border-box;
+	width: 110px; 
+	height: 32px; 
+	padding: 5px 10px; 
+	border: 1px solid #ddd; 
+}
+
+.inputViewbox { 
+	box-sizing: border-box;
+	height: 32px; 
+	padding: 5px 10px; 
+	border: 1px solid #ddd; 
+	color: #666;
+}
+
+
+/*************************
+	메인 타이틀 부분
+*************************/
+#main_title {
+	position: relative;
+	padding-bottom: 150px;
+	background-color: #bab5ef;
+}
+
+/* 신사고 로고 */
+#main_title .logo {
+	position: absolute;
+	top: 20px;
+	right: 0px;
+}
+
+.main_area {
+	padding-top: 66px;
+}
+
+.main_contetn {
+
+}
+
+.main_text {
+	margin-bottom: 20px;
+}
+
+
+/* 우공비 일일독해 */
+.book_preview {
+	padding: 60px 0 70px;
+}
+
+.book_preview .btn_area{
+	margin: 25px 0 50px;
+}
+
+.parents_comment {
+	padding: 62px 0 59px;
+	background-color: #f6f6f6;
+}
+
+
+/* 무지 캐릭터 */
+.img_muji {
+	position: absolute;
+	bottom: -65px;
+	left: 39px;
+	z-index: 10;
+}
+
+
+/* 이벤트 */
+/* 체험단 신청하기 */
+.experience_apply {
+	padding: 55px 0;
+	background-color: #ffa800;
+}
+
+/* 희망도서 선택 */
+.hope_book {
+	padding: 50px 0;
+}
+
+.reason_application {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.btn_book_select {
+	cursor: pointer;
+}
+
+.select_box {
+	position: absolute;
+	z-index: 10;
+	display: none;
+	box-sizing: border-box;
+	width: 260px;
+	height: 240px;
+	padding: 28px 24px;
+	border: 4px solid #231916;
+	border-radius: 18px;
+	background-color: #ffa800;
+}
+
+.select_box.on{
+	display: block;
+}
+
+.select_box label input[type="checkbox"] {
+    display: none;
+}
+
+.select_box label {
+	display: block;
+}
+
+.select_box .check_box {
+	display: inline-block;
+}
+
+.select_box input[type="checkbox"] + .check_box:before {
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url("../img/check_off.png") no-repeat;
+	background-size: 26px 26px;
+	content: '';
+}
+
+.select_box input[type="checkbox"]:checked + .check_box:before {
+	background-image: url(../img/check_on.png);
+}
+
+.book_select_area,
+.book_write_area {
+	float: left;
+}
+
+.book_write_area {
+	width: 620px;
+	margin-left: 9px;
+}
+
+.book_write_area textarea,
+.book_write_area input {
+	overflow-y: auto;
+    box-sizing: border-box;
+    width: 100%;
+	padding: 30px 24px 3px;
+	border-radius: 18px;
+    background-color: #ffedc9;
+    outline: none;
+    color: #222;
+    font-size: 18px;
+}
+.book_write_area textarea {
+	height: 90px;
+}
+
+.box_share_url {
+	display: block;
+	box-sizing: border-box;
+	height: 70px;
+	margin-top: 10px;
+	border-radius: 17px;
+	background-color: #fff;
+}
+
+.book_write_area input {
+	padding: 11px 24px 14px;
+}
+
+.btn_url_submit {
+	display: inline-block;
+	float: left;
+	width: 180px;
+	height: 170px;
+	margin-left: 10px;
+}
+
+/* 댓글 */
+.message_area {
+	padding: 70px 0;
+	background-color: #f2f2f2;
+}
+
+.message_area h3 {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+/* 메시지 리스트 */
+.list_message {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.list_message li {
+	position: relative;
+	display: table;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 120px;
+	padding: 24px 23px 24px 123px;
+	border: #f0f0f0 solid 3px;
+	border-radius: 17px;
+	background-color: #fff;
+	color: #222;
+	font-size: 18px;
+}
+
+.list_message li + li {
+	margin-top: 10px;
+}
+
+/* 메시지 텍스트 */
+.list_message li > span {
+	display: table-cell;
+	padding-right: 126px;
+	line-height: 1.45;
+	vertical-align: middle;
+}
+
+/* 닉네임 */
+.list_message .nickname {
+	position: absolute;
+	top: 50%;
+	right: 28px;
+	margin-top: -12px;
+	color: #888;
+	font-size: 15px;
+}
+
+/* 내 댓글 삭제하기 */
+.list_message .delete_my_message {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	width: 24px;
+	height: 24px;
+	background: url(../img/ico_close.png) no-repeat;
+}
+
+/* 카카오 캐릭터 설정 */
+.list_message li:before {
+	position: absolute;
+	top: 50%;
+	left: 23px;
+	z-index: 1;
+	width: 59px;
+	height: 80px;
+	margin-top: -40px;
+	background-image: url(../img/sp_kakao_book_icon.png);
+	background-repeat: no-repeat;
+	content: '';
+}
+
+/* 카카오책1 */
+.list_message li.kakao1:before {background-position: 0 0;}
+/* 카카오책2 */
+.list_message li.kakao2:before {background-position: -59px 0;}
+/* 카카오책3 */
+.list_message li.kakao3:before {background-position: -118px 0;}
+/* 카카오책4 */
+.list_message li.kakao4:before {background-position: -177px 0;}
+/* 카카오책5 */
+.list_message li.kakao5:before {background-position: -239px 0;}
+/* 카카오책6 */
+.list_message li.kakao6:before {background-position: -295px 0}
+
+/* 페이저 버튼영역 */
+.message_pager {
+	margin-top: 18px;
+	text-align: center;
+}
+
+/* 페이저 기본 설정 */
+.message_pager a {
+	display: inline-block;
+}
+
+.message_pager > span {
+	display: inline-block;
+	margin: 0 7px 0 13px;
+	vertical-align: middle;
+}
+
+.message_pager .pager_num {
+	margin: 0 1px;
+	padding: 3px;
+	color: #999;
+	font-size: 17px;
+}
+
+.message_pager .pager_num.on {
+	color: #333;
+	font-weight: bold;
+}
+
+.message_pager .pager_num:hover {
+	text-decoration: underline;
+}
+
+/* 화살표 설정 */
+.message_pager [class^='arrow_'] {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #b7b7b7;
+}
+
+.message_pager [class^='arrow_']:hover {
+	background-color: #adadad;
+}
+
+/* 화살표 아이콘 기본 설정 */
+.message_pager [class^='arrow_']:before {
+	display: inline-block;
+	height: 8px;
+	margin-bottom: -2px;
+	background-image: url(../img/sprite.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	content: '';
+}
+
+/* 처음으로, 마지막으로 */
+.message_pager .arrow_first:before,
+.message_pager .arrow_last:before {
+	width: 10px;
+}
+
+/* 이전,다음 */
+.message_pager .arrow_prev:before,
+.message_pager .arrow_next:before {
+	width: 5px;
+}
+
+.message_pager .arrow_prev:before {
+	margin-left: -1px;
+}
+
+.message_pager .arrow_next:before {
+	margin-right: -1px;
+}
+
+/* 화살표 버튼간 간격설정 */
+.message_pager .arrow_prev,
+.message_pager .arrow_last {
+	margin-left: -2px;
+}
+
+.message_pager .arrow_next:before,
+.message_pager .arrow_last:before {
+	background-position: 0 -13px;
+}
+
+
+/* 텍스트 모션 */
+.bounceInDown {
+	-webkit-animation-name: bounceInDown;
+	animation-name: bounceInDown;
+	animation-duration: 1.5s;
+}
+
+/* 샤인모션 */
+.motion_shine {
+    position: absolute;
+	top: 190px;
+	right: 0;
+	left: -80px;
+    z-index: 8;
+	display: block;
+    width: 870px;
+	height: 400px;
+    background: linear-gradient(-67deg, rgba(194,207,252,0) 45%, rgba(194,207,252,5) 50%,rgba(194,207,252,0) 50%,rgba(194,207,252,0) 50%);
+    background-size: 140%;
+    animation: shine 1.5s forwards;
+    animation-iteration-count: 1;
+}
+
+/*************************
+	스크랩 영역
+*************************/
+.scrap_area {
+	padding: 60px 0 70px;
+	background-color: #bab5ef;
+}
+
+.scrap_area .btn_url_submit {
+	width: 190px;
+	height: 130px;
+	margin-left: 21px;
+}
+
+.scrap_area .box_share_url {
+	height: 60px;
+    padding: 18px 29px 22px 24px;
+}
+
+.scrap_area .box_share_url input {
+    width: 100%;
+    background-color: transparent;
+    color: #222;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+/*************************
+	참여하기 공통 버튼
+*************************/
+.btn_participate {
+	display: inline-block;
+	margin-top: 30px;
+	text-align: center;
+}
+
+/* 공유 url 입력하기 */
+.url_write {
+	overflow: hidden;
+	width: 960px;
+	margin: 25px 0 0 30px;
+}
+
+.url_write ul {
+	float: left;
+	width: 620px;
+}
+
+/*************************
+	하단
+*************************/
+#footer {
+	padding: 50px 0 184px;
+	background-color: #f2f2f2;
+}
+
+#footer .content_area {
+	box-sizing: border-box;
+	padding: 0 24px;
+}
+
+/* 알아두세요 목록 */
+.list_footer_notice {
+	margin-top: 21px;
+}
+
+.list_footer_notice li {
+	color: #888;
+	font-size: 15px;
+	letter-spacing: -0.03em;
+}
+
+.list_footer_notice li + li {
+	margin-top: 8px;
+}
+
+/* 알아두세요 목록 */
+.list_footer_notice {
+	margin-top: 28px;
+}
+
+.list_footer_notice li {
+	color: #888;
+	font-size: 15px;
+	letter-spacing: -0.5px;
+}
+
+.list_footer_notice li + li {
+	margin-top: 3px;
+}
+
+.event_info {
+	margin-top: 59px;
+	text-align: center;
+}
+
+.check_myinfo {
+    position: absolute;
+    top: -2px;
+    left: 197px;
+    z-index: 1;
+}
+
+/* TOP 버튼 */
+.go_top {
+	position: fixed;
+	right: 20px;
+	z-index: 4;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	background: url(../img/sprite.png) no-repeat -24px 0;
+}
+
+/* 혜인 애니메이션 추가 코드 */
+#main_title {
+	padding-bottom: 55px;
+}
+
+.main_area {
+	position: relative;
+}
+
+.main_text {
+	position: relative;
+	margin-bottom: 19px;
+}
+
+.main_text.fist {
+	animation-delay: .2s
+}
+
+.main_text.second {
+	margin-bottom: 5px;
+	animation-delay: .5s
+}
+
+
+.main_text.third {
+	margin-bottom: 34px;
+	animation-delay: .8s
+}
+
+/* 우공비 일일독해 책 이미지 */
+.main_book {
+	position: relative;
+	display: inline-block;
+	margin: 11px 0 0 39px;
+	transform-origin: bottom;
+	animation-delay: 3.3s;
+}
+
+.main_notice {
+	margin-top: 39px;
+}
+
+/* 애니메이션 이미지요소 공통 */
+.spot_black_wrap, .spot_black_wrap > img, .spot_star, .spotlight_sm, .spotlight_lg {
+	position: absolute;
+}
+
+/* 왼쪽 검은 다이아몬드 반짝이 */
+.spot_black_wrap.left {
+	top: 268px;
+	left: 114px;
+	width: 54px;
+	height: 71px;
+}
+
+.spot_black_wrap.left .spot_black1 {
+	top: 0;
+	right: 0;
+	width: 18px;
+	height: 18px;
+	animation: spotShine 1.3s ease-in-out infinite;
+}
+
+.spot_black_wrap.left .spot_black2 {
+	bottom: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	animation: spotShine 1.7s ease-in-out infinite;
+}
+
+/* 오른쪽 검은 다이아몬드 반짝이 */
+.spot_black_wrap.right {
+	top: 132px;
+	right: 176px;
+	width: 61px;
+	height: 80px;
+}
+
+.spot_black_wrap.right .spot_black1 {
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	animation: spotShine 1.3s ease-in-out infinite;
+}
+
+.spot_black_wrap.right .spot_black2 {
+	right: 0;
+	bottom: 0;
+	width: 28px;
+	height: 28px;
+	animation: spotShine 1.7s ease-in-out infinite;
+}
+
+/* 별 이미지 */
+.spot_star {
+	top: 132px;
+	left: 198px;
+}
+
+.spotlight_sm, .spotlight_lg {
+	top: 0;
+	left: 50%;
+}
+
+.spotlight_sm {
+	margin-left: -322px;
+	animation: spotLightSmMove 3s 1.2s ease forwards;
+}
+
+.spotlight_lg {
+	margin-left: -439px;
+	animation: spotLightLgMove 3s 1.2s ease forwards;
+}

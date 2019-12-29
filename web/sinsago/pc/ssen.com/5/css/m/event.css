@@ -1,0 +1,50 @@
+﻿@charset "utf-8";
+/* 컨텐츠 공통 */
+/* 폰트 :: [컨텐츠 공통] */
+@font-face{font-weight:100;font-style:normal;font-family:'Noto';src:url('/html/fonts/notokr-light.eot');src:url('/html/fonts/notokr-light.eot?#iefix') format('embedded-opentype'),url('/html/fonts/notokr-light.woff2') format('woff2'),url('/html/fonts/notokr-light.woff') format('woff');}
+@font-face{font-weight:300;font-style:normal;font-family:'Noto';src:url('/html/fonts/notokr-regular.eot');src:url('/html/fonts/notokr-regular.eot?#iefix') format('embedded-opentype'),url('/html/fonts/notokr-regular.woff2') format('woff2'),url('/html/fonts/notokr-regular.woff') format('woff');}
+@font-face{font-weight:500;font-style:normal;font-family:'Noto';src:url('/html/fonts/notokr-medium.eot');src:url('/html/fonts/notokr-medium.eot?#iefix') format('embedded-opentype'),url('/html/fonts/notokr-medium.woff2') format('woff2'),url('/html/fonts/notokr-medium.woff') format('woff');}
+@font-face{font-weight:700;font-style:normal;font-family:'Noto';src:url('/html/fonts/notokr-bold.eot');src:url('/html/fonts/notokr-bold.eot?#iefix') format('embedded-opentype'),url('/html/fonts/notokr-bold.woff2') format('woff2'),url('/html/fonts/notokr-bold.woff') format('woff');}
+
+.evt_wrap {position:relative; overflow:hidden;}
+.evt_wrap * {font-family: '맑은 고딕', Malgun Gothic, 'Noto',Sans-serif !important;}
+.evt_wrap img {vertical-align:top;}
+.evt_wrap button span {position: relative;}
+.evt_wrap button {outline: none;}
+
+/* 우측 배너 */
+.evt_fix_menu {position:fixed; top:416px; right:50%; z-index:20; margin-right:-717px;}
+.evt_inner {position:relative; z-index:12; width:1060px; margin:0 auto; text-align:center;}
+.sticker_img {position:absolute;}
+.blind {position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip:rect(0,0,0,0);}
+
+/* 이벤트 컨텐츠 */
+.evt_bg_wrap {position:relative; padding-bottom:408px; background-color:#2b0e50;}
+.main_title {position:relative; width:738px; padding-top:69px;margin:0 auto 39px;}
+.main_title .title1 {width:530px; height:158px; margin-left:-3px; background:url(../../images/event/main_title1_on.png) no-repeat 0 0;}
+.main_title .title2 {height:119px; margin:3px 0 0 -3px; background:url(../../images/event/main_title2_on.png) no-repeat 0 0;}
+.main_title .balloon {top:77px; right:42px;}
+.bg_bottom, .bg_star, .bg_mask, .bg_star_shin { right:0; bottom:0; left:0;z-index:10;}
+.bg_star_shin {top:0;background: url(../../images/event/bg_star_on.png) repeat 50% 0; animation:sine 1.4s 1s infinite ease-in-out;}
+.bg_bottom {z-index:11; height:1164px; background: url(../../images/event/bg_bottom.png) repeat-x 50% 0;}
+.bg_star {top:0; background: url(../../images/event/bg_star.png) repeat-x 50% 0;}
+.shooting {top:0; right:-300px; z-index:10; width:279px; height:200px; background:url(../../images/event/img_star1.png) no-repeat 0 0; background-size:100% auto; animation:star 2.8s 1s infinite ease-in-out;}
+.shooting.sm {top:-100px; left:650px; width:114px; height:80px; animation-duration: 2.3; animation-delay: 1.6s; }
+.shooting.shooting3 {top:auto; bottom:900px; animation-delay: 3.5s; animation-duration: 2.8;}
+.shooting.sm.shooting4 {top:auto; bottom:1200px; left:600px; animation-duration: 2.3; animation-delay: 2.5s;}
+.shooting.sm.shooting5 {top:auto; bottom:400px; left:800px; animation-duration: 2.3; animation-delay: 1.5s;}
+
+@keyframes star {
+	100%{transform:translate(-500%,500%); opacity:0;}
+}
+
+@keyframes sine {
+	30% {opacity:.4;}
+	100% {opacity:1;}
+}
+
+/* 푸터 */
+.evt_footer {background-color: #fff;}
+.evt_footer .evt_inner {width:1060px; padding:40px 56px; text-align:left; box-sizing: border-box;}
+.evt_list_footer_noti {font-size:15px; color:#888; line-height:1.8;	word-break:break-all;}
+.evt_list_footer_noti a {color:#ff0000;}

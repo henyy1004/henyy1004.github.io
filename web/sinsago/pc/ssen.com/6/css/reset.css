@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* Malgun Web Standard Team KKS */
+
+/* Common */
+body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,a,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:'맑은 고딕', Malgun Gothic,'나눔고딕', NanumGothic,'돋움', Dotum, Helvetica, AppleSDGothicNeo ,'새굴림' ,'New Gulim' ,Sans-serif;font-size:14px;line-height:1.33;color:#000;letter-spacing: -0.025em;}
+body{overflow-y:scroll;word-break:break-all}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+img,fieldset,iframe{border:0}
+img{max-width:100%;vertical-align:top}
+li{list-style:none}
+em,address{font-style:normal}
+input,select,button{vertical-align:middle;outline: 0; background: transparent;}
+button{border:0;border-radius:0; cursor: pointer;background: rgba(0,0,0,0);} /* 맥북 User Agent 4px */
+legend,.blind{
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+}
+caption {
+  font-size: 0;
+}
+.hide {
+  display: none !important;
+}
+textarea {
+  border: 0;
+  background-color: transparent;
+  resize: none;
+}
+input[type=text] {border: 0; border-radius:0; -webkit-appearance: none;}
+input:disabled {background-color: #fff;}
+input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button span { position: relative; }
+input[type=text]::-ms-clear {display: none;}
+table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;zoom:1}
+hr{display:none}
+.ellipsis{display:inline-block;overflow:hidden;max-width:100%;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle}
+
+/* Link */
+a:link,a:visited{color:#000;text-decoration:none}
+a:active,a:hover,a:focus{text-decoration:none}
+
+/* Skip Navigation */
+#u_skip{position:absolute;top:0;left:0;z-index:200;width:100%}
+#u_skip a{display:block;position:absolute;top:-50px;left:0;z-index:200;width:100%;padding:10px 0 13px;background:#f23030;color:#fff;text-align:center;text-decoration:none}
+#u_skip a:active,#u_skip a:focus{top:0;text-decoration:none}
+#u_skip a{-moz-transition:all .3s;-webkit-transition:all .3s;transition:all .3s}

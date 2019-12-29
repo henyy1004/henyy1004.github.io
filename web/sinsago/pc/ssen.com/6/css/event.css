@@ -1,0 +1,210 @@
+@charset "utf-8";
+/* Malgun Web Standard Team PJS */
+
+body.no_scroll {overflow-y: hidden; }
+
+/* 슬라이더 초기화 */
+.bx-wrapper {border: 0 !important; box-shadow: none !important; margin: 0 !important; }
+
+/* [공통] 컨탠츠 내용 넓이 설정 */
+.content_area {position: relative; width: 960px; margin: 0 auto; }
+
+/* [공통] 사이트 내 이미지 */
+.sticker_img {position: absolute; z-index: 1; }
+
+/* 팝업 딤드 */
+.dimmed {position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 10; overflow-y: scroll; background-color: rgba(0,0,0,0.8); }
+#wrap {min-width: 1100px; position: relative; background-color: #fff; }
+
+/* 분홍 메인 */
+#main {position: relative; background-color: #f95f7f; text-align: center; }
+#main > .content_area {padding: 63px 0 42px; }
+#main .logo {position: absolute; top: 48px; right: -19px; }
+.main_title_text {position: relative; overflow: hidden;  }
+.main_title_text img {position: relative; }
+
+/* 우공비 공부카드 */
+.main_title_text.ukb {margin: 18px 0 9px; }
+
+/* 포토제닉 선발대회 */
+.main_title_text.mtitle {margin: 0 0 4px; }
+.main_title_text.mtitle img {margin-top: -7px; animation: 1.2s ease title_up_big; }
+.main_title_text.ukb > img {z-index: 3; animation: .7s ease title_up; }
+
+/* 프레임 */
+.main_photo_area {position: relative; width: 782px; height: 267px; margin: 0 auto; background: url(../img/bg_frame.png) no-repeat; }
+.appeach { right: -24px; top: -6px; }
+.ico_camera {bottom: 15px; left: 27px; z-index: 2; }
+.main_photo_area [class*='card_'] {
+/*	
+  animation-name: bounce-only;
+  animation-timing-function: ease;
+  animation-duration: .9s;
+*/
+}
+.card_yellow  { top: 22px; left: 42px; animation-delay: 1.3s;}
+.card_green  { top: 43px; left: 135px; animation-delay: 1.35s;}
+.card_blue  { top: 22px; left: 231px; animation-delay: 1.4s;}
+.card_pink  { top: 43px; left: 324px; animation-delay: 1.45s;}
+.card_ukb  { top: 22px; left: 418px; animation-delay: 1.5s;}
+
+
+/* 대상,기간,발표 */
+.event_data {padding: 23px 0; background-color: #fff; }
+
+/* 비디오 영역 */
+.event_video > .content_area {width: 1000px; }
+.event_video {position: relative; padding: 57px 0 70px; background-color: #00b6fb; }
+.video_area {position: absolute; top: 178px; right: 55px; z-index: 3; width: 900px; height: 506px; }
+
+/* 비디오 재생 버튼 */
+.video_area > button {display: block; position: absolute; backface-visibility: visible; top: 179px; left: 29px; width: 278px; height: 171px;  zoom: 1;}
+.video_area iframe {position: relative;  z-index: 3; width: 100%; height: 100%; }
+
+/* 공부카드 게임방법 보기 */
+.view_rule {display:inline-block; position: absolute; bottom: 0px; left: 255px; width: 480px; height: 79px; }
+
+/* event1 */
+.event1 {position: relative; padding: 52px 0 70px; }
+.btn_url_submit {display: inline-block;  z-index: 99; zoom: 1; background: rgba(0,0,0,0); position: absolute; top: 601px; left: 230px; width: 480px; height: 79px; }
+
+/* 상세보기 버튼 */
+.view_pencel_pop {position: absolute; right: 53px; bottom: 118px; width: 58px; height: 54px; }
+
+/* 사진 등록 영역 */
+.list_event_bord {background-color: #f2f2f2; }
+.list_event_bord > .content_area {width: 940px; padding: 60px 0 78px; }
+.list_photo {overflow: hidden; margin: -20px 0 0 -32px; }
+.list_photo > li {float: left; width: 292px; height: 336px; padding: 44px 18px 48px; margin: 20px 0 0 32px; background: url(../img/bg_picture.png) no-repeat; box-sizing: border-box; }
+.name_picture {display: block; text-align: center; font-family: 'Kakao', sans-serif; font-size: 23px; }
+.name_picture:after {display: block; width: 60px; height: 16px; margin: 7px auto 16px; background: url(../img/star3.png) no-repeat; content: ''; }
+
+/* 사진 영역 */
+.event1_photo {padding: 0 28px; }
+.tumb_photo {display: block; width: 200px; height: 150px; }
+.tumb_photo img {width: 100%; height: auto; }
+
+/* 사진 정보 */
+.photo_info {position: relative; padding-right: 36px; margin-top: 13px; }
+.photo_info > span {display: inline-block; font-size: 15px; vertical-align: top; }
+.photo_info .upload_data:before {display: inline-block; width: 1px; height: 13px; margin: 3px 10px 0 4px; background: #ccc; vertical-align: top; content: ''; }
+.photo_info .view_detail {position: absolute; top: -4px; right: 0; width: 28px; height: 28px; background: url(../img/ico_search.png) no-repeat; }
+
+/* 페이저 버튼영역 */
+.message_pager {margin-top: 29px; text-align: center; }
+
+/* event2 */
+.envet2 {text-align: center; padding: 27px 0 54px; background-color: #f95f7f; }
+
+/* sns 공유 영역 */
+.list_share_sns {position: absolute; right: 260px; bottom: 126px; }
+.list_share_sns > a {display: inline-block; width: 100px; height: 100px; background: rgba(0,0,0,0);}
+.list_share_sns > a + a {margin-left: 27px; }
+
+/* url 공유 */
+.sns_wrie_url {position: absolute; right: 60px; bottom: 18px; padding-right: 151px; }
+.sns_wrie_url label {display: block; margin-top: 10px; }
+.sns_wrie_url input {border-radius: 10px; background-color: #fff; width: 413px; height: 40px; padding: 0 20px; line-height: 40px; font-size: 16px; box-sizing: border-box; }
+.btn_sns_submit {position: absolute; top: 0; right: 0; }
+
+/* 페이저 기본 설정 */
+.message_pager a {display: inline-block; }
+.message_pager span {display: inline-block; margin: 0 7px 0 13px; vertical-align: top; }
+.message_pager .pager_num {padding: 3px; margin: 0 1px; font-size: 17px; color: #999; }
+.message_pager .pager_num.on {font-weight: bold; color: #333; }
+.message_pager .pager_num:hover {text-decoration: underline; }
+
+/* 화살표 설정 */
+.message_pager [class^='arrow_'] {width: 30px; height: 30px; background-color: #b7b7b7; border-radius: 50%; }
+.message_pager [class^='arrow_']:hover {background-color: #adadad; }
+
+/* 화살표 아이콘 기본 설정 */
+.message_pager [class^='arrow_']:before {display: inline-block; height: 8px; margin-bottom: -4px; background-repeat: no-repeat; background-image: url(../img/sprite.png); content: ''; }
+
+/* 처음으로, 마지막으로 */
+.message_pager .arrow_first:before,
+.message_pager .arrow_last:before {width: 10px; }
+
+/* 이전,다음 */
+.message_pager .arrow_prev:before,
+.message_pager .arrow_next:before {width: 5px; }
+.message_pager .arrow_prev:before {margin-left: -1px; }
+.message_pager .arrow_next:before {margin-right: -1px; }
+
+/* 화살표 버튼간 간격설정 */
+.message_pager .arrow_prev,
+.message_pager .arrow_last {margin-left: -2px; }
+.message_pager .arrow_next:before,
+.message_pager .arrow_last:before {background-position: 0 -13px; }
+
+/*************************하단 *************************/
+
+#footer {padding: 50px 0 35px; background-color: #f2f2f2; }
+#footer .content_area {box-sizing: border-box; padding: 0 4px; }
+
+/* 알아두세요 목록 */
+.list_footer_notice {margin-top: 21px; }
+.list_footer_notice li {font-size: 15px; color: #888; letter-spacing: -0.03em; }
+.list_footer_notice li + li {margin-top: 8px; }
+.list_footer_notice li span {font-weight: bold; color:#000; text-decoration: underline; }
+
+/* 회원정보 확인버튼 */
+.check_myinfo {position: absolute; top: -2px; left: 180px; z-index: 1; }
+.event_info {text-align: center; margin-top: 46px; }
+
+/* TOP 버튼 */
+.go_top {position: fixed; right: 20px; z-index: 4; opacity: 0; }
+
+/*************************팝업 영역 *************************/
+.layer_pop {position: absolute; top: 170px; bottom: 0; left: 50%; width: 790px; margin-left: -385px; }
+.pop_header {background-color: #f95f7f; border-radius: 27px 27px 0 0; text-align: center; }
+.pop_header img {margin: -34px 0 0 -7px; }
+
+/* 팝업 컨텐츠 */
+.pop_content {padding: 35px 50px 50px; margin-bottom: 80px; background-color: #fff; border-radius: 0 0 27px 27px; }
+.pop_title {margin-bottom: 11px; font-size: 17px; font-weight: bold; }
+.pop_title .pop_title_sub {display: inline-block; margin-left: 16px; font-size: 13px; color: #888; font-weight: normal; }
+
+/* 비회원 팝업 동의 영역 */
+.agree_box {border: 1px solid #ddd; margin-bottom: 16px; }
+.agree_info {padding: 17px 30px; color: #666; }
+.agree_info > p {margin-bottom: 10px; }
+.agree_info li {line-height: 1.55; }
+.agree_box .check_agree {display: block; padding: 12px 0 0; height: 45px; text-align: center; border-top: 1px solid #ddd; background-color: #f0f0f0; box-sizing: border-box; }
+.agree_box .check_agree input {width: 22px; height: 22px; margin: -2px 2px 0 0 ; vertical-align: middle; }
+.agree_box .check_agree span {font-weight:bold; }
+
+.table_basic {width: 100%; border: 1px solid #ddd; }
+.table_basic tr {border-top: 1px solid #ddd; }
+.table_basic th {padding: 13px 0 13px 30px; background-color: #f0f0f0; text-align: left; font-size: 15px; color: #333; }
+.table_basic td {padding: 10px 37px 10px 40px; vertical-align: middle; }
+.table_basic input[type="text"],
+.table_basic select {width: 110px; height: 32px; line-height: 31px; padding: 5px 10px; border: 1px solid #ddd; box-sizing: border-box; }
+.inputViewbox {height: 32px; padding: 5px 10px; border: 1px solid #ddd; box-sizing: border-box; color: #666;}
+.table_basic .pop_btn {display: inline-block; padding: 0 17px; line-height: 31px; height: 32px; margin-left: 8px; border: 0; background-color: #00b6fb; color: #fff; font-weight: bold; vertical-align: top; cursor: pointer;}
+
+.list_text {margin-top: 17px; }
+.list_text li {font-size: 13px; color: #888; line-height: 1.5; }
+
+/* 팝업 슬라이드 */
+.pop_slide_title {font-weight: normal; overflow: hidden; margin-top: 3px; margin-bottom: 13px;  }
+.pop_slide_title > b { font-family: 'kakao',sans-serif; font-size: 34px;}
+.pop_slide_title img{float: left; }
+.pop_slide_title .photo_info {float: right; margin-top: 16px; padding-right: 0; color: #666; }
+.pop_btn_area {margin-top: 27px; text-align: center; }
+.pop_btn_area .pop_btn {cursor: pointer;}
+.pop_desc_sns {margin-top: 5px; font-size: 13px; color: #00b6fb; }
+
+/* 사진 슬라이드 */
+.pop_slide_wrap {position: relative;}
+.pop_slide_wrap .bx-wrapper .bx-controls-direction a { width: 20px; height: 35px; top:228px; margin-top: 0;}
+.pop_slide_wrap .bx-wrapper .bx-controls-direction a.bx-prev { background: url(../img/slide_left.png); left: -35px;}
+.pop_slide_wrap .bx-wrapper .bx-controls-direction a.bx-next { background: url(../img/slide_right.png); right: -35px; }
+.pop_slider img {width: 690px; height: 388px; }
+[class*="slider_btn"] {position: absolute; top: 50%; margin-top: -17px; }
+[class*="slider_btn"].prev {left: -35px; }
+[class*="slider_btn"].next {right: -35px; }
+.pop_close_btn {position: absolute; top: 9px; right: 6px; padding: 10px; cursor: pointer;}
+.pop_close_btn:after {display: inline-block; width: 25px; height: 25px; background: url(../img/sprite.png) no-repeat; background-position: -25px 0; content: ''; }
+
+.pop_slide_wrap .table_basic { margin-top: 30px;}

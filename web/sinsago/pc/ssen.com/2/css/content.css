@@ -1,0 +1,221 @@
+﻿@charset "utf-8";
+/* Malgun Web Standard Team KKS */
+
+/* 단락 :: [컨텐츠 공통] */
+.section{position:relative;background-color:#fff}
+.section:after{display:block;clear:both;content:''}
+.section.v10{margin-bottom:10px}
+.section.v15{margin-bottom:15px}
+.section.v20{margin-bottom:20px}
+
+
+/* 컨텐츠 공통 */
+#wrap{position: relative}
+.inner{position:relative;width:1000px;margin:0 auto;padding:0 20px;box-sizing:border-box}
+.layout_fluid{display:table;table-layout:fixed;width:100%}
+.layout_fluid .column_middle{display:table-cell;vertical-align:middle}
+.hide{display:none !important}
+
+/* header */
+.header{position:relative;overflow:hidden;background:url(../img/bg_header.png) repeat-x}
+.header:before{position:absolute;z-index:0;top:0;left:-50%;width:100%;height:765px;background:#ffd34c;content:''}
+.header:after{position:absolute;z-index:0;top:0;right:-50%;width:100%;height:765px;background-color:#356ad7;content:''}
+.header .inner{padding:0}
+.header .text_cover{position:relative;z-index:10;display:block}
+.header h1{overflow:hidden;position:absolute;top:20px;right:0;z-index:11;width:120px;height:35px}
+.header .logo{display:inline-block;overflow:hidden;width:120px;height:35px;background:url(../img/logo.png)no-repeat;text-indent:-999em}
+
+/* 책 캐릭터 */
+.character_book_wrap{position:absolute;z-index:9;top:100px;right:-28px;width:484px;height:579px}
+[class*="book_"]{position:absolute}
+.book_body_wrap{top:0;left:0;width:100%;height:100%;animation:jumpMotion 1.3s cubic-bezier(1,0,1,1.5) 1.5s infinite;transform-style:preserve-3d}
+.book_body{width:436px;height:568px;background:url(../img/book_body.png) no-repeat}
+.book_eyes{top:199px;left:173px;width:98px;height:20px}
+.book_eye{bottom:0;left:0;width:20px;height:20px;border-radius:18px;background-color:#ffd34c;animation:eyesMotion 1.4s cubic-bezier(1,0,1,1.5) 2s infinite}
+.book_eye.right{left:auto;right:0}
+.book_mouse{top:240px;right:230px;width:66px;height:28px;background:url(../img/book_mouse.png) no-repeat}
+.book_arm{top:223px;right:0;width:74px;height:66px;background:url(../img/book_arm.png) no-repeat;animation:armMotion 1.5s 1.5s infinite}
+.book_legs{bottom:10px;left:173px;overflow:hidden;width:82px;height:48px}
+.book_leg2{bottom:0;width:82px;height:48px;background:url(../img/book_legs.png) no-repeat;animation:legMotion3 1.3s cubic-bezier(1,0,1,1.5) 1.5s infinite}
+/* .book_leg{width:36px;height:47px;background:url(../img/book_leg_left.png) no-repeat}
+.book_leg.left{bottom:2px;left:0;animation:legMotion 1.5s ease-out 1.7s infinite}
+.book_leg.right{bottom:0;left:auto;right:0;background-image:url(../img/book_leg_right.png);animation:legMotion2 1s ease-out 1.5s infinite} */
+.book_shadow{bottom:0;left:168px;width:90px;height:25px;background-color:#1d54c4;border-radius:50%;animation:shadowMotion 1.3s cubic-bezier(1,0,1,1.5) 1.5s infinite}
+.book_balloon{top:62px;right:27px;width:140px;height:140px;background:url(../img/book_balloon.png) no-repeat;animation-delay:.5s}
+.star_big, .star_small{position:absolute;animation:shineStar 2.5s 1.5s infinite}
+.star_big{position:absolute;top:173px;right:183px;width:23px;height:24px;background:url(../img/star_big.png) no-repeat}
+.star_small{position:absolute;top:200px;right:180px;width:25px;height:16px;background:url(../img/star_small.png) no-repeat;animation-delay:3.5s}
+
+/* 작은 책 캐릭터 */
+.character_book_sm_wrap{position:absolute;top:190px;left:105px;width:137px;height:175px}
+.character_book_sm_wrap .book_body{width:137px;height:175px;background:url(../img/book_body_sm.png) no-repeat}
+.character_book_sm_wrap .book_eyes{top:59px;left:36px;width:50px;height:10px}
+.character_book_sm_wrap .book_eye{bottom:0;left:0;width:10px;height:10px;border-radius:50%;background-color:#ffd34c;animation:none}
+.character_book_sm_wrap .book_eye.right{left:auto;right:0}
+.character_book_sm_wrap .book_mouse{top:79px;right:58px;width:36px;height:15px;background:url(../img/book_mouse_sm.png) no-repeat}
+.character_book_sm_wrap .star_big{top:43px;right:36px;width:12px;height:13px;background:url(../img/star_big2.png) no-repeat}
+.character_book_sm_wrap .star_small{top:58px;right:36px;width:8px;height:9px;background:url(../img/star_small2.png) no-repeat;animation-delay:3.5s}
+
+/* 눈 깜빡이는 모션 */
+@keyframes eyesMotion{
+  0%{}
+  20%{height:4px;border-radius:0}
+  50%{height:20px;border-radius:50%}
+  100%{}
+}
+
+/* 별 반짝임 효과 */
+@keyframes shineStar{
+  0%{opacity:1}
+  50%{opacity:0}
+  100%{opacity:1}
+}
+
+/* 손 움직임 모션 */
+@keyframes armMotion{
+  0%{}
+  50%{transform-origin:0% 80%;transform: rotate(-20deg)}
+  100%{transform: rotate(0)}
+}
+
+/* 메인 책캐릭터 점프모션 */
+@keyframes jumpMotion{
+  0%{top:0}
+  20%{top:-20px}
+  50%{top:0}
+  100%{top:0}
+}
+
+/* 그림자 모션 */
+@keyframes shadowMotion{
+  0%{}
+  20%{opacity:.4;transform:scale(.7)}
+  50%{opacity:1;transform:scale(1)}
+  100%{}
+}
+
+/* 다리 움직임 모션 */
+@keyframes legMotion{
+  0%{bottom:2px}
+  30%{bottom:12px}
+  40%{bottom:2px}
+  100%{bottom:2px}
+}
+
+/* 다리 움직임 모션2 */
+@keyframes legMotion2{
+  0%{bottom:0}
+  30%{bottom:10px}
+  40%{bottom:0}
+  100%{bottom:0}
+}
+
+/* 다리 움직임 모션3 */
+@keyframes legMotion3{
+  0%{bottom:0}
+  20%{bottom:10px;transform:skew(10deg,3deg)}
+  50%{bottom:0;transform:skew(0,0)}
+  100%{bottom:0;transform:skew(0,0)}
+}
+
+/* 사전 평가단 활동 */
+.event1 .inner{height:553px;background:url(../img/content_evt1.png) no-repeat}
+
+/* 사전 평가단 활동 혜택 */
+.event2 .inner{height:553px;background:url(../img/content_evt2.png) no-repeat}
+.event2 .btn_area{background-color:#ff7e00}
+.event2 .btn_apply{position:relative;display:block;width:1000px;height:180px;margin:0 auto;background:url(../img/text_apply.png) no-repeat}
+.event2 .ico_check_circle{position:absolute;top:64px;right:237px;width:52px;height:53px;background:url(../img/ico_check_circle.png) no-repeat;animation:checkJumpMotion 1.5s ease-out .5s infinite normal;transform-origin: bottom}
+
+/* 체크아이콘 점프 모션 */
+@keyframes checkJumpMotion{
+  0%{transform:translateY(0)}
+  20%{ transform:translateY(0)}
+  40%{ transform:translateY(-25px)}
+  50%{ transform:translateY(0) scaleY(.8)}
+  60%{ transform:translateY(-20px) scaleY(1)}
+  80%{ transform:translateY(0)}
+  100%{ transform:translateY(0)}
+}
+
+/* 두근두근! 기대평 이벤트 */
+.event3{background-color:#e3efff}
+.event3:after{position:absolute;bottom:-40px;left:50%;margin-left:-20px;width:0;height:0;border:20px solid transparent;border-top-color:#e3efff;content:''}
+.event3 .inner{padding:0}
+
+/* 기대평 영역 */
+.form_comment{margin-top:66px;overflow:hidden}
+.form_comment textarea{float:left;overflow:hidden;width:750px;height:90px;padding:10px 30px;border:4px solid #ff7e00;border-radius:18px;font-size:18px;color:#666;box-sizing:border-box}
+
+.form_comment textarea::placeholder{line-height:66px}
+.form_comment textarea::-moz-placeholder{line-height:66px}
+.form_comment textarea::-webkit-input-placeholder{line-height:66px}
+.form_comment textarea:-moz-placeholder{line-height:66px}
+.form_comment textarea::-moz-placeholder{line-height:66px}
+.form_comment textarea:-ms-input-placeholder{line-height:66px}
+.form_comment textarea::-ms-input-placeholder{line-height:66px}
+
+.form_comment .btn_reg{float:right;width:200px;height:90px;background:url(../img/btn_reg.png) no-repeat;cursor:pointer}
+
+/* 기대평 리스트 */
+.list_comment{margin-top:30px}
+.list_comment>li{padding:0 12px;border:2px solid #f0f0f0;border-radius:18px}
+.list_comment>li+li{margin-top:10px}
+.list_comment .info_comment{min-height:86px;color:#666;line-height:1.4}
+.info_comment [class*="comment_"]{padding:22px 10px;text-align:center;box-sizing:border-box}
+.info_comment .comment_label{width:163px}
+.info_comment .comment_content{font-size:18px;text-align:left}
+.info_comment .comment_name{width:68px;font-size:16px}
+
+/* footer */
+.footer{background:#f2f2f2}
+.footer .inner{position:static;padding-top:105px;height:544px;background:url(../img/content_footer.png) no-repeat}
+.footer .title_notice_list{display:block;margin-bottom:9px;font-size:17px;color:#222;line-height:1.2}
+.footer .notice_list{font-size:15px;color:#888;line-height:1.2}
+.footer .notice_list>li+li{margin-top:9px}
+.footer .notice_list+.title_notice_list{margin-top:27px}
+.footer .btn_top{position:fixed;right:20px;bottom:20px;z-index:10;width:50px;height:50px;background:url(../img/btn_top.png)no-repeat;cursor:pointer}
+
+/* 팝업 */
+.layer_wrap{position:fixed;top:0;right:0;bottom:0;left:0;z-index:999;overflow-y:auto;background:rgba(0, 0, 0, 0.7)}
+.layer_wrap .btn_close{display:block;position:absolute;top:20px;right:20px;overflow:hidden;width:24px;height:24px;background:url(../img/btn_popclose.png) no-repeat;cursor:pointer;text-indent:-999em}
+.layer_content{overflow:hidden;position:relative;top:50%;width:790px;margin:-448px auto 0;border-radius:22px}
+.layer_content_header{height:170px;background:#356ad7 url(../img/layer_title.png) no-repeat}
+.layer_content_body{padding:36px 50px;background-color:#fff}
+.tit_h4_message{font-size:17px;font-weight:bold;color:#ff7e00;line-height:1.2}
+.box_infocollect{margin-top:12px;padding:17px 27px;border:1px solid #ddd;color:#666}
+.box_infocollect .mb5{margin-bottom:5px}
+.box_agree{height:43px;border:1px solid #ddd;border-top:none;background:#f0f0f0;text-align:center;line-height:44px}
+.box_agree label{font-weight:bold;color:#333}
+.box_agree input[type=checkbox]{width:23px;height:23px;margin-right:8px}
+.group_pop_note{margin-bottom:33px}
+.group_pop_note h4{margin-bottom:7px;font-size:14px;line-height:1.2;color:#333}
+.group_pop_note ul>li{font-size:13px;color:#888;line-height:1.2}
+.group_pop_note ul>li+li{margin-top:5px}
+.btn_report{display:inline-block;overflow:hidden;width:210px;height:68px;background:url(../img/btn_report.png) no-repeat;text-indent:-999em}
+.tbl_pop{width:100%;margin-top:12px;border:1px solid #ddd;font-size:15px}
+.tbl_pop th{padding:10px 30px;background:#f0f0f0;border-bottom:1px solid #ddd;color:#333;text-align:left}
+.tbl_pop td{padding:10px 30px 10px 40px;border-bottom:1px solid #ddd;font-size:14px}
+.tbl_pop td select{padding:4px 6px 5px 10px}
+.tbl_pop td input[type=text]{height:30px}
+.tbl_pop td .space{display:inline-block;width:20px;text-align:center;vertical-align:middle}
+.btn_cnt{text-align:center}
+.mesage_comment{margin-top:5px;font-size:13px;color:#ff7e00}
+
+/* 코멘트 페이지 버튼 리스트 */
+.pagination{margin-top:10px;margin-bottom:50px;font-size:17px;text-align:center}
+.pagination>span{display:inline-block;vertical-align:top}
+.pagination>div{display:inline-block;position:relative;top:2px;padding:0 3px 0 6px;vertical-align:top}
+.pagination>div>a{padding:0 4px 0 3px;color:#999}
+/* 선택된 페이지 번호 */ 
+.pagination strong{padding:0 4px 0 3px;color:#333}
+
+/* 미디어쿼리 */
+@media all and (max-width:1000px){
+#wrap{width:1425px}
+}
+
+@media screen and (max-height: 897px){
+  .layer_content{top:0;margin-top:0}
+}
+

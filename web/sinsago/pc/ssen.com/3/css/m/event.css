@@ -1,0 +1,307 @@
+﻿@charset "utf-8";
+/* Malgun Web Standard Team KKS */
+
+/* 폰트 :: [컨텐츠 공통] */
+@font-face{font-family:'Noto';font-style:normal;font-weight:100;src:url('../../font/notokr-light.eot');src:url('../../font/notokr-light.eot?#iefix') format('embedded-opentype'),url('../../font/notokr-light.woff2') format('woff2'),url('../../font/notokr-light.woff') format('woff')}
+@font-face{font-family:'Noto';font-style:normal;font-weight:300;src:url('../../font/notokr-regular.eot');src:url('../../font/notokr-regular.eot?#iefix') format('embedded-opentype'),url('../../font/notokr-regular.woff2') format('woff2'),url('../../font/notokr-regular.woff') format('woff')}
+@font-face{font-family:'Noto';font-style:normal;font-weight:500;src:url('../../font/notokr-medium.eot');src:url('../../font/notokr-medium.eot?#iefix') format('embedded-opentype'),url('../../font/notokr-medium.woff2') format('woff2'),url('../../font/notokr-medium.woff') format('woff')}
+@font-face{font-family:'Noto';font-style:normal;font-weight:700;src:url('../../font/notokr-bold.eot');src:url('../../font/notokr-bold.eot?#iefix') format('embedded-opentype'),url('../../font/notokr-bold.woff2') format('woff2'),url('../../font/notokr-bold.woff') format('woff')}
+
+/* 공통 css모음  */
+.evt_hide {
+	display: none !important;
+}
+
+.evt_blind {
+	position: absolute;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	clip: rect(0,0,0,0);
+}
+
+.evt_content {
+	position: relative;
+	width: 950px;
+	margin: 0 auto;
+}
+
+.sticker_img {
+	position: absolute;
+}
+
+/* 메인 타이틀 영역 */
+.evt_main {
+	padding: 78px 0;
+	background: #ffe348 url(../../images/event/main_bg.png) repeat;
+	background-position: 270px 160px;
+	text-align: center;
+}
+
+.evt_main .evt_content {
+	padding-bottom: 293px;
+}
+
+.main_title_ani {
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	text-align: center
+}
+
+.main_title_ani.main_title_test {
+	width: 769px;
+	height: 61px;
+}
+
+.main_title_ani.main_title_myju {
+	width: 552px;
+	height: 138px;
+	padding-top: 16px;
+	margin: 0 auto 12px;
+}
+
+.main_title_ani.main_title_info {
+	width: 535px;
+	height: 31px;
+}
+
+.main_title_ani img {
+	position: absolute;
+	left: 0;
+	bottom: -100%;
+	transition: all ease-in-out .4s;
+	-ms-transition: all ease-in-out .4s;
+}
+
+.main_title_ani.on img {
+	bottom: 0;
+}
+
+/* 마이쮸 받자 */
+.main_title_ani.main_title_myju img {
+	transition-delay: .4s;
+	-ms-transition-delay: .4s;
+}
+/* 기간 */
+.main_title_ani.main_title_info img {
+	transition-delay: .85s;
+	-ms-transition-delay: .85s;
+}
+
+.main_muju {
+	transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.sticker_img.myju1 { left: 198px; bottom: -257px; }
+.sticker_img.myju2 { left: 348px; bottom: -238px }
+.sticker_img.myju3 { left: 430px; bottom: -238px}
+.sticker_img.myju4 { left: 452px; bottom: -264px; }
+.sticker_img.myju1.on { left: 198px; bottom: -157px; }
+.sticker_img.myju2.on { left: 348px; bottom: -138px }
+.sticker_img.myju3.on { left: 430px; bottom: -138px}
+.sticker_img.myju4.on { left: 452px; bottom: -164px; }
+.main_sticker {
+	transition: all .8s cubic-bezier(0.165, 0.84, 0.44, 1);
+	right: 62px; bottom: 133px;
+	transform: rotateY(-90deg);
+}
+.main_sticker.on {
+	transform: rotateY(0deg);
+}
+
+/* 이벤트 참여방법 하나 */
+.evt_event1 {
+	padding: 83px 0 87px;
+	position: relative;
+	background-color: #fffae7;
+}
+
+/* 물결 설정 */
+.evt_event1:before,
+.evt_event1:after {
+	position: absolute;
+	right: 0;
+	left: 0;
+	height: 31px;
+	z-index: 50;
+	background: url(../../images/event/event1_wave.png) repeat-x;
+	content: '';
+}
+
+.evt_event1:before {
+	top: -31px;
+}
+
+.evt_event1:after {
+	bottom: -31px;
+	transform: rotate(-180deg)
+}
+
+/* 공유 부분 설정 */
+.evt_sns_share {
+	position: absolute;
+	left: 98px;
+	bottom: -4px;
+}
+
+/* sns 공유 버튼 */
+.evt_sns_share li {
+	display: inline-block;
+}
+.evt_sns_share li + li {
+	margin-left: 12px;	
+}
+.evt_sns_share li a {
+	display: inline-block;
+	width: 87px;
+	height: 85px;
+}
+
+/* 이미지 URL 복사 */
+.evt_url_share {
+	position: absolute;
+	right: 91px;
+	bottom: 12px;
+	width: 302px;
+	height: 59px;
+}
+
+.evt_event2 {
+	text-align: center;
+	padding: 127px 0 77px;
+	background-color: #ffae3a;
+}
+
+.evt_event2 .evt_content {
+	width: 847px;
+}
+
+/* url 입력 폼 */
+.list_sns_form {
+	padding-top: 70px;
+	text-align: left;
+}
+
+/* 내가 등록한거 보기 */
+.evt_sns_last {
+	position: relative;
+	border-top: 1px solid #d59131;
+	margin-top: 47px;
+	padding-top: 27px;
+}
+
+.evt_sns_last a + a{
+	margin-left: 6px;
+}
+
+.evt_sns_last .evt_view_sns_url {
+	width: 121px;
+}
+
+.evt_sns_last .evt_view_sns_img {
+	width: 125px;
+	left: 250px;
+}
+
+.evt_form_wrap {
+	position: relative;
+}
+
+.evt_form_wrap .evt_input_area {
+	position: relative;
+	display: block;
+	margin: 16px 0 10px;
+}
+
+.evt_form_wrap .basic_input {
+  display: block;
+	width: 747px;
+	height: 47px;
+	line-height: 2.5;
+	padding: 2px 15px 0;
+	font-size: 18px;
+	box-sizing: border-box;
+	color: #818181;
+	border: 1px solid #7f7f7f;
+	background-color: #fff;
+}
+
+.basic_input:-ms-input-placeholder { /* IE 10+ */
+	color: #818181 !important;
+}
+
+.basic_input::-ms-clear {
+	display: none;
+}
+
+p.basic_input {
+  overflow:hidden;
+  padding-right: 95px !important;
+  -webkit-padding-before: 1px !important;
+}
+
+/* 등록 버튼 */
+.evt_form_wrap button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: transparent;
+}
+
+.evt_form_wrap button img {
+	position: static;
+}
+
+/* 첨부 버튼 */
+.evt_form_wrap .evt_img_add {
+	position: absolute;
+	right: 100px;
+	top: 0;
+}
+
+/* 푸터 안내사항 */
+.evt_footer {
+	padding: 42px 0 68px 100px;
+	background-color: #f0f0f0;
+}
+
+.evt_footer * {
+	color: #2d2d2d;
+	font-family: 'Noto';
+}
+
+.evt_footer h3 {
+	font-size: 20px;
+	margin-bottom: 15px;
+	letter-spacing: -0.05em;
+}
+
+.evt_footer_info {
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.evt_footer_info li {
+	position: relative;
+	line-height: 1.73;
+	padding-left: 16px;
+}
+
+.evt_footer_info li:before {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #6f6f6f;
+	content: '';
+}
+
+.evt_footer_info li a {
+	color: #f64b00;
+	text-decoration: underline;
+	font-weight: bold;
+}

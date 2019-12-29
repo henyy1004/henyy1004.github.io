@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="3,900만의 멤버십 L.POINT 라이프스타일 페이먼트 L.pay" />
+    <title>Lpay-엘페이</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/content.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!--[if lt IE 9]>
+      <script>
+        alert(
+          '이 사이트는 최신 브라우저 환경에 맞춰져있습니다. 따라서 익스플로러 브라우저 버전을 최신으로 업데이트해주시거나 혹은 크롬으로 접속해주세요.',
+        );
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="skip">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="wrap">
+      <header>
+        <div class="inner clear">
+          <h1 class="header-logo">
+            <a href="./index.html" class="link_logo"
+              ><img src="img/logo-header.png" alt="엘페이"
+            /></a>
+          </h1>
+          <div class="gnb gnb-action" aria-hidden="true">
+            <ul class="gnb-row clear">
+              <li class="gnb-menu">
+                <a href="#;" class="gnb-title">이벤트</a>
+              </li>
+              <li class="gnb-menu">
+                <a href="#;" class="gnb-title">카드추천</a>
+              </li>
+              <li class="gnb-menu">
+                <a href="#;" class="gnb-title">서비스 안내</a>
+              </li>
+              <li class="gnb-menu">
+                <a href="#;" class="gnb-title">사용처 안내</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <div class="inner clear">
+            <h2 class="blind">주메뉴</h2>
+            <div id="gnb" class="gnb">
+              <ul class="gnb-row clear">
+                <li class="gnb-menu">
+                  <a href="#;" class="gnb-title first">이벤트</a>
+                  <ul class="gnb-submenu">
+                    <li><a href="#;">진행중인 이벤트</a></li>
+                    <li><a href="#;">종료된 이벤트</a></li>
+                  </ul>
+                </li>
+                <li class="gnb-menu"><a href="#;" class="gnb-title">카드추천</a></li>
+                <li class="gnb-menu">
+                  <a href="#;" class="gnb-title">서비스 안내</a>
+                  <ul class="gnb-submenu">
+                    <li><a href="#;">온·오프라인 결제</a></li>
+                    <li><a href="#;">QR 결제</a></li>
+                    <li><a href="#;">웨이브 결제</a></li>
+                    <li><a href="#;">교통카드 이용</a></li>
+                  </ul>
+                </li>
+                <li class="gnb-menu"><a href="#;" class="gnb-title">사용처 안내</a></li>
+              </ul>
+              <ul class="gnb-row clear">
+                <li class="gnb-menu">
+                  <a href="#;" class="gnb-title">홍보자료</a>
+                  <ul class="gnb-submenu">
+                    <li><a href="#;">보도자료</a></li>
+                    <li><a href="#;">동영상</a></li>
+                    <li><a href="#;">수상내역</a></li>
+                  </ul>
+                </li>
+                <li class="gnb-menu"><a href="#;" class="gnb-title">소득공제 안내</a></li>
+                <li class="gnb-menu"><a href="#;" class="gnb-title">FAQ</a></li>
+                <li class="gnb-menu"><a href="#;" class="gnb-title">공지사항</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main id="content">
+        <section class="main-top">
+          <h2 class="blind">엘페이 큐알코드 다운로드</h2>
+          <div class="inner">
+            <div class="left-area">
+              <div class="text-area clear">
+                <p class="text big">간편 결제의<br />새로운 기준</p>
+                <p class="text">엘페이가 고객님의 곁에 더욱<br />가까이 다가갑니다.</p>
+                <div class="app-qr-area tooltip-area">
+                  <button
+                    id="btn-tooltip-qr"
+                    type="button"
+                    class="btn-go toolitp-open"
+                    aria-controls="tooltip-qr"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    앱 다운로드 QR<span class="blind">레이어창 열기</span>
+                  </button>
+                  <div
+                    id="tooltip-qr"
+                    class="tooltip hide"
+                    role="dialog"
+                    aria-labelledby="btn-tooltip-qr"
+                  >
+                    <p class="tc tootip-text">
+                      QR코드를 스마트폰으로 스캔하시면<br />
+                      L.pay 앱을 다운 받을 수 있습니다.
+                    </p>
+                    <div class="tc img-qr">
+                      <img src="img/img-qr.png" alt="앱다운로드 큐알코드" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="img-area">
+              <img src="img/bg-visual.png" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="main-evnet">
+          <div class="inner clear">
+            <h2 class="main-title">이벤트</h2>
+            <h3 class="blind">이벤트 목록 슬라이드</h3>
+            <div class="main-event-slider-area">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><a href="#;">Slide 1</a></div>
+                  <div class="swiper-slide"><a href="#;">Slide 2</a></div>
+                  <div class="swiper-slide"><a href="#;">Slide 3</a></div>
+                  <div class="swiper-slide"><a href="#;">Slide 4</a></div>
+                  <div class="swiper-slide"><a href="#;">Slide 5</a></div>
+                  <div class="swiper-slide"><a href="#;">Slide 6</a></div>
+                </div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <a href="#;" class="btn-go"><span class="blind">이벤트</span> 전체보기</a>
+          </div>
+        </section>
+        <section>
+          <h2 class="blind">엘페이 서비스 소개</h2>
+          <div class="main-service main-service1 bg-gray">
+            <div class="inner">
+              <div class="service-title-area">
+                <h3 class="title-lg">
+                  <span class="num">01</span>L.pay 하나로<br /><b>안전한 간편 결제</b>
+                </h3>
+                <p class="desc">
+                  카드번호, 공인인증 등 복잡한 결제 절차 없이<br />안전하게 결제합니다.
+                </p>
+              </div>
+              <a href="#;" class="btn-go">온·오프라인 결제 안내</a>
+            </div>
+          </div>
+          <div class="main-service main-service2 right">
+            <div class="inner">
+              <div class="service-title-area">
+                <h3 class="title-lg">
+                  <span class="num">02</span>언제나 어디서나 한 번에<br /><b>빠르게 결제</b>
+                </h3>
+                <p class="desc">지갑이 없어도 결제와 적립이 한 번에 가능합니다.</p>
+              </div>
+              <a href="#;" class="btn-go">바코드 결제 안내</a>
+            </div>
+          </div>
+          <div class="main-service main-service3 bg-gray">
+            <div class="inner">
+              <div class="service-title-area">
+                <h3 class="title-lg">
+                  <span class="num">03</span>소상공과 함께하는<br /><b>L.pay QR 서비스</b>
+                </h3>
+                <p class="desc">바쁜 시간, 빠른 거래<br />QR 결제로 빨라집니다.</p>
+              </div>
+              <a href="#;" class="btn-go">QR 결제 안내</a>
+            </div>
+          </div>
+          <div class="main-service main-service4 right">
+            <div class="inner">
+              <div class="service-title-area">
+                <h3 class="title-lg">
+                  <span class="num">04</span>세계 최초 음파 이용<br /><b
+                    >L.pay 웨이브 결제 서비스</b
+                  >
+                </h3>
+                <p class="desc">
+                  스마트폰을 결제 기기에 가까이 대어주세요.<br />바코드로 찍지 않아도 즉시 결제가
+                  이루어집니다.
+                </p>
+              </div>
+              <a href="#;" class="btn-go">웨이브 결제 안내</a>
+            </div>
+          </div>
+          <div class="main-service main-service5 bg-gray">
+            <div class="inner">
+              <div class="service-title-area">
+                <h3 class="title-lg">
+                  <span class="num">05</span>택시, 버스, 지하철도<br /><b>L.pay로 편리하게</b>
+                </h3>
+                <p class="desc">
+                  지갑을 꺼내지 않고, 스마트폰 터치만으로<br />대중교통 이용이 편리해집니다.
+                </p>
+              </div>
+              <a href="#;" class="btn-go">교통카드 이용안내</a>
+            </div>
+          </div>
+          <div class="main-service main-service6 right">
+            <div class="inner">
+              <div class="service-title-area">
+                <h3 class="title-lg">
+                  <span class="num">06</span>항상 고객님의 곁에,<br /><b>L.pay 간편결제</b>
+                </h3>
+                <p class="desc">
+                  뚱뚱한 지갑은 이제 그만!<br />온/오프라인 110,000개의 가맹점에서 결제와<br />L.POINT
+                  적립이 가능합니다.
+                </p>
+                <h4 class="blind">엘페이 사용처 목록</h4>
+                <ul class="blind">
+                  <li>
+                    롯데백화점
+                  </li>
+                  <li>롯데닷컴</li>
+                  <li>하이마트</li>
+                  <li>롯데마트</li>
+                  <li>롯데슈퍼</li>
+                  <li>롯데시네마</li>
+                  <li>롯데홈쇼핑</li>
+                  <li>롯데월드 에비뉴</li>
+                  <li>알라딘</li>
+                </ul>
+              </div>
+              <a href="#;" class="btn-go">사용처 안내</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- footer -->
+      <footer>
+        <div class="inner clear">
+          <h2 class="blind">하단 회사정보</h2>
+          <div class="footer-logo"></div>
+          <div class="footer-top">
+            <ul class="footer-link clear">
+              <li><a href="#;">회사소개</a></li>
+              <li><a href="#;">이용약관</a></li>
+              <li>
+                <a href="#;"><b>개인정보처리방침</b></a>
+              </li>
+              <li>고객센터 1899-6300</li>
+            </ul>
+            <div class="footer-sns">
+              <h3 class="blind">sns 링크</h3>
+              <a href="#;" target="_blank" title="새창이동"
+                ><img src="img/social_facebook2.png" alt="페이스북"
+              /></a>
+              <a href="#;" target="_blank" title="새창이동"
+                ><img src="img/social_naver2.png" alt="네이버 블로그"
+              /></a>
+              <a href="#;" target="_blank" title="새창이동"
+                ><img src="img/social_youtube2.png" alt="유튜브"
+              /></a>
+              <a href="#;" target="_blank" title="새창이동"
+                ><img src="img/social_linkedin2.png" alt="인사이드"
+              /></a>
+              <a href="#;" target="_blank" title="새창이동"
+                ><img src="img/social_instagram2.png" alt="인스타그램"
+              /></a>
+            </div>
+          </div>
+          <div class="footer-mid">
+            <div class="footer-info">
+              롯데멤버스(주) | 대표이사 강승하<br />
+              <address>04511 서울특별시 중구 통일로 2길 16 AIA타워 12~15F</address>
+              사업자등록번호 104-86-58491
+              <a href="#;" target="_blank" title="새창 이동" class="btn-confirm">사업자 정보확인</a
+              ><br />
+              © LOTTE Members
+            </div>
+          </div>
+          <div class="footer-bottom clear">
+            <div class="fl footer-award">
+              <h3 class="blind">수상내역 리스트</h3>
+              <ul class="blind">
+                <li>코리아 모바일 어워드</li>
+                <li>코리아 모바일 어워드</li>
+                <li>코리아 모바일 어워드</li>
+                <li>코리아 모바일 어워드</li>
+                <li>코리아 모바일 어워드</li>
+                <li>코리아 모바일 어워드</li>
+              </ul>
+            </div>
+
+            <div class="footer-family fl">
+              <h3 class="blind">패밀리사이트 링크</h3>
+              <div class="menu-list">
+                <button
+                  id="btn-lpayfamily"
+                  type="button"
+                  class="btn-menulist ellipsis"
+                  aria-haspopup="true"
+                  aria-controls="menu-lpayfamily"
+                  aria-expanded="false"
+                  aria-orientation="vertical"
+                >
+                  엘페이 패밀리
+                </button>
+                <ul
+                  id="menu-lpayfamily"
+                  class="menu-list-link top hide"
+                  role="menu"
+                  aria-labelledby="btn-lpayfamily"
+                  aria-orientation="vertical"
+                >
+                  <li role="none"><a href="#;" target="_blank" role="menuitem">L.POINT</a></li>
+                  <li role="none"><a href="#;" target="_blank" role="menuitem">L.pay</a></li>
+                  <li role="none"><a href="#;" target="_blank" role="menuitem">Lime</a></li>
+                  <li role="none">
+                    <a href="#;" target="_blank" role="menuitem">L.POINT 파트너스</a>
+                  </li>
+                  <li role="none">
+                    <a href="#;" target="_blank" role="menuitem">BigData Competition</a>
+                  </li>
+                  <li role="none"><a href="#;" target="_blank" role="menuitem">DeepVision</a></li>
+                  <li role="none">
+                    <a href="#;" target="_blank" role="menuitem" class="last">Open Platform</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-list">
+                <button
+                  id="btn-lottefamily"
+                  type="button"
+                  class="btn-menulist ellipsis"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-controls="menu-lottefamily"
+                >
+                  롯데 패밀리
+                </button>
+                <ul
+                  id="menu-lottefamily"
+                  class="menu-list-link top hide"
+                  role="menu"
+                  aria-labelledby="btn-lottefamily"
+                  aria-orientation="vertical"
+                >
+                  <li>
+                    <div class="title-menulist">그룹</div>
+                    <ul class="depth-menulist">
+                      <li role="none"><a href="#;" target="_blank" role="menuitem">롯데그룹</a></li>
+                      <li role="none">
+                        <a href="#;" target="_blank" role="menuitem">롯데채용센터</a>
+                      </li>
+                      <li role="none"><a href="#;" target="_blank" role="menuitem">L.POINT</a></li>
+                      <li role="none"><a href="#;" target="_blank" role="menuitem">L.pay</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="title-menulist">식품</div>
+                    <ul class="depth-menulist">
+                      <li role="none">
+                        <a href="#;" target="_blank" role="menuitem">롯데제과</a>
+                        <ul class="depth2-menulist">
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">나뚜루</a>
+                          </li>
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">빼빼로</a>
+                          </li>
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">헬스원</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="#;" target="_blank" role="menuitem">롯데칠성음료</a>
+                        <ul class="depth2-menulist">
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">롯데칠성몰</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="#;" target="_blank" role="menuitem">롯데리아</a>
+                        <ul class="depth2-menulist">
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">롯데리아몰</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="#;" target="_blank" role="menuitem">엔젤리너스</a>
+                        <ul class="depth2-menulist">
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">엔젤리너스몰</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="#;" target="_blank" role="menuitem">T.G.I.Fridays</a>
+                      </li>
+                      <li role="none">
+                        <a href="#;" target="_blank" role="menuitem">크리스피크림도넛</a>
+                      </li>
+                      <li role="none">
+                        <a href="#;" target="_blank" role="menuitem">롯데푸드</a>
+                        <ul class="depth2-menulist">
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">파스퇴르</a>
+                          </li>
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">파스퇴르몰</a>
+                          </li>
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">파스퇴르아이</a>
+                          </li>
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">쉐푸드</a>
+                          </li>
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">엔네이처</a>
+                          </li>
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">롯데비엔나</a>
+                          </li>
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">키스틱</a>
+                          </li>
+                          <li role="none">
+                            <a href="#;" target="_blank" role="menuitem">의성마늘햄</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="#;" target="_blank" role="menuitem">롯데주류BG</a>
+                        <ul class="depth2-menulist">
+                          <li role="none"><a href="#;" target="_blank" role="menuitem">WINE</a></li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="#;" target="_blank" role="menuitem">롯데아사히주류</a>
+                      </li>
+                      <li role="none">
+                        <a href="#;" target="_blank" role="menuitem">롯데칠성주류</a>
+                      </li>
+                      <li role="none">
+                        <a href="#;" target="_blank" class="last" role="menuitem"
+                          >롯데유통사업본부</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui.js"></script>
+
+    <!-- 메인 이벤트 슬라이더 -->
+    <script>
+      const eventSwiper = new Swiper('.main-event-slider-area .swiper-container', {
+        cssMode: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        keyboard: true,
+        spaceBetween: 73,
+        slidesPerView: 3,
+        loop: true,
+        autoplay: true,
+      });
+    </script>
+  </body>
+</html>

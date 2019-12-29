@@ -1,0 +1,26 @@
+@charset "euc-kr";
+	
+#quick ul li{padding:0 0 4px 0;}
+
+.high_bg dt{margin:0 0 5px 0;}
+.middle_bg dt{margin:0 0 5px 0;}
+.primary_bg dt{margin:0 0 5px 0;}
+
+.boardlist table thead tr th {padding:12px 0 8px 0; line-height:16px;}
+.boardlist2 table thead tr th {padding:12pxpx 0 8px 0; }
+.open_class table thead tr th {padding:12px 0 8px 0;}
+
+.table_type11 table thead tr th {line-height:14px; padding:5px 0 1px 0;}
+.table_type11 table tbody tr td {line-height:18px; padding:6px 0 3px 0;  }
+
+.table_type12 table thead tr th {line-height:12px; padding:6px 0 2px 0;}
+.table_type12 table tbody tr td {line-height:12px; padding:4px 0 2px 0;}
+
+.table_type13 table thead tr th {line-height:12px; padding:6px 0 2px 0;}
+
+.coupon{top:400px;}
+.note{top:400px;}
+
+.class_info4 p.ra_align span{margin-left:-28px; }
+
+.teacherProfile{display:none}

@@ -1,0 +1,70 @@
+/* °øÅë */
+*{margin:0; padding:0; font-family:Dotum, "µ¸¿ò", "±¼¸²", Gulim, AppleGothic, Sans-serif;}
+img, fieldset, button{border:none;}
+li{list-style:none;}
+textarea{overflow:auto;} 
+legend	{position:absolute; top:0; left:0; width:0; height:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;} /* For Screen Reader */ 
+.tests	{font-family: "µ¸À½"; color:#888888; font-size: 8pt; line-height: 160%}
+.testm	{font-family: "µ¸À½"; color:#888888; font-size: 9pt; line-height: 140%}
+.testb	{font-family: "µ¸À½"; color:#888888; font-size: 11pt; line-height: 140%}
+.fb		{font-weight:bold;}
+.ls		{letter-spacing:-0.1em;}
+
+/* ¹è°æ */
+body {width:100%; height:100%;}
+
+#wrapper {
+width:1000px;
+position:relative;
+margin:0 auto;
+margin-top: 0px;
+}
+
+/* ÀÌº¥Æ® */
+#tab1		{position:relative; width:770px; padding-bottom:40px; background:url('/html/images/etc/precede_m/a_bg.jpg');padding-left:230px}
+#tab1		.aa_title	{padding:50px 0 0 0}
+#tab1		.course_list {height:480px}
+#tab1		.course_list ul.course_tab {height:80px;border:none}
+#tab1		.course_list ul.course_tab li{float:left;margin-right:0px;border:none}
+#tab1		.course_list .aa_list	{position:absolute; width:720px;top: 235px; height: 450px; background-color:#ffffff;padding-top:15px}
+#tab1		.ab_title	{margin-top: 100px;}
+#tab1		.course_list2 {margin:20px 0 0 -29px;}
+#tab1		.course_list2 div.ab_top,
+#tab1		.course_list2 div.ab_100,
+#tab1		.course_list2 div.ab_90,
+#tab1		.course_list2 div.ab_80,
+#tab1		.course_list2 div.ab_70 {margin-bottom:20px;}
+#tab1		.course_list2 .ab_list {position:absolute;width: 702px; height: 142px; left: 240px;}
+ 
+#tab2		{position:relative; width:770px; background:#f0d86e;padding-left: 230px;}
+#tab2		.info_list img {padding-bottom:35px}
+
+#tab2_sub		{position:relative; width:770px; height:580px; background:url('/html/images/etc/precede_m/bb_bg.jpg') no-repeat;padding-left:230px}
+#tab2_sub	ul {padding-top: 160px;}
+#tab2_sub	ul li {float:left;}
+
+
+#tab3		{position:relative; width:1000px; height:1700px; background:url('/html/images/etc/precede_m/c_bg.jpg');}
+#tab3		.ca_title	{position:absolute; top:0px; left:230px;}
+#tab3		.ca_scr		{position:absolute; top:176px; left:230px;}
+#tab3		.ca_txt		{position:absolute; top:170px; left:550px;}
+#tab3		.cb_title	{position:absolute; top:460px; left:230px;}
+#tab3		.cb_scr		{position:absolute; top:536px; left:230px;}
+#tab3		.cb_txt		{position:absolute; top:526px; left:550px;}
+#tab3		.cc_title	{position:absolute; top:850px; left:230px;}
+#tab3		.cc_scr_01	{position:absolute; top:926px; left:230px;}
+#tab3		.cc_txt_01	{position:absolute; top:926px; left:550px;}
+#tab3		.cc_scr_02	{position:absolute; top:1152px; left:230px;}
+#tab3		.cc_txt_02	{position:absolute; top:1152px; left:550px;}
+#tab3		.cc_scr_03	{position:absolute; top:1378px; left:230px;}
+#tab3		.cc_txt_03	{position:absolute; top:1378px; left:550px;}
+
+#tab4		{position:relative; width:770px; height:1060px;padding: 80px 0 0 230px; background:url('/html/images/etc/precede_m/d_bg.jpg')}
+#tab5		{position:relative; width:770px; height:1500px;padding-left: 230px; background:url('/html/images/etc/precede_m/e_bg.jpg')}
+
+#gm		{position:fixed; top:0px; z-index:10000;padding:100px 0 0 40px}
+#gm div {margin-bottom:10px}
+
+#banner		{position:absolute; top:0px; left:1010px;}
+#banner div {margin-bottom:3px}
+

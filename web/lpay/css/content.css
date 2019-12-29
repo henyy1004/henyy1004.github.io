@@ -1,0 +1,212 @@
+@charset "utf-8";
+/* 메인 컨텐츠 */
+.main-title {
+    margin: 74px 0 52px;
+    font-size: 26px;
+}
+
+.main-top {
+    background: linear-gradient(#1489f7 50%, #693cec);
+}
+
+.main-top .inner {
+    min-height: 634px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.main-top .left-area {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 800px;
+    background-color: #fff;
+}
+
+.main-top .text-area {
+    position: relative;
+    z-index: 1;
+    margin: 67px 396px 0 0;
+}
+
+.main-top .text {
+    font-size: 29px;
+    font-weight: 100;
+    color: #444;
+    line-height: 37px;
+    text-align: right;
+}
+
+.main-top .text + .text {
+    margin-top: 29px;
+}
+
+.main-top .text.big {
+   font-size: 55px;
+   line-height: 70px;
+}
+
+.main-top .img-area {
+    position: absolute;
+    top: -94px;
+    left: 395px;
+}
+
+.main-top .app-qr-area {
+    float: right;
+    position: relative;
+    margin-top: 172px;
+}
+
+.main-top .app-qr-area .tooltip {
+    right: 9px;
+    bottom: 55px;
+    z-index: 10;
+    width: 283px;
+    transform: translateX(50%);
+}
+
+.main-top .app-qr-area .img-qr {
+    margin: 17px 0 5px;
+}
+
+.main-top .btn-go {
+    font-size: 18px;
+    text-align: right;
+    cursor: pointer;
+}
+
+/* 이벤트 */
+.main-evnet {
+    padding-bottom: 25px;
+}
+
+.main-evnet .btn-go {
+    float: right;
+    margin-top: 13px;
+}
+
+.main-event-slider-area {
+    position: relative;
+}
+
+.main-event-slider-area .swiper-slide {
+    width: 310px;
+    height: 310px;
+    background-color: brown;
+}
+
+.main-event-slider-area [class*=swiper-button] {
+    width: 22px;
+    height: 43px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.main-event-slider-area .swiper-button-prev {
+    left: -40px;
+    background-image: url('../img/btn-slider-prev.png');
+}
+
+.main-event-slider-area .swiper-button-next {
+    right: -40px;
+    background-image: url('../img/btn-slider-next.png');
+}
+
+.main-event-slider-area .swiper-pagination {
+    top: -64px;
+    right: 0;
+}
+
+.main-event-slider-area .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    margin: 0 5px;
+    background-color: #d8d8d8;
+    opacity: 1;
+}
+
+.main-event-slider-area .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #000;
+}
+
+/* 메인 : 서비스 소개 */
+.main-service.right {
+    text-align: right;
+}
+
+.main-service .inner{
+    height: 600px;
+    background-repeat: no-repeat;    
+}
+
+.main-service .service-title-area {
+    padding-top: 70px;
+}
+
+.service-title-area .title-lg {
+    font-size: 44px;
+    line-height: 1.37;
+}
+
+.service-title-area .title-lg b {
+    font-weight: 400;
+}
+
+.service-title-area .title-lg .num {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 90px;
+    font-weight: 100;
+    color: #6a3cec;
+    line-height: 1;
+    letter-spacing: -0.7px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.service-title-area .desc {
+    margin-top: 14px;
+    font-size: 18px;
+    line-height: 1.222;
+}
+
+.service-title-area + .btn-go {
+    margin-top: 35px;
+}
+
+/* 메인 : 서비스소개 1 */
+.main-service1 .inner{
+    background-image: url(../img/bg-section01.png);
+    background-position: 100% 100%;
+}
+
+/* 메인 : 서비스소개 2 */
+.main-service2 .inner{
+    background-image: url(../img/bg-section02.png);
+    background-position: 0 100%;
+}
+
+/* 메인 : 서비스소개 3 */
+.main-service3 .inner{
+    background-image: url(../img/bg-section03.png);
+    background-position: 100% 100%;
+}
+
+/* 메인 : 서비스소개 4 */
+.main-service4 .inner{
+    background-image: url(../img/bg-section04.png);
+    background-position: 0 0;
+}
+
+/* 메인 : 서비스소개 5 */
+.main-service5 .inner{
+    background-image: url(../img/bg-section05.png);
+    background-position: 100% 50%;
+}
+
+/* 메인 : 서비스소개 6 */
+.main-service6 .inner{
+    background-image: url(../img/bg-section06.png);
+    background-position: 0 50%;
+}

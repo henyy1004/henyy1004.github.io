@@ -1,0 +1,3 @@
+#ssg_loading{position:absolute;display:none;top:0;z-index:100;width:100%;height:100%;text-align:center}
+#ssg_loading .child{display:table-cell;vertical-align:middle}
+#ssg_loading .child img{width:40px}

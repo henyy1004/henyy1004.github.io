@@ -1,0 +1,295 @@
+@charset "utf-8";
+
+
+/* 공통 */
+
+h3.brd_btm {border-bottom:1px solid #E2E2E2}
+.mt_18 {margin-top:18px}
+.location {width:100%; text-align:right}
+
+/* 장홍준 */
+
+.cont {position:relative;}
+.visiul_08 {width:211px; height:166px; background:url("../../images/m/prem/08_visual.gif") no-repeat; z-index:10; position:absolute; top:21px; right:18px;}
+.visiulH_08 {width:211px; height:166px; background:url("../../images/m/prem/08_visual.gif") no-repeat; z-index:10; position:absolute; top:-34px; right:18px;}
+.prem_sch2 {margin-left:21px; padding:1px 0;}
+.board_list4 td.first_line {text-align:left; background-color:#ffffee; padding-left:20px; color:#636363;}
+
+.print_question span * {*z-index:10}
+.print_question thead th {height:29px; font-size:11px; color:#fff; background-color:#a1a1a1; border-bottom:1px solid #898989; border-top:2px solid #636363;}
+.print_question thead th.first_th {border-right:1px solid #7d7d7d}
+.print_question thead th span.span_txt {position:relative; left:262px; *top:5px}
+.print_question thead th span.choice_view {position:relative; right:7px}
+.print_question tbody td {letter-spacing:-1px; font-size:11px; padding-right:18px; padding-bottom:10px; background-color:#f7f7f7; border-right:1px solid #e1e1e1; color:#898989; text-align:right}
+.print_question tbody td.title {font-size:12px; font-weight:bold; padding-right:21px}
+.print_question tbody td.first_td {padding-top:17px}
+.print_question tbody td.last_td {padding-bottom:57px; border-bottom:1px solid #e1e1e1}
+.print_question tbody td.box {background-color:#fff; border:none; border-bottom:1px solid #e1e1e1; text-align:center; padding-right:0}
+.print_question tbody td.choice {padding-top:4px; background:url("../../images/m/prem/bg_choice.gif") no-repeat right top; color:#fff;}
+.print_question tbody td.box p.same_same {text-align:right; padding-right:5px; padding-top:7px}
+.print_question tbody td.box p.print_choce {margin-top:12px; padding-right:10px;}
+.print_question tbody td.box p.print_choce span.left_choce {margin-right:28px}
+.print_question tbody td.box p.txt {margin-top:8px; margin-bottom:18px}
+.print_question tbody td.box div.question_list {width:496px; margin:0 0 13px 24px; text-align:left}
+.print_question tbody td.box div.question_list span {*zoom:1; color:#405b6b; display:block; float:left; width:46px; height:23px; background:url("../../images/m/prem/bg_not_same.gif") no-repeat 0 0; margin:0 4px 6px 0}
+.print_question tbody td.box div.question_list:after {display:block; content:""; clear:both}
+.print_question tbody td.box div.question_list span.same { background:url("../../images/m/prem/bg_same.gif") no-repeat 0 0; color:#fff}
+.print_question tbody td.box div.question_list span.last_span {margin-right:0px}
+.print_question tbody td.box div.question_list span input {position:relative; top:4px; left:4px; *top:0; *left:1px}
+.print_question tbody td.box div.question_list span label {position:relative; top:5px; left:8px; *top:3px; *left:1px}
+
+
+/* 이화정 */
+
+.step {margin:39px 0 20px 0; *zoom:1; *margin-top:19.5px;}
+.step:after {display:block; content:""; clear:both}
+.step li {float:left}
+.let th, .let td {letter-spacing:-1px}
+.let_none {letter-spacing:0 !important}
+
+.prem_schbox02 {position:relative; width:700px; height:63px; margin-bottom:21px; font-size:11px; background:url("../../images/m/prem/bg_testSrc.gif") no-repeat left top;}
+.prem_schbox02 .tit {position:absolute; left:28px; top:24px}
+.search02 {margin-left:100px; padding-top:13px; *padding-top:6px; padding-left:25px;}
+.search02 label, .search02 input, .search02 select {display:block; float:left}
+.search02 label {position:relative; top:2px; .top:6px; margin:0 12px 0 3px; color:#464646}
+.search02 select {border:1px solid #e3bb00 ;margin-right:3px; color:#898989; font-size:11px; font-family:'돋움',Dotum,AppleGothic,sans-serif}
+.search02 p {width:500px; margin-bottom:6px; *zoom:1}
+.search02 p:after {display:block; content:""; clear:both}
+
+
+/* 박진희 */
+/* 중등 수강설정 css */
+.prem_pt {padding-top:30px}
+.prem_schbox {display:block; height:46px; width:700px; white-space:nowrap; background:url('../../images/m/prem/bg_sch.gif') no-repeat 0 100%}
+.prem_schbox fieldset {display:block; height:43px; position:relative; top:-3px; padding:6px 4px 0 8px}
+.prem_schbox h4.tit {display: inline; float: left; padding: 15px 15px 0 20px; position:relative; .top:-2px}
+.searchWrap {float:left; margin: 12px 0 10px 10px; background:url('../../images/m/prem/bar_sch.gif') repeat-y 0 0}
+.searchWrap .radioWrap {float:left; margin:3px 14px 0 18px; .margin:0px 8px 0 10px}
+.searchWrap .radioWrap .input_radio {margin-right:2px; .margin-right:0; color:#464646; font-size:11px}
+.searchWrap .radioWrap .input_radio input {position:relative;top:-1px; .top:-2px}
+.prem_schbox .search {display:inline; float:left}
+.prem_schbox .search div, .prem_schbox .search span {display: inline; float: left; padding-right: 5px}
+.prem_schbox .search select {border:1px solid #E3BB00; color:#898989; font-family:Dotum,AppleGothic,sans-serif; font-size:0.9em}
+.prem_btnArea {*zoom:1; margin:20px 0 6px}
+.prem_btnArea:after {content:""; display:block; clear:both}
+.prem_btnArea .btn_posL {float:left}
+.prem_btnArea .btn_posR {float:right}
+
+
+/* 중등 수강설정 NEW css */
+.prem_schbox_M {display:block; height:460px; width:700px; white-space:nowrap; background:url('../../images/m/prem/bg_sch_M.jpg') no-repeat 0 100%}
+.radioGroup {display:block; height:150px; width:520px; padding:0 0 0 180px; }
+.radioGroup .input_radio input {position:relative; margin:80px 76px 0 0;}
+.helpGroup {display:block; height:45px; width:540px; padding:0 0 0 160px; }
+.helpGroup .normal {position:relative; margin:19px 74px 0 0;}
+.helpGroup .special {position:relative; margin:19px 0 0 10px;}
+#help1 {position:absolute; display:none; z-index:100; top:260px; left:128px;}
+#help2 {position:absolute; display:none; z-index:100; top:260px; left:218px;}
+#help3 {position:absolute; display:none; z-index:100; top:260px; left:278px;}
+#help4 {position:absolute; display:none; z-index:100; top:260px; left:228px;}
+#help5 {position:absolute; display:none; z-index:100; top:260px; left:248px;}
+#help6 {position:absolute; display:none; z-index:100; top:260px; left:298px;}
+
+#helps1 {position:absolute; display:none; z-index:100; top:202px; left:128px;}
+#helps2 {position:absolute; display:none; z-index:100; top:202px; left:218px;}
+#helps3 {position:absolute; display:none; z-index:100; top:202px; left:278px;}
+#helps4 {position:absolute; display:none; z-index:100; top:202px; left:228px;}
+#helps5 {position:absolute; display:none; z-index:100; top:202px; left:248px;}
+#helps6 {position:absolute; display:none; z-index:100; top:202px; left:298px;}
+
+.checkGroup1 {display:block; height:40px; width:700px; }
+#g_ssen {position:relative; margin:0 0 0 117px;}
+#ssen {position:relative; margin:22px 0 0 74px;}
+#ilpoom {position:relative; margin:0 0 0 75px;}
+#special {position:absolute; margin:19px 0 0 270px;}
+
+.checkGroup2 {display:block; height:40px; width:700px; }
+#Q_standard {position:relative; margin:-28px 0 0 117px;}
+#light_ssen {position:relative; margin:42px 0 0 74px;}
+#Q_development {position:relative; margin:-22px 0 0 75px;}
+#Q_special {position:relative; margin:-18px 0 0 70px;}
+#g_ssen_H {position:relative; margin:-31px 0 0 77px;}
+
+.checkGroup3 {display:block; height:40px; width:700px; }
+#ugongbi {position:relative; margin:12px 0 0 117px;}
+
+.teacher_area {display:block; height:30px; width:536px; margin:38px 0 0 164px;}
+.sch_search {position:relative; margin:17px 0 0 300px; }
+
+
+/* 고등 수강설정 css */
+.prem_schbox_H {display:block; height:65px; width:700px; white-space:nowrap; background:url('../../images/m/prem/bg_testSrc.gif') no-repeat 0 100%}
+.prem_schbox_H fieldset {display:block; height:70px; position:relative; top:-3px; padding:6px 4px 0 8px}
+.prem_schbox_H h4.tit {display: inline; float: left; padding: 25px 15px 0 20px; position:relative; .top:-2px}
+.searchWrap_H {position:relative; margin: 12px 0 10px 100px; }
+.searchWrap_H .radioWrap {margin:3px 14px 0 18px; .margin:0px 8px 0 10px}
+.searchWrap_H .radioWrap .input_radio {margin-right:2px; .margin-right:0; color:#464646; font-size:11px}
+.searchWrap_H .radioWrap .input_radio input {position:relative;top:-1px; .top:-2px}
+.searchWrap_H .search_H {margin:6px 14px 0 18px; .margin:0px 8px 0 10px}
+.searchWrap_H .search_H div, .prem_schbox .search span {display: inline; float: left; padding-right: 5px}
+.searchWrap_H .search_H select {border:1px solid #E3BB00; color:#898989; font-family:'����',Dotum,AppleGothic,sans-serif; font-size:0.9em}
+
+.board_list4 .prem_txt a {text-decoration:underline; color:#555; letter-spacing:-1px}
+.board_list4 .choice {background-color:#ffffee;}
+.prem_info {margin-top:30px}
+.prem_info2 {margin-top:40px}
+
+.h4_month {*zoom:1; margin:25px 0 5px}
+.h4_month:after {content:""; display:block; clear:both}
+.h4_month .con_tit2 {float:left; width:140px; margin-top:0; margin-right:10px}
+.h4_month select {float:left; font-size:11px; color:#898989}
+.h4_month .btn_posR {float:right}
+.cal_tit {margin-top:25px; padding:15px 0 30px 24px; background:url("../../images/m/prem/bg_cal.gif") no-repeat}
+.cal_tit p {color:#fff; font-size:16px; font-weight:bold; line-height:34px}
+.cal_tit p span {color:#ffd200;}
+.cal_table {*zoom:1; margin-bottom:20px}
+.cal_table:after {content:""; display:block; clear:both}
+.cal_table .bg_graph {float:left; width:161px; height:122px; background:url('../../images/m/prem/bg_graph.gif') no-repeat 0 0}
+.cal_table .bg_graph img {margin:40px 22px}
+.cal_table .board_area {float:right}
+.cal_table .board_list4 {width:530px; .width:535px;  height:122px}
+.cal_table .board_list4 th, .cal_table .board_list4 td {padding:8px 5px; .padding:3px 0}
+.cal_table .board_list4 .sat {color:#4792e5}
+.cal_table .board_list4 .sun {color:#f36c4f}
+.h4_mb {margin-bottom:5px}
+.img_test_graph {margin-bottom:20px}
+.td_coaching {font-weight:bold; font-size:12px !important; color:#464646 !important}
+
+.top_premNotice {*zoom:1; width:700px; height:220px; background:url('../../images/m/prem/bg_topNotice.jpg') no-repeat 0 0; letter-spacing:-1px}
+.top_premNotice:after {content:""; display:block; clear:both}
+.top_premNotice .top_posL {float:left; margin-right:16px; padding-left:29px}
+.top_premNotice .top_posL dl {width: 288px; height: 93px; margin:50px 0 10px; padding:0 0 17px 155px; border-bottom:1px solid #cccccc}
+.top_premNotice .top_posL dl dt {margin-bottom:10px; color:#464646; font-size:16px; font-weight:bold}
+.top_premNotice .top_posL dl dt span {display:block; margin-bottom:3px; color:#ab6b35; font-size:12px; font-weight:normal}
+.top_premNotice .top_posL dl dd {font-size:11px; color:#898989}
+.top_premNotice .top_posL dl dd span {margin:0 3px;  font-weight:bold; color:#636363}
+.top_premNotice .top_posL dl dd span.txt-deco a {text-decoration:underline; color:#636363}
+.top_premNotice .study_alarm {padding:3px 40px; background:url('../../images/m/prem/icn_reply.gif') no-repeat 0 0; }
+.top_premNotice .study_alarm p {font-size:12px; color:#636363; line-height:15px}
+.top_premNotice .study_alarm span {font-weight:bold}
+.top_premNotice .top_posR {padding-top:10px}
+.top_premNotice .top_posR p {height:70px}
+.schedule_title {*zoom:1; margin:40px 0 5px}
+.schedule_title:after {content:""; display:block; clear:both}
+.schedule_title div {float:left}
+.schedule_title .today_date {margin-top:3px}
+.schedule_title .today_date strong {color:#464646; font-weight:bold; font-size:11px}
+.schedule_title .today_date span {color:#898989; font-size:11px; margin-right:63px}
+.schedule_title .btn_posR {float:right}
+.schedule_date span {margin:0 5px; color:#f26522; font-size:14px; font-weight:bold}
+.schedule_date img {position:relative; top:-2px}
+.board_list4 div {*zoom:1}
+.board_list4 div:after {content:""}
+.board_list4 .td_posL {width:auto; float:left; padding-top:5px}
+.board_list4 .td_posL . posTop {padding-top:6px}
+.board_list4 .td_posR {width:auto; float:right;height:80px;}
+.board_list4 .tbl_schedule td {height:80px; vertical-align:top}
+.board_list4 .tbl_schedule td.active {border:2px solid #60bb46}
+.board_list4 .tbl_schedule td .layer_wrap {position:relative}
+.board_list4 .tbl_schedule .layer_schdl {position:absolute; top:-85px; left:10px; padding-top:5px; background:url('../../images/m/prem/bg_layerTop.png') no-repeat 0 0;}
+.board_list4 .tbl_schedule .layer_in {background:url('../../images/m/prem/bg_layerBtm.png') no-repeat 0 100%;}
+.board_list4 .tbl_schedule .layer_in p {width:140px; min-height:72px; padding:5px; color:#fff; font-size:12px; font-weight:bold }
+.lect_table {*zoom:1; margin-top:45px; margin-bottom:40px}
+.lect_table:after {content:""; display:block; clear:both}
+.lect_table .lect_posL {float:left}
+.lect_table .h4_lect {*zoom:1; width:520px; margin-bottom:5px}
+.lect_table .h4_lect:after {content:""; display:block; clear:both}
+.lect_table .h4_lect .con_tit2 {float:left; width:170px; margin-top:0; margin-right:10px}
+.lect_table .h4_lect select {float:left}
+.lect_table .h4_lect .btn_posR {float:right}
+.lect_table .board_list4 {width:520px; .width:525px}
+.lect_table .board_list4 th, .lect_table .board_list4 td {padding:8px 5px}
+.lect_table .board_list4 .sat {color:#4792e5}
+.lect_table .board_list4 .sun {color:#f36c4f}
+.lect_table .bg_graph {float:right; width:161px; height:122px; background:url('../../images/m/prem/bg_graph.gif') no-repeat 0 0}
+.lect_table .bg_graph img {margin:40px 22px}
+.lect_table p {float:right; width:auto}
+.h4_eval {*zoom:1; margin:25px 0 5px}
+.h4_eval:after {content:""; display:block; clear:both}
+.h4_eval .con_tit2 {float:left; width:176px; margin-top:0; margin-right:10px}
+.h4_eval .btn_posR {float:right}
+
+
+/* 박진희 팝업 */
+/* 유사문제출력팝업 */
+
+.pop_sQuot {padding:26px 20px}
+.top_tit {*zoom:1; width:959px; padding-bottom:20px; border-bottom:1px solid #636363}
+.top_tit:after {content:""; display:block; clear:both}
+.top_tit .btn_posR {float:right}
+.top_tit .btn_posR img {margin:0}
+.top_tit span {float:left; font-size:16px; font-weight:bold; color:#464646}
+.top_tit img {position:relative; top:-2px; margin-right:10px}
+.date_name {*zoom:1; width:959px; margin:10px 0 20px; font-size:bold; font-weight:bold; color:#898989}
+.date_name:after {content:""; display:block; clear:both} 
+.date_name .date {float:left}
+.date_name .name {float:right}
+.qout_cont {*zoom:1; width:959px; padding-bottom:20px}
+.qout_cont:after {content:""; display:block; clear:both}
+.quot_posL {float:left; width:460px; padding-right:9px; border-right:1px solid #d4d4d4}
+.quot_posL .quotWrap {margin-bottom:26px; padding-top:15px; background:url('../../images/m/prem/bg_pop_quotTop.gif') no-repeat 0 0}
+.quot_posL .quotIn {padding:15px 30px 30px; background:url('../../images/m/prem/bg_pop_quotBtm.gif') no-repeat 0 100%}
+.quot_posR {float:left; width:381px; padding-left:19px}
+.quot_posR p {font-size:11px; letter-spacing:-1px; color:#898989}
+.quot_posR p strong {display:block; margin-bottom:5px; text-decoration:underline; font-size:12px; color:#464646}
+.qout2_cont {width:959px}
+.qout2_cont .quotWrap {margin-bottom:29px; padding-top:15px; background:url('../../images/m/prem/bg_pop2_qoutTop.gif') no-repeat 0 0}
+.qout2_cont .quotIn {padding:15px 30px 22px; background:url('../../images/m/prem/bg_pop2_qoutBtm.gif') no-repeat 0 100%}
+.qout2_cont .quotIn table {margin-bottom:18px}
+.qout2_cont .quotIn table th {font-size:12px; color:#363636; border-top:2px solid #636363; border-bottom:1px solid #959595; border-right:1px solid #959595; height:29px;}
+.qout2_cont .quotIn table th.last_th {border-right:0}
+.qout2_cont .quotIn table th.level_th {text-align:left; text-indent:20px}
+.qout2_cont .quotIn table th.bg_b7b0a0 {background-color:#b7b0a0}
+.qout2_cont .quotIn table th.bg_d4cfc3 {background-color:#d4cfc3}
+.qout2_cont .quotIn table td {vertical-align:top; padding:35px 30px 30px 30px; border-right:1px solid #959595; border-bottom:1px solid #959595}
+.qout2_cont .quotIn table td.last_td {border-right:0}
+.pop_sQuot .quot_title {margin-bottom:19px; padding-bottom:15px; color:#464646; font-size:14px; font-weight:bold; background: url("../../images/m/prem/brd_dashed.gif") repeat-x scroll 0 100% transparent}
+.pop_sQuot .quot_title span {color:#f26522; font-size:14px; font-weight:bold}
+.qout_cont .quotIn .num_level {*zoom:1}
+.qout_cont .quotIn .num_level:after {content:""; display:block; clear:both}
+.qout_cont .quotIn .num_level .num_posL {float:left; text-align:center; padding-top:8px; width:50px; height:23px; color:#676767; font-size:11px; font-weight:bold; background:url('../../images/m/prem/bg_numbox.gif') no-repeat 0 0}
+.qout_cont .quotIn .num_level .level_posR {float:right}
+.qout_cont .quotIn .problem_type1 {margin:21px 37px 41px 17px}
+/*.qout2_cont .quotIn .answer_box {*zoom:1; margin-top:20px;border:1px solid #959595}
+.qout2_cont .quotIn .answer_box:after {content:""; display:block; clear:both}*/
+.qout2_cont .quotIn .answer_box {margin-top:20px}
+.qout2_cont .quotIn .answer_box table {margin:0; border:1px solid #959595}
+.qout2_cont .quotIn .answer_box td {padding:7px; text-align:center; vertical-align:middle}
+.qout2_cont .quotIn .answer_box .answer {width:58px; /*min-height:21px; */border-right:1px solid #959595; background-color:#f2f1ef; font-size:12px; font-weight:bold; color:#363636}
+.qout2_cont .quotIn .answer_box .ans_con {width:260px; padding:7px 7px 7px 20px; text-align:left; font-size:12px; color:#636363; word-break:break-all}
+
+
+/* 이달의 평가현황 그래프 */
+.v_graph {margin-bottom:20px; padding:16px 0; background:url("../../images/m/prem/bg_graph_bar.gif") no-repeat}
+.v_graph ul {*zoom:1; height:129px; margin:0 0 0 50px; .padding:0 0 0 50px; font-size:11px; font-family:Tahoma, Geneva, sans-serif; list-style:none}
+.v_graph ul:after {display:block;clear:both;content:""}
+.v_graph li {display:inline;float:left;position:relative;width:25px;height:85%;/*margin:0 3%*/ margin:0 26px 0 0;text-align:center; white-space:nowrap}
+.v_graph li.last {margin-right:0}
+.v_graph .g_term {display:inline-block; position:relative; /*width:100%;*/width:25px; height:20px; margin:0 -100% -20px 0; padding:109px 0 0 0; color:#898989; line-height:20px; vertical-align:bottom}
+.v_graph .g_bar {display:inline-block; position:relative; width:100%; margin:-1px 0 0 0; background:url("../../images/m/prem/graph_g_bar.gif") no-repeat; vertical-align:bottom}
+.v_graph .o_bar {display:inline-block; position:relative; width:100%; margin:-1px 0 0 0; background:url("../../images/m/prem/graph_o_bar.gif") no-repeat; vertical-align:bottom}
+.v_graph .g_bar span, .v_graph .o_bar span {position:absolute;top:-2px;left:0;width:100%;color:#fff; font-weight:bold}
+
+
+/* 전형인 -이전수강기록css- */
+.prem_prev_schbox {display:block; height:46px; width:700px; background:url('../../images/m/prem/bg_prev_course.jpg') no-repeat 0 100%}
+.prem_prev_schbox fieldset {display:block; height:43px; position:relative; top:-3px; padding:6px 4px 0 8px}
+.prem_prev_schbox .search {display:inline; float:left; padding:11px 20px 0 80px;}
+.prem_prev_schbox .search select {border:1px solid #E3BB00; color:#898989; font-family:'����',Dotum,AppleGothic,sans-serif; font-size:0.9em}
+.prem_prev_schbox .info_txt {margin:10px 0 0 10px;}
+.prem_prev_schbox .radioWrap {position:relative; margin:30px 0 10px 5px;}
+.prem_prev_schbox .radioWrap .input_radio {margin-right:2px; .margin-right:0; color:#464646; font-size:11px}
+.prem_prev_schbox .radioWrap .input_radio input {position:relative;top:-1px; .top:-2px}
+.prem_prev_schbox .btn_posR {float:right; margin-top:-25px;}
+
+/* 수강기록상세 */
+.prem_prev_infobox {display:block; height:120px; width:700px; background:url('../../images/m/prem/bg_prev_course_detail.jpg') no-repeat 0 100%}
+.prem_prev_infobox .tch_info {display:block; position:relative; top:26px; left:40px; width:60px; height:60px; border:2px solid #E2E2E2 }
+.prem_prev_infobox .title {position:absolute; top:49px; left:120px; font-weight:bold; font-size:17px; font-family:'돋움',Dotum,AppleGothic,sans-serif}
+.prem_prev_infobox .t_name {position:absolute; top:72px; left:120px; font-size:1.0em; color:#CC723D; font-family:'돋움'}
+.prem_prev_infobox .std_per {position:absolute; top:100px; left:120px; font-size:12px; color:#898989; font-family:'돋움'}
+.prem_prev_infobox .std_per .per {font-size:12px; font-weight:bold; color:orange; font-family:'돋움'}
+.prem_prev_btn {display:block; width:700px; height:20px; margin:20px 0 0 0;}
+.prem_prev_btn .btn_posL {cursor:hand}
+.prem_prev_btn .btn_posR {float:right; cursor:hand}
+.prem_prev_list {display:block; position:relative; width:700px; height:460px; margin:20px 0 0 0;}

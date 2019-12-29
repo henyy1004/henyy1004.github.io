@@ -1,0 +1,271 @@
+﻿@charset "utf-8";
+@import url('common.css');
+
+/* layout */
+#pop_wrap {position:relative}
+#pop_wrap .inner {border:4px solid #58b530; padding:20px 18px}
+#pop_wrap .layer_close {position:absolute; top:0; right:0}
+#pop_wrap .top {height:20px; margin-bottom:20px; padding-bottom:10px; border-bottom:1px solid #58b530}
+#pop_wrap input.txt {padding:5px 4px}
+#pop_wrap select.txt {padding:5px 4px;border:1px solid #d3d3d3}
+#pop_wrap .list ul {font-size:11px}
+
+/* tab */
+.tab {*zoom:1; position:relative; top:1px} 
+.tab:after {content:""; display:block; clear:both} 
+.tab li {float:left}
+.tab a {display:block; padding:9px 0; border:1px solid #d3d3d3; border-left:0; text-align:center}
+.tab a.on {display:block; border:1px solid #3a9015; background:#58b530}
+.tab .fst a {border-left:1px solid #d3d3d3}
+.tab .fst a.on {border:1px solid #3a9015}
+
+/* btn */
+.btn_center {text-align:center}
+.btn_center a {display:inline-block; margin:0 5px}
+
+/* tab type 2 : 클릭시 하위메뉴 노출*/
+.tab1 {*zoom:1; position:relative; top:1px} 
+.tab1:after {content:""; display:block; clear:both} 
+.tab1 li {float:left}
+.tab1 a {display:block; padding:9px 0; border:1px solid #3a9015; border-right:none; background:#58b530; text-align:center}
+.tab1 a.last {border:1px solid #3a9015}
+.tab1 a.on {display:block; border:1px solid #ff750f; background:#ff9600}
+.tab2 {position:absolute; left:0}
+.tab2 li {float:left; padding:8px 0 8px 9px; margin-right:12px; background:url('../images/common/bl_greenDot.gif') no-repeat left center}
+.tab2 li a {padding:0; border:0; background:none; line-height:12px; text-align:left}
+.tab2 li a.on {border:none; background:none; text-decoration:underline; color:#fe7200}
+
+
+/* search */
+.search_area {width:404px; padding:25px; border:1px solid #e8e8e8; background:#fbfbfb}
+.search_area strong {display:inline-block; padding-left:20px; margin-right:17px}
+.search_area .address {background:url('../images/icon/icon_find.gif') no-repeat left top}
+.search_area .password {background:url('../images/icon/icon_pw.gif') no-repeat left top}
+.search_area .school {background:url('../images/icon/icon_school.gif') no-repeat left top}
+.search_juso{width:456px;padding-top:10px;text-align:right}
+
+/* 로그인 */
+.login {position:relative; width:345px; margin:0 auto}
+.login ul {height:58px; padding-top:10px;}
+.login li {position:relative; height:26px; padding-left:80px}
+.login li:first-child {margin-bottom:5px}
+.login li span {position:absolute; top:6px; left:0px; display:inline-block; width:70px; padding-left:10px; background:url('../images/lnb/bl_lnb.gif') no-repeat left 3px}
+.login li input {width:158px; height:15px; padding:5px 4px; border:1px solid #e8e8e8}
+.login p {margin:5px 0 23px; padding-left:80px}
+.login p input {vertical-align:middle}
+.login li input:focus {border:1px solid #ff9600}
+.login .login_btn {position:absolute; top:10px; right:0}
+.login .btn {padding-left:80px; margin-bottom:10px}
+
+/* 우편번호 검색 */
+.post .tab li {width:133px}
+.post .detail li {padding-top:25px}
+.post li p {padding-left:10px; margin-bottom:14px; background:url('../images/lnb/bl_lnb.gif') no-repeat left 5px}
+.post li p span {color:#2ca607}
+.post .list p {margin:15px 0 8px}
+.post .list div {width:438px; height:72px; padding:8px; border:1px solid #e8e8e8; overflow-y:scroll}
+.post .list li {padding:0}
+.post .no_result {text-align:center; overflow:hidden !important}
+.post .no_result p {padding-top:20px; color:#ff7803; background:none; margin:0}
+
+/* 휴면계정안내 */
+.dormancy p {padding-left:10px; margin-bottom:10px; background:url('../images/lnb/bl_lnb.gif') no-repeat left 6px}
+.dormancy p span {color:#ff7803}
+.dormancy .mt30 {margin-bottom:30px}
+.dormancy .qus {display:block; padding:35px 0 40px; color:#2ca607; text-align:center}
+.dormancy .qus a {text-decoration:underline; color:#347afc}
+.dormancy .search_area {margin-bottom:25px}
+.dormancy .result {height:138px; padding:11px 8px; border:1px solid #e8e8e8; margin-bottom:5px;overflow-y:scroll}
+.dormancy .result p {padding:35px 0 0 0; background:none; text-align:center; color:#ff7803}
+.dormancy ul span {padding-right:5px; font-weight:bold; color:#2ca607}
+.dormancy ul li {padding-bottom:2px}
+
+/* 학습지수 */
+.ssi .tab li {width:83px}
+.ssi .ssiArea {position:relative}
+.ssi .img {position:absolute; right:0; top:-13px}
+.ssi p {margin:22px 0 42px; text-align:center}
+.ssi_stage {margin-bottom:20px; padding:14px 12px; border-top:1px solid #d3d3d3; border-bottom:1px solid #d3d3d3}
+.ssi_stage p {font-size:11px}
+.ssi_stage .tit {margin-bottom:6px; font-size:12px}
+.ssi_stage .tit strong {margin-bottom:6px; color:#fd7100}
+.ssi_stage span {display:inline-block; width:10px; padding:2px 0 1px; background:#fa8e36; border:1px solid #d16206; line-height:9px; color:#fff; text-align:center; font-size:11px}
+.ssi_stage p {text-align:left; padding:0; margin:0}
+.ssi_percent {padding-top:6px}
+.ssi_percent a {display:block; color:#2c2c2c; padding-right:13px; height:15px; line-height:15px; background:#dfdfdf; text-align:right}
+.ssi_percent li {position:relative; height:23px; z-index:200}
+.ssi_percent .number {position:absolute; left:0; top:0; width:266px; margin:0}
+.ssi_percent .percent {position:relative}
+.ssi_percent .on {background:#ff9137}
+.ssi_percent .layer {display:none; position:absolute; bottom:15px; right:0; width:290px; padding-bottom:6px; z-index:100; background:url('../images/popup/bg_arrow.png') no-repeat 233px bottom}
+.ssi_percent .layer div {border:3px solid #ff9137; background:#fff}
+.ssi_percent .layer p {padding:5px 8px; margin:0; text-align:left; line-height:18px}
+.ssi_percent .layer p span {padding:2px 4px 1px; font-size:11px; background:#ff9137; border:1px solid #f96900; color:#fff; letter-spacing:-1px; font-weight:normal}
+.ssi_percent .layer strong {display:block; padding:4px 8px 4px 23px; background:#fffbe3; border-bottom:1px solid #ff9137; color:#4b4b4b; background:#fffbe3 url('../images/icon/icon_ssi.gif') no-repeat 8px 9px}
+
+.table_type1 th {padding:7px 0; color:#1e1e1e; background:#fbfbfb; border:1px solid #d3d3d3; text-align:center}
+.table_type1 thead th {color:#31a300}
+.table_type1 td {padding:7px; text-align:center; border:1px solid #d3d3d3; text-align:left; font-size:11px; line-height:16px}
+.table_type1 td li {line-height:23px}
+.table_type1 .none {padding:0}
+.table_type1 .left {padding:7px 13px; text-align:left}
+.table_type1 .stage th {text-align:right; padding:12px 2px 2px}
+.table_type1 .stage span {display:inline-block; width:10px; padding:2px 0 1px; background:#fa8e36; border:1px solid #d16206; line-height:9px; color:#fff; text-align:center; font-size:11px; font-weight:normal}
+
+/* 브랜드별 참고서 전체보기 */
+.reference {font-size:11px}
+.reference ul {width:664px; padding:10px 10px 5px 10px; border:1px solid #e8e8e8; background-color:#fbfbfb; margin-bottom:16px; *zoom:1}
+.reference ul:after {content:""; display:block; clear:both}
+.reference ul.last {margin-bottom:0}
+.reference li {float:left; width:209px; padding-left:12px; background:url('../images/common/bl_greenDot.gif') no-repeat 3px center; margin-bottom:2px}
+
+/* 구성내용 펼쳐보기 */
+.component {padding:0px 35px}
+.component .imgWrap {margin-bottom:23px; text-align:center}
+.component span {display:block; width:217px; padding-left:200px; *zoom:1}
+.component span:after {content:""; display:block; clear:both}
+
+/* 내게 맞는 참고서 */
+.findRb {width:668px; overflow:hidden}
+.findRb .tab1>li {width:133px}
+.findRb .tab2 {width:653px; padding-left:15px; border-bottom:1px solid #d3d3d3}
+.findRb .content {padding:55px 0}
+.findRb .content2 {padding-top:55px}
+.findRb .summary {margin-bottom:44px; text-align:center}
+.findRb .stit {padding-bottom:13px}
+.findRb .stit {padding:0 0 13px 21px; font-size:16px; font-weight:bold; background:url('../images/popup/findRb_stit01.gif') no-repeat left 1px; color:#333}
+
+.table_type2 {width:668px; border:1px solid #d3d3d3; margin-bottom:18px; font-size:11px}
+.table_type2 th, .table_type2 td {border:1px solid #d3d3d3; font-weight:normal; padding:13px 12px; text-align:left; vertical-align:top} 
+.table_type2 strong {font-weight:bold}
+.table_type2 th {background:#fffce3;color:#666}
+.table_type2 .rowGroup {padding:13px 16px; vertical-align:middle; background:#fbfbfb; color:#13a100}
+.table_type2 .link {padding:13px 8px}
+.table_type2 .link a {display:inline-block; padding-left:13px; text-decoration:underline; color:#2989c0}
+.table_type2 .link2 {padding:13px 8px}
+.table_type2 .link2 a {display:inline-block; padding-left:13px; text-decoration:underline; color:#2989c0}
+
+/* 신사고매니아 설문 */
+.survey {text-align:center}
+.survey div {border:1px solid #e8e8e8; background:#fbfbfb; *zoom:1}
+.survey div:after {content:""; display:block; clear:both}
+.survey div span {float:left}
+.survey div div {position:relative; float:left; padding:38px 0 0 34px; border:none; text-align:left}
+.survey p {margin-bottom:12px}
+.survey dl {position:absolute; left:197px; top:109px}
+.survey dt {padding-left:9px; margin-bottom:10px; background:url('../images/common/bl_greenDot.gif') no-repeat left 3px; line-height:0}
+.survey dd {padding-left:9px}
+.surImg {width:116px; padding:17px 37px; border-right:1px solid #e8e8e8}
+.surImg span{float:none; display:block; width:116px; padding:5px 0px 1px; margin-bottom:13px; background:url('../images/book/bg_thumb_book.gif') no-repeat 10px top}
+.survey em {width:116px; line-height:14px}
+
+.survey ul {padding:22px 0 10px; text-align:left}
+.survey li {margin-bottom:20px; font-weight:bold}
+.survey textarea {display:block; width:658px; height:34px; padding:4px 6px; border:1px solid #e8e8e8; margin-top:8px; overflow:hidden}
+.survey textarea.line1 {height:12px}
+
+/* 장남일선배님과의 인터뷰 */
+#pop_wrap .page {padding-bottom:35px; background:url("../images/popup/page.gif" ) left bottom no-repeat}
+.interview p {line-height:20px}
+.interview p strong {padding:1px 0 0 3px; line-height:12px; color:#0090cc}
+.interview .num {display:inline-block; width:15px; height:12px; padding:1px 0; line-height:12px; font-weight:bold; background:#639ddd; border:1px solid #2578d4; color:#ffffff; text-align:center; vertical-align:middle}
+.interview strong {vertical-align:middle; font-size:12px}
+.interview .second {display:block; padding:5px 0 0 20px}
+.interview p em {color:#35b100}
+.interview div {position:relative; padding:24px 25px 24px 0; border-top:1px solid #e8e8e8; font-size:11px}
+.interview .qus {margin-bottom:8px}
+.interview .fst {border-top:none; padding:5px 25px 50px 240px}
+.interview .fst img {position:absolute; left:0;top:0}
+.interview .inter {padding:24px 250px 36px 0}
+.interview .photo {padding-top:15px; text-align:center}
+.interview .photo img {padding:0 3px}
+.interview .last {height:155px; padding-right:250px}
+.interview .last img {position:absolute; right:-5px; top:20px}
+.inter img {position:absolute; right:-5px; top:25px}
+
+/* 문영주 선배님과의 인터뷰 */
+.inter01 .fst{padding-bottom:60px;}
+.inter01 .num {display:inline-block; width:15px; height:12px; padding:1px 0; line-height:12px; font-weight:bold; background:#f36d8c; border:1px solid #d53459; color:#ffffff; text-align:center; vertical-align:middle}
+.inter01 p strong {padding-left:3px; color:#f65b7f}
+.inter01 .photo{text-align:center}
+
+/* 김종은 선배님과의 인터뷰 */
+.inter02 .fst{padding-bottom:60px;}
+.inter02 .num {display:inline-block; width:15px; height:12px; padding:1px 0; line-height:12px; font-weight:bold; background:#f6a200; border:1px solid #f67400; color:#ffffff; text-align:center; vertical-align:middle}
+.inter02 p strong {padding-left:3px; color:#fb8200}
+.inter02 .inter {padding-bottom:20px}
+
+/* 김민지 선배님과의 인터뷰 */
+.inter03 .fst{padding-bottom:80px}
+.inter03 .num {display:inline-block; width:15px; height:12px; padding:1px 0; line-height:12px; font-weight:bold; background:#8a67bf; border:1px solid #5b3a8b; color:#ffffff; text-align:center; vertical-align:middle}
+.inter03 p strong {padding-left:3px; color:#7f50c6}
+
+/* 임승민 선배님과의 인터뷰 */
+.inter04 .fst{padding-bottom:60px;}
+.inter04 .num {display:inline-block; width:15px; height:12px; padding:1px 0; line-height:12px; font-weight:bold; background:#98701e; border:1px solid #765001; color:#ffffff; text-align:center; vertical-align:middle}
+.inter04 p strong {padding-left:3px; color:#8b4e00}
+.inter04 .inter {padding-bottom:20px}
+
+/* 김도연 선배님과의 인터뷰 */
+.inter05 .fst{padding-bottom:10px;}
+.inter05 .num {display:inline-block; width:15px; height:12px; padding:1px 0; line-height:12px; font-weight:bold; background:#4DB91D; border:1px solid #388614; color:#ffffff; text-align:center; vertical-align:middle}
+.inter05 p strong {padding-left:3px; color:#1A9A1B}
+.inter05 .inter {padding-bottom:20px}
+
+/* 씽 적립방법 */
+.mile p {padding:10px 0 23px 0}
+.save table {border-top:1px solid #d3d3d3; border-left:1px solid #d3d3d3; line-height:18px}
+.save .first th {padding:6px 0; background:#fbfbfb; color:#31a300}
+.save th {border-right:1px solid #d3d3d3; border-bottom:1px solid #d3d3d3}
+.save td {padding:9px 0 9px 10px; border-bottom:1px solid #d3d3d3; border-right:1px solid #d3d3d3}
+.save .tab a {width:81px; height:12px}
+.save .detail {padding-top:20px; border-top:1px solid #d3d3d3}
+
+/* 사랑의 씽 나누기 도서증정 소식*/
+.word01 {position:relative; padding:7px 8px; font-weight:bold; background:#58b530; color:#fff; border:1px solid #3a9015}
+.word01 span {position:absolute; right:0; top:0; padding:7px 10px; font-weight:normal; border-left:1px solid #3a9015}
+.word02 {padding:18px 50px 0 50px; border:1px solid #d3d3d3;  border-top:none}
+.word02 .first {color:#01b6de}
+/*.word02 span {font-weight:bold; color:#79c101}
+.word02 em {font-weight:bold; color:#ff57ac}*/
+.word02 .one {margin-bottom:20px; font-weight:bold}
+.word02 img {padding:12px 0 30px 60px}
+.word02 .two {padding:33px 0 17px 0}
+.word03 {margin-top:20px; border-top:1px solid #d3d3d3; border-left:1px solid #d3d3d3}
+.word03 .prev, .word03 .next {padding-left:28px; font-weight:bold; border-right:1px solid #d3d3d3; border-bottom:1px solid #d3d3d3; background:#fbfbfb}
+.word03 .prev {background:url("../images/icon/icon_prev.gif") 10px 11px no-repeat}
+.word03 .next {background:url("../images/icon/icon_next.gif") 10px 11px no-repeat}
+.word03 td {border-right:1px solid #d3d3d3; border-bottom:1px solid #d3d3d3; padding:7px 9px}
+.word03 td em {padding-left:5px; color:#2aa608}
+.word03 td span {color:#ff6884}
+.word03 .hits {text-align:center}
+
+
+/* 사랑의 씽 나누기 도서증정 소식 140714 추가 */
+.news_list ul {zoom:1;}
+.news_list ul:after {display:block; clear:both; content:''}
+.news_list li {margin:0 0 26px 26px; float:left; width:210px; height:218px; text-align:center; border:1px solid #d5d5d5}
+.news_list li.first {margin-left:0}
+.news_list p {margin:11px auto 9px; width:131px; height:22px; line-height:22px; font-family: 'Verdana' ; background:url('../images/lounge/bg_ssing_news.png') no-repeat center center; color:#fff; font-weight:bold}
+.news_list p.on {background:url('../images/lounge/bg_honor_info.gif') no-repeat center center;}
+.news_list span {margin-top:10px; display:block}
+
+/* 2014-07-22 희망 우체통 당첨자 보기_팝업 */
+.img_top {margin:22px 0 22px 35px}
+.winnerList {overflow-y:auto; height:473px;} /*0731 수정*/
+.winnerList ul {border:1px solid #d3d3d3}
+.winnerList ul li {border-top:1px solid #d3d3d3}
+.winnerList ul li:first-child {border-top:0}
+.winnerList ul li > a {display:block; padding:8px 14px; color:#414141; font-weight:bold; background:url("../images/popup/icon_open.gif") no-repeat 98% 12px}
+.winnerList ul li > p.empty{display:block; padding:8px 14px; color:#414141; font-weight:bold;}
+.winnerList ul li > a.on {background:url("../images/popup/icon_close.gif") no-repeat 98% 16px}
+.winnerList ul li div {padding:12px 32px; border-top:1px solid #d3d3d3}
+.winnerList ul li dl {*zoom:1; font-weight:bold}
+.winnerList ul li dl:after {content:""; display:block; clear:both}
+.winnerList ul li .postcard {margin-bottom:12px}
+.winnerList ul li .postcard dt {border: 1px solid #ff750f; background:#ff9600 }
+.winnerList ul li .comment{margin:0;padding:0}
+.winnerList ul li .comment dt {margin-bottom:20px;border: 1px solid #3da415; background:#58b530}
+.winnerList ul li .comment dd {margin-bottom:6px}
+.winnerList ul li dl dt {float:left; margin-right:37px; padding:2px 7px; color:#ffffff; font-size:11px}
+.winnerList ul li dl dd {float:left; width:127px}

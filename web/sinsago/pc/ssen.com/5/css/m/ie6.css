@@ -1,0 +1,64 @@
+@charset "euc-kr";
+	
+#container {width:873px;}	
+.min_height{height:420px; }
+
+.paging a{width:16px;}
+.paging strong {width:16px;}
+
+#support_link{width:340px; margin-left:335px; }
+
+.m_txt{clear:both; overflow:hidden; background:#f8f8f8; margin:0 2px 0 2px; padding:5px 15px 5px 15px; font-size:11px; line-height:15px;}
+
+/* 투명처리 */
+.png24 {
+   tmp:expression(setPng24(this));
+}
+
+#banner{overflow:hidden; width:137px; }
+
+.fr_mt{margin-top:-21px; float:right; }
+
+.intro_view{overflow:hidden; border:2px solid #7ba1d2; text-align:left; padding:15px 10px 17px 12px; width:654px;}
+
+.lecture03_con{width:650px; padding:0; margin:37px 0 0 30px; }
+.result_info{background:url(../../images/m/course/finder_result_bg.jpg) no-repeat left top; width:650px; height:210px; float:left; margin-bottom:12px; letter-spacing:-1px;  }
+.scrollbox1 li{padding:8px 0 2px 0; height:21px;}
+.scrollbox2 li{height:26px;}
+
+.boardlist table thead tr th {padding:10px 0 8px 0; text-align:center; background:url("../../images/m/board/line.jpg") left 14px no-repeat;}
+.boardlist2 table thead tr th {padding:8px 0 8px 0; text-align:center; background:url("../../images/m/board/line.jpg") left 14px no-repeat;}
+
+.open_class table tbody tr.close td{ border-bottom:1px solid #cccccc;  }
+.open_class table tbody tr.open td{border:1px solid #fff;}
+
+.table_type1 {padding-top:2px; }
+.table_type11 {padding-top:2px; }
+.table_type11 table tbody tr td {line-height:18px; padding:6px 0 3px 0;  }
+.table_type12 {padding-top:2px; }
+.table_type12 table tbody tr td {line-height:12px; padding:4px 0 2px 0;   }
+.table_type13 {padding-top:2px; }
+
+
+.c_info_top {background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../html/images/classroom/class_info_top.png ', sizingMethod='crop'); }
+.c_info_center{margin-top:-3px; }
+.c_info_btm{background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../html/images/classroom/class_info_btm2.png', sizingMethod='crop'); }
+
+.calendar tbody td.sun div p span.class{width:45px; }
+.calendar tbody td div p span.class{width:49px;}
+
+.schedule tbody td p.schedule img{margin-bottom:1px; }
+
+#contentin02{height:685px;}
+/* 내공부방메인 라우드처리 20101120 */
+#content_classroom  #contentin02 .box01{left:24px;}
+#content_classroom  #contentin02 .box02{left:24px;}
+
+/* 서브메인 배너 버튼 20110404 */
+.btn_order{position:absolute; left:5px; top:125px; margin-top:-13px}
+#event_banner, #teacher_banner, #lecture_banner{margin-top:-13px}
+
+.teacherProfile{position:absolute; top:100px; left:435px; width:58px; height:23px; cursor:hand}
+
+/* 11-06-14 htsim@sinsago.co.kr 학부모 콘텐츠 추가로 인한 CSS */
+#mentor {margin-bottom:0px}

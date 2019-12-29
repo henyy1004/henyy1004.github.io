@@ -1,0 +1,485 @@
+@charset "euc-kr";
+@import url("global.css");
+@import url("board.css");
+@import url("cscenter.css");
+@import url("course.css");
+@import url("teacher.css");
+@import url("classroom.css");
+
+/* base */
+body#sub_ctype1 {
+position:relative; 
+margin:0;
+padding:0;
+font:small '돋움', dotum, arial, serif, sans-serif;
+color:#666666;
+font-size:12px;
+background: url('../../images/m/comm/sub_bg1.jpg')  no-repeat center top;}
+
+/*서브메인*/
+body#submain {
+margin:0;
+padding:0;
+font:small '돋움', dotum, arial, serif, sans-serif;
+color:#666666;
+font-size:12px;
+background: url(../../images/m/submain/submain_bg.jpg) no-repeat center top;}
+
+a, a:link {text-decoration:none; color:#666666;}
+a:visited {text-decoration:none; color:#666666;}
+a:active {text-decoration:none; color:#666666;}
+a:hover {text-decoration:underline; color:#666666;}
+
+/* 컨텐츠 바로가기 */
+#skipNavi {list-style:none; font-size:1.15em;}
+#skipNavi a:active,
+#skipNavi a:focus{text-align:center;}
+#skipNavi a:active,
+#skipNavi a:focus{color:#000; background:#fff; border:1px solid #475470; outline:0;}
+#skipNavi {position:absolute; top:-10em; left:0; margin:0 auto; width:18em; z-index:20;}
+#skipNavi a:active,
+#skipNavi a:focus{position:absolute; top:10.5em; left:0; width:18em;}
+
+/* layout */
+#wrapper {
+width:940px;
+position:relative;
+margin:0 auto;
+}
+
+#header {
+position:relative;
+width:870px;
+height:115px;
+}
+
+.sub_visual1{
+position:relative;
+width:870px;
+height:115px;
+background:url("../../images/m/cscenter/sub_visual_1.png") no-repeat 170px top; }
+
+#header .visual_txt1{position:absolute; left:170px; top:40px;}/* sub visual text1 */
+
+#header .tab_lecture{position:absolute; right:0; top:91px;}
+#header .tab_lecture li{float:left; margin-right:2px;}
+
+#header h1.top_logo img {
+position:absolute;
+left:15px;
+top:57px;
+z-index:10;
+}
+	
+	#gnb {
+	float:left;
+	overflow:hidden;
+	margin:0
+	}
+		.util_ctrl {float:left;padding:0;	margin:0;}	
+		.util_r_menu {
+		position:absolute;
+		right:0;
+		height:15px;
+		padding:21px 0 2px 15px;
+		width:152px; 
+		}
+		.util_r_menu li {float:left;}
+	
+		#topmenu {width:720px;}
+			.top_navi {
+				width:720px;
+				padding:10px 0 0 0;
+				overflow:hidden;
+			}
+			.top_navi li {
+			float:left;
+			color:#fff;
+			font-size:12px;
+			padding:0 0 0 0;
+			}			
+			.top_navi li ul {
+			position:absolute;
+			top:12px;
+			width:900px;
+			z-index:7;
+			padding-left:3px;
+			}
+			.top_navi li ul.msub1 {left:400px; width:310px;}
+			.top_navi li ul.msub2 {left:400px; width:310px;}
+			.top_navi li ul.msub3 {left:400px; width:310px;}
+			.top_navi li ul li {
+			float:left;
+			padding:0 2px 6px 0;
+			display:inline;
+			white-space:nowrap;
+			font-size:12px; 
+			}
+			.top_navi li ul li a {
+			display:inline-block; 
+			padding:0; 
+			font-weight:normal; 
+			margin-left:0; 
+			color:#434343 !important;
+			}
+			.top_navi li ul li a.current {display:inline; padding:0; font-weight:normal; margin-left:0; color:#c59900 !important; text-decoration:none;}
+			.top_navi li ul li a:hover {color:#c59900 !important; text-decoration:none;}	
+	
+	#container {
+	overflow:hidden;
+	padding:0 0 0 0;
+	width:870px;
+	margin-bottom:20px;
+	}
+
+	/* 서브메인 start */
+	#subm_header {
+	position:relative;
+	width:870px;
+	height:95px;
+	}
+
+	#subm_header .visual_txt1{position:absolute; left:170px; top:40px; }/* sub visual text1 */
+
+	#subm_header h1.top_logo img {
+	position:absolute;
+	left:45px;
+	top:57px;
+	z-index:10;
+	}
+
+	#subm_container {
+	overflow:hidden;
+	padding:0 0 0 0;
+	margin-bottom:20px;
+	width:870px;
+	}
+
+	#subm_container h2{width:420px; margin:0 auto;	}
+
+	#best_m	{position:absolute; width:870px; height:45px; background:url('/html/images/m/main/best_bg_mid.jpg') no-repeat;}
+
+	#submain_con{width:100%; overflow:hidden; float:left; }
+	#submain_con h3.tit01{margin:0 0 0px 1px;}
+	.submain_section1{position:relative; float:left; width:195px; margin-right:10px; }
+	.submain_section2{position:relative; float:left; width:195px; margin-right:10px; }
+	.submain_section3{position:relative; float:left; width:195px; margin-right:10px;}
+	.submain_section4{position:relative; float:left; width:250px; }	
+
+	.notice_list{overflow:hidden; border-top:1px solid #c8c8c8; padding:5px 0 0 0; margin-bottom:15px; }
+	.notice_list li{padding:0 0 5px 0; line-height:15px; }
+	.notice_list li p.s_list{color:#777777; background:url("../../images/h/submain/bullet_dot.jpg") no-repeat 5px 50%; float:left; padding:2px 0 0 13px; width:170px; text-align:left;}
+	.notice_list li p.s_date{ float:left; margin-bottom:6px; padding:0 0 0 0; color:#adadad; font-size:11px; }
+
+	.btn_more01{position:absolute; right:2px; top:6px; }
+	.btn_more02{position:absolute; right:2px; top:6px; }
+	.btn_more03{position:absolute; right:2px; top:6px; }
+	.btn_more04{position:absolute; right:2px; top:6px; }
+
+	.btn_order{position:absolute; left:5px; top:110px;}
+
+	.subm_cscenter{overflow:hidden; width:870px; }
+	.subm_cscenter dt{float:left; }
+	.subm_cscenter dd{float:left; }
+	/* 서브메인 end */
+
+	/* left menu 수정 20100823 */
+	#lnb{overflow:hidden; display:inline; float:left; width:152px; position:absolute; left:0; top:135px; z-index:100000;}
+	.left_menu {
+		padding:4px 0 30px 15px; 
+		background:url("../../images/m/cscenter/bg_lnb_btm.jpg") no-repeat left bottom; min-height:200px; 
+		overflow:hidden;
+		margin:0 0 0 0;
+		color:#525252;
+	}
+
+	.left_menu li {
+		overflow:hidden;
+		padding:5px 0 3px 10px; 
+		font-size:12px;
+	}
+	.left_menu li.current {
+		overflow:hidden;
+		background:url(../../images/m/cscenter/lnb_current_bg.jpg) no-repeat left top;
+		padding:5px 0 3px 10px; 
+		color:#fff;
+	}
+	.left_menu li.current strong {color:#fff;}
+
+	/* 활성화 안됐을때,*/
+	.left_depth2_off {
+		overflow:hidden;
+		background:none; 
+		margin:4px 7px 0 -10px;
+		padding:2px 0 0 0;
+		width:130px;
+	}
+
+	.left_depth2_off li {
+		clear:both;
+		overflow:hidden;
+		background:url(../../images/m/comm/bul/bullet_hor_off.jpg) no-repeat 11px 7px;
+		font-weight:normal;
+		font-size:11px;
+		padding:3px 0 5px 22px;
+		color:#777;		
+	}
+
+	/* 활성화 안됐을때 end */
+
+	.left_depth2 {
+		overflow:hidden;
+		background:url(../../images/m/comm/lnb_depth2_bg.jpg) no-repeat left bottom;
+		margin:4px 7px 0 -10px;
+		padding:2px 0 0 0;
+		width:130px;
+	}
+
+	.left_depth2 li {
+		clear:both;
+		overflow:hidden;
+		background:url(../../images/m/comm/bul/bullet_hor_off.jpg) no-repeat 11px 7px;
+		font-weight:normal;
+		font-size:11px;
+		padding:3px 0 5px 22px;
+		color:#777;		
+	}
+	.left_depth2 li.current_depth{
+		clear:both;
+		overflow:hidden;
+		background:url(../../images/m/comm/bul/bullet_hor_on.jpg) no-repeat 11px 7px;
+		font-weight:normal;
+		font-size:11px;
+		padding:3px 0 5px 22px;		
+	}
+	.left_depth2 li.current_depth span, .left_depth2 li.current_depth span a{color:#037C00; }
+
+	.left_menu li a:link {text-decoration:none; color:#525252;}
+	.left_menu li a:visited {text-decoration:none; color:#525252;}
+	.left_menu li a:active {text-decoration:none; color:#525252;}
+	.left_menu li a:hover { text-decoration:none; color:#525252;}
+
+	.left_menu li.current a:link{text-decoration:none;}
+	.left_menu li.current a:visited {text-decoration:none;}
+	.left_menu li.current a:active {text-decoration:none; }
+	.left_menu li.current a:hover {text-decoration:none;}
+
+	.left_depth2 li a:link {text-decoration:none; }
+	.left_depth2 li a:visited {text-decoration:none;}
+	.left_depth2 li a:active {text-decoration:none;}
+	.left_depth2 li a:hover {text-decoration:none; }
+
+	.left_depth2 li a:link span{text-decoration:none;}
+	.left_depth2 li a:visited span{text-decoration:none;}
+	.left_depth2 li a:active span{text-decoration:none;}
+	.left_depth2 li a:hover span{text-decoration:none; }
+
+	.left_depth2_off li a:link {text-decoration:none; color:#777;}
+	.left_depth2_off li a:visited {text-decoration:none; color:#777;}
+	.left_depth2_off li a:active {text-decoration:none; color:#777;}
+	.left_depth2_off li a:hover { text-decoration:none; color:#777;}
+
+	.left_menu_lecture {padding:4px 0 30px 17px; background:url("../../images/m/cscenter/bg_lnb_btm.jpg") no-repeat left bottom; min-height:200px; }
+	.left_menu_lecture li {overflow:hidden; padding:0 0 15px 3px; font-size:14px; font-weight:bold; color:#191919; line-height:18px; }
+	.left_menu_lecture li.book {background:url(../../images/s/course/left_book_bg.jpg) no-repeat left top; padding:2px 0 0 3px; width:115px;}
+	.left_menu_lecture li.book img {width:110px; height:137px; }
+	.left_menu_lecture li.book span{}
+
+	.left_menu_lecture li a:link {text-decoration:none; color:#000;}
+	.left_menu_lecture li a:visited {text-decoration:none; color:#000;}
+	.left_menu_lecture li a:active {text-decoration:none; color:#000;}
+	.left_menu_lecture li a:hover {text-decoration:none; color:#000;}
+
+	#banner{overflow:hidden; margin-top:10px; }
+	
+	#content {
+	background:url("../../images/m/cscenter/bg_content_top.jpg") no-repeat left top;
+	display:inline;
+	float:left;
+	margin-left:140px;
+	position:relative;
+	width:730px;
+	padding:29px 0 0 0;
+	}
+
+	#content #contentin{
+	overflow:hidden;
+	background:url("../../images/m/cscenter/bg_content.jpg") repeat-y left top; 
+	padding:0 0 0 9px;
+	min-height:480px; 
+	}
+
+	#line_map {
+	clear:both;
+	position:absolute;
+	top:15px;
+	left:0;
+	width:720px;
+	z-index:100000;
+	}
+	.location {
+	float:right;
+	color:#282828;
+	font-size:.9em;
+	}
+	.location li {
+	float:left;
+	padding:0 5px 0 6px;
+	background:url("../../images/m/comm/area_icon.jpg") no-repeat left 2px; 
+	}
+	.location li.home{background:none; margin:-1px 0 0 0; }
+
+	.location a:link {text-decoration:none; color:#282828;}
+	.location a:visited {text-decoration:none; color:#282828;}
+	.location a:active {text-decoration:none; color:#282828;}
+	.location a:hover {text-decoration:none; color:#282828;}
+
+	#content #contentin h3{width:500px; background:url("../../images/m/comm/bul/bullet_r_arrow01.jpg") no-repeat left top; margin:0 0 13px 17px; padding-left:29px;}
+
+	.con_box{
+	overflow:hidden;
+	margin:0 auto;
+	width:680px; 
+	}
+
+	.con_box h4{
+	padding:0; margin:0 0 8px 0;
+	}
+	
+/* 게시판 */
+
+	/* 서브메인 */
+	.notice_info0{background:#fbffed url("../../images/m/cscenter/bg_notice_info0.jpg") no-repeat left top; 
+	padding:15px 0 12px 168px;
+	margin:0 4px 0 0;
+	height:85px; 
+	}
+
+	/* 공지사항 */
+	.notice_info1{background:#fbffed url("../../images/m/cscenter/bg_notice_info1.jpg") no-repeat left top; 
+	padding:0 0 0 168px;
+	margin:0 4px 0 0;
+	height:100px; 
+	}
+	/* 자주하는 질문 */
+	.notice_info2{background:#fbffed url("../../images/m/cscenter/bg_notice_info2.jpg") no-repeat left top; 
+	padding:0 0 0 168px;
+	margin:0 4px 0 0;
+	height:100px; 
+	}
+	/* 질문n답변 */
+	.notice_info3{background:#fbffed url("../../images/m/cscenter/bg_notice_info3.jpg") no-repeat left top; 
+	padding:0 0 0 168px;
+	margin:0 4px 0 0;
+	height:100px; 
+	}
+	/* 프로그램 다운로드 */
+	.notice_info4{background:#fbffed url("../../images/m/cscenter/bg_notice_info4.jpg") no-repeat left top; 
+	padding:0 0 0 168px;
+	margin:0 4px 0 0;
+	height:100px; 
+	}
+	/* 원격 */
+	.notice_info5{background:#fbffed url("../../images/m/cscenter/bg_notice_info5.jpg") no-repeat left top; 
+	padding:0 0 0 168px;
+	margin:0 4px 0 0;
+	height:100px; 
+	}
+	/* 피클선생님메인 */
+	.teacher_info0{background:#fbffed url("../../images/m/cscenter/bg_notice_info0.jpg") no-repeat left top; 
+	padding:5px 0 12px 168px;
+	margin:0 4px 0 0;
+	height:85px; 
+	}
+
+	.txt_pad{padding:18px 0 10px 0; }
+	.txt_pad02{padding:26px 0 10px 0; }/* 나의 질문과 답변 */
+	.txt_pad03{padding:36px 0 10px 0; }
+
+	.faq_tab{overflow:hidden; height:92px; margin-left:10px; }
+
+	.tab_type1{overflow:hidden; height:30px; position:relative; }
+	.tab_type1_1{overflow:hidden; height:34px; background:url(../../images/m/board/qna_border_top.jpg) no-repeat left bottom; }
+	.tab_type2{margin-bottom:15px; }
+
+	.tab_stype1{overflow:hidden;  }
+	.tab_stype1_1{overflow:hidden; height:42px; background:url(../../images/m/board/qna_border_top.jpg) no-repeat left bottom; margin-bottom:30px;  }
+	.tab_stype2{overflow:hidden; height:30px; }
+	.tab_stype2_1{overflow:hidden; height:30px; background:url(../../images/m/board/qna_border_top.jpg) no-repeat left bottom; margin-bottom:30px;  }
+
+	/*강좌선택 내공부방 학부모탭*/
+	.c_tab1{overflow:hidden; height:30px; }
+	.c_tab1_1{overflow:hidden; height:34px; background:url(../../images/m/board/qna_border_top.jpg) no-repeat left bottom; }
+
+	#content .cnt_btm {
+	position:relative;
+	background:url("../../images/m/cscenter/bg_content_btm.jpg") no-repeat left bottom;
+	padding:20px 0 0 0;
+	}
+
+	/* Footer Area */
+	/* Copyright */
+	#footer2 {clear:both; position: relative; width:870px; height:96px; padding-bottom: 20px;}
+	#footareaL2 {float:left;	width:140px; height:62px; background:url('../../images/m/comm/foot_logo_.jpg') 10px 32px no-repeat;}
+	#footer2 address {clear:both; font-style:normal; padding-top:5px;}
+	#footer2 address, #footer p {color:#4d4d4d; font-size:11px;}
+
+	#footer {clear:both; position: relative; width:870px; height:96px; background:url('../../images/m/comm/footer.jpg') no-repeat; padding-bottom:30px; }
+	#footareaL {float:left;	width:140px; height:62px; background:url('../../images/m/comm/foot_logo.jpg') 25px 32px no-repeat;}
+	#footareaM {float:left; width:575px;}
+	#footareaM ul li {float:left; padding-top:18px;}
+	#footer address {clear:both; font-style:normal; padding-top:5px;}
+	#footer address, #footer p {color:#4d4d4d; font-size:11px;}
+
+	#footareaR { width:150px;}
+	#footareaR .familysite { position: absolute; left: 715px; top: -145px; z-index:20;}
+	#footareaR  ul {position: absolute; left: 715px; top: 50px; width:150px;}
+	#footareaR  ul li {float:left; padding-left:12px;}
+
+	/* Quick Area */
+	#quick{
+	position:absolute;
+	right:0;
+	text-align:center;
+	top:80px;
+	width:60px;
+	}
+	#quick ul{}
+	#quick ul li{display:block; padding:0 0 0 0;}
+	
+	#quicklink {}
+	#quicklink li {float:left; height:0;}
+	#quicklink li a {display:block;}
+	#quicklink a:hover, #quicklink a:focus, #quicklink a:active {height:auto; overflow:auto; display:block; font-size:12px;}
+	#q_content, #q_gnb, #q_snb, #q_quick, #q_footer {font-size:0; line-height:0; overflow:hidden; position:absolute; top:0; left:-5000px;}
+
+
+	
+/* 수강강좌 바로가기 */
+#myCourse{position:absolute; top:125px; left:-9999px; z-index:999999; width:283px; height:226px}
+#myCourse .courseList{float:left; width:233px; height:206px; padding:10px; background:url('../../images/m/myCourse/bg_myCourse.png') left top no-repeat;}
+#myCourse .courseHeder{height:27px}
+#myCourse .courseHeder li{float:left}
+#myCourse .courseHeder li label{vertical-align:middle}
+#myCourse .courseContent{overflow:hidden; clear:both; height:155px; padding-top:2px}
+#myCourse .courseFooter{clear:both; margin-top:10px; text-align:center}
+#myCourse .courseCmd{float:right; padding-top:54px}
+#myCourse .courseCmd img{width:30px; height:103px}
+
+/* 공통 푸터 */
+#cmFooter{width:100%; padding-top:5px}
+#crmFamilyWrap{z-index:999999; width:935px; padding-right:73px; margin:0 auto}
+#cmFamilySite{z-index:999999; display:none; position:absolute; width:935px; height:110px; margin:-111px auto 0 auto; border-top:1px solid #24bde9; border-left:1px solid #24bde9; border-right:1px solid #24bde9; background:#fff}
+#cmFamilySite ul li{float:left; padding:0 3px; margin:25px 0 0 0; border-right:1px solid #dfdfdf}
+#cmFamilySite ul li.first{padding-left:7px}
+#cmFamilySite ul li.last{border-right:0px}
+
+#cmFooter .cmFContent{width:100%; height:30px; border-bottom:1px solid #ececec; background:url('http://www.sinsago.co.kr/img/cmFooter/bg_footer.jpg') no-repeat top center}
+#cmFooter .cmFContent .cmFMenu{width:868px; padding:7px 75px 0 10px; margin:0 auto}
+#cmFooter .cmFContent .cmFMenu ul li{float:left}
+#cmFooter .cmFContent .cmFMenu ul li.last{float:right; padding-right:10px}
+#cmFooter .cmFContent .cmFMenu ul li.last a{cursor:pointer}
+#cmFooter .cmFCopy{width:470px; height:37px; padding:15px 75px 20px 0; margin:0 auto}
+
+#cmFooter .cmFAwd{width:868px; padding:0 75px 0 20px; margin:0 auto; text-align:center}
+#cmFooter .cmFAwd .cursor{cursor:pointer}	
