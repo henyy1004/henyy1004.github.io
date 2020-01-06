@@ -90,13 +90,8 @@
 /*!******************!*\
   !*** ./js/ui.js ***!
   \******************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/polyfill */ "./node_modules/@babel/polyfill/lib/index.js");
-/* harmony import */ var _babel_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_polyfill__WEBPACK_IMPORTED_MODULE_0__);
+/*! no static exports found */
+/***/ (function(module, exports) {
 
 
 const ui = () => {
@@ -10590,12 +10585,13 @@ try {
 /***/ }),
 
 /***/ 0:
-/*!************************!*\
-  !*** multi ./js/ui.js ***!
-  \************************/
+/*!****************************************!*\
+  !*** multi @babel/polyfill ./js/ui.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(/*! @babel/polyfill */"./node_modules/@babel/polyfill/lib/index.js");
 module.exports = __webpack_require__(/*! ./js/ui.js */"./js/ui.js");
 
 
