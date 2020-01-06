@@ -7,11 +7,11 @@
 
 .main-top {
     background: linear-gradient(#1489f7 50%, #693cec);
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .main-top .inner {
     min-height: 634px;
-    border-bottom: 1px solid #e8e8e8;
 }
 
 .main-top .left-area {
