@@ -1,45 +1,43 @@
-'use strict';
-
-var ui = function ui() {
+const ui = () => {
   uiHeader();
   uiTooltip();
   uiMenuList();
 };
 
 // header 모션
-var uiHeader = function uiHeader() {
-  var Header = document.querySelector('header');
-  var Nav = Header.querySelector('nav');
-  var GnbAction = Header.querySelector('.gnb-action');
-  var GnbActionItem = GnbAction.querySelectorAll('a');
-  var Gnb = Header.querySelector('#gnb');
-  var LinkLogo = document.querySelector('.link_logo');
-  var GnbItem = Gnb.querySelectorAll('a');
-  var BtnQr = document.querySelector('#btn-tooltip-qr');
-  var GnbHeight = Gnb.offsetHeight;
-  var HeaderTween = new TimelineMax();
-  var openNav = false;
+const uiHeader = () => {
+  const Header = document.querySelector('header');
+  const Nav = Header.querySelector('nav');
+  const GnbAction = Header.querySelector('.gnb-action');
+  const GnbActionItem = GnbAction.querySelectorAll('a');
+  const Gnb = Header.querySelector('#gnb');
+  const LinkLogo = document.querySelector('.link_logo');
+  const GnbItem = Gnb.querySelectorAll('a');
+  const BtnQr = document.querySelector('#btn-tooltip-qr');
+  const GnbHeight = Gnb.offsetHeight;
+  const HeaderTween = new TimelineMax();
+  let openNav = false;
 
   // 키코드정의
-  var keyCode = {
+  const keyCode = {
     TAB: 9,
     ESC: 27,
     SPACE: 32,
     UP: 38,
     DOWN: 40,
     ENTER: 13,
-    SHIFP: 16
+    SHIFP: 16,
   };
 
   // nav open
-  var open = function open() {
+  const open = () => {
     if (!openNav) {
       HeaderTween.to(Nav, 0.5, {
         height: GnbHeight,
-        onStart: function onStart() {
+        onStart: () => {
           GnbAction.style.display = 'none';
           Gnb.style.display = 'block';
-        }
+        },
       });
 
       openNav = true;
@@ -47,14 +45,14 @@ var uiHeader = function uiHeader() {
   };
 
   // nav close
-  var close = function close() {
+  const close = () => {
     if (openNav) {
       HeaderTween.to(Nav, 0.5, {
         height: 0,
-        onStart: function onStart() {
+        onStart: () => {
           GnbAction.style.display = 'block';
           Gnb.style.display = 'none';
-        }
+        },
       });
 
       openNav = false;
@@ -62,17 +60,17 @@ var uiHeader = function uiHeader() {
   };
 
   // nav에서 마우스 떠났을때 handler
-  var mouseleaveHandler = function mouseleaveHandler() {
+  const mouseleaveHandler = () => {
     close();
   };
 
   // .gnb-action 작업
-  GnbActionItem.forEach(function (item, index) {
-    var mouseenterHandler = function mouseenterHandler() {
+  GnbActionItem.forEach((item, index) => {
+    const mouseenterHandler = () => {
       open();
     };
 
-    var keyDownkHandler = function keyDownkHandler(event) {
+    const keyDownkHandler = event => {
       switch (event.keyCode) {
         case keyCode.SPACE:
           open();
@@ -86,7 +84,7 @@ var uiHeader = function uiHeader() {
       }
     };
 
-    var focusHandler = function focusHandler() {
+    const focusHandler = () => {
       // 펼쳐지기 전 메뉴 첫번째 링크에 포커스되었을떼
       if (index === 0) {
         GnbItem[0].focus();
@@ -99,7 +97,7 @@ var uiHeader = function uiHeader() {
       }
     };
 
-    var blurHandler = function blurHandler() {
+    const blurHandler = () => {
       if (index === GnbActionItem.length - 1) {
         GnbItem[GnbItem.length - 1].focus();
       }
@@ -112,8 +110,8 @@ var uiHeader = function uiHeader() {
   });
 
   // #gnb 작업
-  GnbItem.forEach(function (item, index) {
-    var keyDownkHandler = function keyDownkHandler(event) {
+  GnbItem.forEach((item, index) => {
+    const keyDownkHandler = event => {
       switch (event.keyCode) {
         case keyCode.UP:
           close();
@@ -124,16 +122,16 @@ var uiHeader = function uiHeader() {
       }
     };
 
-    var blurHandler = function blurHandler() {
+    const blurHandler = () => {
       if (index === 0) {
-        LinkLogo.addEventListener('focus', function () {
+        LinkLogo.addEventListener('focus', () => {
           openNav = true;
           close();
         });
       }
       // 마지막 링크에서 outfocus되면 탭닫기
       if (index === GnbItem.length - 1) {
-        BtnQr.addEventListener('focus', function () {
+        BtnQr.addEventListener('focus', () => {
           openNav = true;
           close();
         });
@@ -149,38 +147,38 @@ var uiHeader = function uiHeader() {
 
 // tooltop
 // todo: 툴팁과 메뉴리스트의 로직이 비슷하다 공통으로 뽑아낼 수 있는 방법을 생각해보자
-var uiTooltip = function uiTooltip() {
+const uiTooltip = () => {
   // 툴팁 다 가져오기
-  var toolTipArray = document.querySelectorAll('.toolitp-open');
+  const toolTipArray = document.querySelectorAll('.toolitp-open');
 
   // 각 툴팁버튼에 이벤트달기
-  toolTipArray.forEach(function (item, index) {
+  toolTipArray.forEach((item, index) => {
     // 툴팁 열림닫힘 상태
-    var hasPopup = false;
+    let hasPopup = false;
     // 버튼이 제어하는 툴팁노드
-    var controls = document.getElementById(item.getAttribute('aria-controls'));
+    const controls = document.getElementById(item.getAttribute('aria-controls'));
     // 키코드정의
-    var keyCode = {
+    const keyCode = {
       TAB: 9,
       ESC: 27,
       SPACE: 32,
       UP: 38,
-      DOWN: 40
+      DOWN: 40,
     };
 
-    var open = function open() {
+    const open = () => {
       item.setAttribute('aria-expanded', 'true');
       controls.classList.remove('hide');
       hasPopup = true;
     };
 
-    var close = function close() {
+    const close = () => {
       item.setAttribute('aria-expanded', 'false');
       controls.classList.add('hide');
       hasPopup = false;
     };
 
-    var clickHandler = function clickHandler() {
+    const clickHandler = () => {
       if (!hasPopup) {
         open();
       } else {
@@ -188,7 +186,7 @@ var uiTooltip = function uiTooltip() {
       }
     };
 
-    var keyDownkHandler = function keyDownkHandler(event) {
+    const keyDownkHandler = event => {
       switch (event.keyCode) {
         case keyCode.ESC:
           if (hasPopup) {
@@ -218,7 +216,7 @@ var uiTooltip = function uiTooltip() {
       }
     };
 
-    var blurHandler = function blurHandler() {
+    const blurHandler = () => {
       if (hasPopup) {
         close();
       }
@@ -232,28 +230,28 @@ var uiTooltip = function uiTooltip() {
 
 // menulist
 // todo: 툴팁과 메뉴리스트의 로직이 비슷하다 공통으로 뽑아낼 수 있는 방법을 생각해보자
-var uiMenuList = function uiMenuList() {
+const uiMenuList = () => {
   // 메뉴리스트버튼 다 가져오기
-  var menuListArray = document.querySelectorAll('.btn-menulist');
+  const menuListArray = document.querySelectorAll('.btn-menulist');
   // 팝업 열림닫힘 상태
-  var hasPopup = false;
+  let hasPopup = false;
   // 키코드정의
-  var keyCode = {
+  const keyCode = {
     TAB: 9,
     ESC: 27,
     SPACE: 32,
     UP: 38,
-    DOWN: 40
+    DOWN: 40,
   };
 
   // 각 메뉴리스트버튼에 이벤트달기
-  menuListArray.forEach(function (item, index) {
+  menuListArray.forEach((item, index) => {
     // 버튼이 제어하는 메뉴리스트노드
-    var controls = document.getElementById(item.getAttribute('aria-controls'));
+    const controls = document.getElementById(item.getAttribute('aria-controls'));
     // 메뉴리스트노드의 마지막 요소
-    var controlsLastFocus = controls.querySelector('.last');
+    const controlsLastFocus = controls.querySelector('.last');
 
-    var clickHandler = function clickHandler() {
+    const clickHandler = () => {
       if (!hasPopup) {
         open();
       } else {
@@ -261,7 +259,7 @@ var uiMenuList = function uiMenuList() {
       }
     };
 
-    var keyDownkHandler = function keyDownkHandler(event) {
+    const keyDownkHandler = event => {
       switch (event.keyCode) {
         case keyCode.ESC:
           if (hasPopup) {
@@ -291,19 +289,19 @@ var uiMenuList = function uiMenuList() {
       }
     };
 
-    var focusHandler = function focusHandler() {
+    const focusHandler = () => {
       if (!hasPopup) {
         open();
       }
     };
 
-    var close = function close() {
+    const close = () => {
       item.setAttribute('aria-expanded', 'false');
       controls.classList.add('hide');
       hasPopup = false;
     };
 
-    var open = function open() {
+    const open = () => {
       item.setAttribute('aria-expanded', 'true');
       controls.classList.remove('hide');
       hasPopup = true;
@@ -313,7 +311,7 @@ var uiMenuList = function uiMenuList() {
     item.addEventListener('keydown', keyDownkHandler);
     item.addEventListener('focus', focusHandler);
 
-    var blurHandler = function blurHandler() {
+    const blurHandler = () => {
       if (hasPopup) {
         close();
       }
