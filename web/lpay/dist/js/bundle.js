@@ -10590,13 +10590,12 @@ try {
 /***/ }),
 
 /***/ 0:
-/*!****************************************!*\
-  !*** multi @babel/polyfill ./js/ui.js ***!
-  \****************************************/
+/*!************************!*\
+  !*** multi ./js/ui.js ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! @babel/polyfill */"./node_modules/@babel/polyfill/lib/index.js");
 module.exports = __webpack_require__(/*! ./js/ui.js */"./js/ui.js");
 
 
