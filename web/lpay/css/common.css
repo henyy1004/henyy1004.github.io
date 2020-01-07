@@ -107,6 +107,7 @@ address {
 
 /* 레이아웃 */
 #wrap {
+    position: relative;
     padding-top: 186px;
     overflow: hidden;
 }
@@ -321,6 +322,10 @@ nav .gnb:before{
 
 .gnb a:hover {
     color: #6a3cec;
+}
+
+.gnb-action {
+    z-index: 1;
 }
 
 .gnb-row + .gnb-row{
