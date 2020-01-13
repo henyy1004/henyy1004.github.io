@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- mobile responsive meta -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>IE와 ES6</title>
+  <meta
+    name="description"
+    content="웹퍼블리셔 정혜인 개인 포트폴리오"
+  />
+
+  <link rel="canonical" href="https://henyy1004.github.io/2020/01/04/es6/" />
+  <link rel="alternate" type="application/rss+xml" title="Jung Hyein – Portfolio" href="/feed.xml">
+    <!-- Fonts -->
+    <link
+      media="none"
+      href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap"
+      rel="stylesheet"
+      onload="this.media='all'"
+    />
+    <link
+    media="none"
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+      onload="this.media='all'"
+    />
+    <link
+    media="none"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap"
+      rel="stylesheet"
+      onload="this.media='all'"
+    />
+
+  <!-- Main Stylesheet -->
+  <link href="/assets/css/main.css" rel="stylesheet" />
+</head>
+
+
+<body>
+
+  
+
+  <div class="container-full">
+  <!-- begin header -->
+  <header class="header">
+
+    <div class="logo">
+      <a class="logo__link" href="/">
+      
+        Hyein Portfolio
+      
+      </a>
+    </div>
+
+    <nav class="main-nav">
+      <span class="main-nav__open">menu</span>
+
+      <div class="main-nav__box">
+        <span class="main-nav__close">Close</span>
+
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="/" class="nav__link">Home</a>
+          </li>
+          
+            
+          
+            
+          
+          <li class="nav__item">
+            <a href="/about/" class="nav__link">About</a>
+          </li>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <li class="nav__item">
+            <a href="/post/" class="nav__link">Post</a>
+          </li>
+          
+            
+          
+            
+          
+          <li class="nav__item">
+            <a href="/resume/" class="nav__link">Resume</a>
+          </li>
+          
+            
+          
+            
+          
+          <li class="nav__item">
+            <a href="/works/" class="nav__link">Works</a>
+          </li>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+  <!-- end header -->
+</div>
+
+
+  <!-- begin content -->
+  <main class="content" aria-label="Content">
+    <div class="container">
+  <!-- begin post -->
+  <article class="post">
+    <div
+      class="post__head"
+      data-aos="fade-up"
+      data-aos-easing="ease-out-quad"
+      data-aos-duration="700"
+    >
+      <h1 class="post__title">IE와 ES6</h1>
+      <div class="post__date">
+        <time datetime="2020-01-04T00:05:55+09:00"
+          >Published Jan 04, 2020</time
+        >
+      </div>
+      
+    </div>
+
+    <div
+      class="post__content"
+      data-aos="fade-up"
+      data-aos-easing="ease-out-quad"
+      data-aos-delay="100"
+      data-aos-duration="700"
+    >
+      <h2 id="es6es2015란">ES6(ES2015)란?</h2>
+<p>간단하게 2015년에 나온 <code class="highlighter-rouge">ECMAScript</code> 버전
+<code class="highlighter-rouge">ES</code>는 <code class="highlighter-rouge">ECMAScript</code>를 말한다.</p>
+
+<h3 id="ecma-script란">ECMA Script란?</h3>
+<p>ECMAScript는 표준이다. JavaScript는 해당 표준을 구현하기 위한 가장 유명한 구현체이다. 다른 구현체들로는 다음과 같은 것들이 있다.SpiderMonkey, V8, 그리고 ActionScript</p>
+
+<h3 id="ecma-script-생긴이유">ECMA Script 생긴이유</h3>
+<p>자바스크립트(Javascript)가 넷스케이프(Netscape) 브라우져만이 아니라 다른 웹 브라우져들의 지원까지 받기 시작하면서 다양한 웹 브라우져에서 자바스크립트(Javascript)가 공통되게 잘 작동하기 위해서 표준 규격이 필요해졌는데, 이 때문에, ECMA 국제 기구에서 “ECMAScript Standard”라 불리는 스크립트 표준이 만들어지게 된다.</p>
+
+<h3 id="javascript">javaScript</h3>
+<p>가장 익숙한 javaScript는 <code class="highlighter-rouge">ECMA Script</code> + <code class="highlighter-rouge">BOM</code> + <code class="highlighter-rouge">COM</code>으로 구성되어있다.</p>
+
+<h3 id="ecma-버전">ECMA 버전</h3>
+<ul>
+  <li>ES3 (1999) : 대중적으로 알고있는 그냥 자바스크립트라고 보면 된다. 대부분의 브라우저에서 지원하며, IE8까지 크로스브라우징을 지원하는 환경이라면 ES3을 쓰고 있다고 보면 된다.</li>
+  <li>ES5 (2009)</li>
+  <li>ES6 (ES2015)</li>
+  <li>ES7 (ES2016)</li>
+  <li>ES8 (ES2017) : ES2017에서는 Promise 급의 중대한 변화인 async, await등이 발표되었다.</li>
+</ul>
+
+<p>버전별로 자세한 설명은 생략(구글링 해주세요ㅎㅎ)
+버전별로 새로운 기능이 추가되고 업그레이드된다. 최신버전들은 하위브라우저에서 호환이 안된다는 것.</p>
+
+<h2 id="es6를-하위브라우저에서-보는-법">ES6를 하위브라우저에서 보는 법</h2>
+
+<p>최근 <a href="'https://henyy1004.github.io/web/lpay/index.html'">Lpay 클론코딩</a>을 하면서 ui를 제어하는 javaScript부분을 ES6문법으로 작성하였습니다. <code class="highlighter-rouge">const</code>, <code class="highlighter-rouge">forEach</code> 등을 사용하여 작업하였지만 문제는 IE에서 최신임에도 불구하고 스크립트를 읽지 못하는 것이었다. 아주 개인적인 작은 작업이었기 때문에 굳이 babel을 설정하고 싶지 않은 마음이었다. 에전에 cdn방식으로 babel을 불러와서 크로스브라우징을 한 기억이 떠올라 cdn으로 불러왔지만 잘 되지 않았다.
+때문에 경험해보고자 그냥 직접! webpack과 babel을 사용해서 적용해보기로 했다.</p>
+
+<h3 id="babel">BABEL</h3>
+<p>babel은 ES6에서 ECMAScript가 모든 브라우저에 지원했던 자바스크립 (ES5)로 컴파일해주는 transcompiler이다.</p>
+
+<p>모든 사용자가 최신스크립트버전을 지원해주는 브라우저만 쓰면 얼마나 좋을까 하지만 일반사용자들은 소프트웨어를 업데이트하는 일에 관심이 없다. 때문에 모든 사람이 최신 브라우저를 쓰지 않는다. 하지만 ES6는 포기할 수 없다! 그래서 하위 브라우저에서도 지원해주는 ES5로 변환해주는 babel이 필요한거다.</p>
+
+<h4 id="transcompiler">Transcompiler</h4>
+<p>babel은 일부의 자바스크립트 코드(예를들어 es6 템플릿 String을 사용한 코드)를 input으로 받고 일부의 순수한 자바스크립트를 output으로 생성한다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">// input</span>
+    <span class="kd">const</span> <span class="nx">expression</span> <span class="o">=</span> <span class="nx">javascript</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`string text </span><span class="p">${</span><span class="nx">expression</span><span class="p">}</span><span class="s2"> string text`</span><span class="p">)</span>
+
+    <span class="c1">// output</span>
+    <span class="kd">var</span> <span class="nx">expression</span> <span class="o">=</span> <span class="nx">javascript</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">string text</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">expression</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">string text</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>예시 외에 직접 실행해보고 싶다면  https://babeljs.io/repl/ 에서 가능하다.</p>
+
+<h3 id="webpack">WEBPACK</h3>
+<p>WEBPACK이란 오픈 소스 자바스크립트 모듈 번들러이다. 주로 자바스크립트를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다</p>
+
+<p><code class="highlighter-rouge">webpack.config.js</code>에 설정을 하면 빌드된 최종 결과물을 받을 수 있다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+<span class="c1">// 시작경로</span>
+<span class="na">entry</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">main</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/main.js</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="c1">// 아웃풋</span>
+<span class="nl">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bundle.js</span><span class="dl">'</span><span class="p">,</span> <span class="c1">//최종 빌드될 파일명</span>
+<span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./dist</span><span class="dl">'</span> <span class="c1">// 최종 빌드된 파일이 저장될 곳</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>자세한 사용법은 <a href="https://webpack.js.org/">webpack사이트</a>참고</p>
+
+<p>lpay클론코딩 작업에서는 기존 es6로 작성된 <code class="highlighter-rouge">ui.js</code>파일을 <code class="highlighter-rouge">babel</code>로 컴파일하고 <code class="highlighter-rouge">babel-polyfill</code>과 함께 번들링하기 위해 사용하였다.</p>
+
+<h2 id="이슈">이슈</h2>
+<p>익스플로러에서는 es6의 <code class="highlighter-rouge">forEach</code>, <code class="highlighter-rouge">map</code> 과 같은 loop기능을 사용할 수 없었다.
+바벨로 컴파일 시키고 polyfill을 적용시켜도 ie에서는 적용이 되지 않았는데.</p>
+
+<p><code class="highlighter-rouge">.babelrc</code>에 <code class="highlighter-rouge">babel-plugin-loop-optimizer</code>모듈을 적용하며 해결되었다.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"presets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"@babel/preset-env"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"plugins"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"@babel/plugin-transform-runtime"</span><span class="p">,</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"absoluteRuntime"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"corejs"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"helpers"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"regenerator"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"useESModules"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="s2">"babel-plugin-loop-optimizer"</span><span class="p">]</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>이렇게 ie최신에서도 es6를 사용한 문법이 해석되어 ui인터렉션이 작용할 수 있도록 처리하였다.
+처음에는 cdn으로만 적용하려 하다가 결국 babel과 webpack을 사용하게 되었는데
+이런 작은 작업에 적용해본 이유는 직접 설정해보며 이해해보고 싶어서다.
+js 번들링 이외에도 webpack은 굉장히 많고 편리한 기능이 있다. 비슷한 빌드 시스템으로는 <code class="highlighter-rouge">parcel</code>이 있다.</p>
+
+<p>출처: https://takeuu.tistory.com/93 [워너비스페셜]
+출처: https://yeolco.tistory.com/146 [열코의 프로그래밍 일기]
+출처: https://geonlee.tistory.com/133 [빠리의 택시 운전사]</p>
+
+    </div>
+
+    
+
+    <!-- <div class="post__share">
+      <ul class="share__list list-reset">
+        <li class="share__item">
+          <a
+            class="share__link share__facebook"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://henyy1004.github.io/2020/01/04/es6/"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Facebook"
+            rel="nofollow"
+          >
+            <svg
+              enable-background="new 0 0 56.693 56.693"
+              height="56.693"
+              viewBox="0 0 56.693 56.693"
+              width="56.693"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m40.43 21.739h-7.645v-5.014c0-1.883 1.248-2.322 2.127-2.322h5.395v-8.278l-7.43-.029c-8.248 0-10.125 6.174-10.125 10.125v5.518h-4.77v8.53h4.77v24.137h10.033s0-13.32 0-24.137h6.77z"
+              />
+            </svg>
+          </a>
+        </li>
+
+        <li class="share__item">
+          <a
+            class="share__link share__twitter"
+            href="https://twitter.com/intent/tweet?text=IE%EC%99%80%20ES6&url=https://henyy1004.github.io/2020/01/04/es6/"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Twitter"
+            rel="nofollow"
+          >
+            <svg
+              enable-background="new 0 0 56.693 56.693"
+              height="56.693"
+              viewBox="0 0 56.693 56.693"
+              width="56.693"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m52.837 15.065c-1.811.805-3.76 1.348-5.805 1.591 2.088-1.25 3.689-3.23 4.444-5.592-1.953 1.159-4.115 2-6.418 2.454-1.843-1.964-4.47-3.192-7.377-3.192-5.581 0-10.106 4.525-10.106 10.107 0 .791.089 1.562.262 2.303-8.4-.422-15.848-4.445-20.833-10.56-.87 1.492-1.368 3.228-1.368 5.082 0 3.506 1.784 6.6 4.496 8.412-1.656-.053-3.215-.508-4.578-1.265-.001.042-.001.085-.001.128 0 4.896 3.484 8.98 8.108 9.91-.848.23-1.741.354-2.663.354-.652 0-1.285-.063-1.902-.182 1.287 4.015 5.019 6.938 9.441 7.019-3.459 2.711-7.816 4.327-12.552 4.327-.815 0-1.62-.048-2.411-.142 4.474 2.869 9.786 4.541 15.493 4.541 18.591 0 28.756-15.4 28.756-28.756 0-.438-.009-.875-.028-1.309 1.974-1.422 3.688-3.203 5.042-5.23z"
+              />
+            </svg>
+          </a>
+        </li>
+
+        <li class="share__item">
+          <a
+            class="share__link share__pinterest"
+            href="http://pinterest.com/pin/create/button/?url=https://henyy1004.github.io/2020/01/04/es6/&amp;media=https://henyy1004.github.io&amp;description=IE%EC%99%80%20ES6"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Pinterest"
+            rel="nofollow"
+          >
+            <svg
+              enable-background="new 0 0 56.693 56.693"
+              height="56.693"
+              viewBox="0 0 56.693 56.693"
+              width="56.693"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m28.348 5.158c-13.599 0-24.625 11.023-24.625 24.625 0 10.082 6.063 18.744 14.739 22.553-.069-1.721-.012-3.783.429-5.654.473-2 3.168-13.418 3.168-13.418s-.787-1.572-.787-3.896c0-3.648 2.115-6.373 4.749-6.373 2.24 0 3.322 1.682 3.322 3.695 0 2.252-1.437 5.619-2.175 8.738-.616 2.613 1.31 4.744 3.887 4.744 4.665 0 7.808-5.992 7.808-13.092 0-5.397-3.635-9.437-10.246-9.437-7.47 0-12.123 5.57-12.123 11.792 0 2.146.633 3.658 1.624 4.83.455.537.519.754.354 1.371-.118.453-.389 1.545-.501 1.977-.164.625-.669.848-1.233.617-3.44-1.404-5.043-5.172-5.043-9.408 0-6.994 5.899-15.382 17.599-15.382 9.4 0 15.588 6.804 15.588 14.107 0 9.658-5.369 16.875-13.285 16.875-2.659 0-5.16-1.438-6.016-3.068 0 0-1.43 5.674-1.732 6.768-.522 1.9-1.545 3.797-2.479 5.275 2.215.654 4.554 1.01 6.979 1.01 13.598 0 24.623-11.023 24.623-24.623-.001-13.603-11.027-24.626-24.624-24.626z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div> -->
+
+    <div class="post__navigation">
+      
+      <a class="prev" href="/2019/12/09/Mobx/">
+        <div class="prev__post-icon">
+          <svg
+            enable-background="new 0 0 512 512"
+            height="512"
+            viewBox="0 0 512 512"
+            width="512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="m352 128.4-32.3-32.4-159.7 160 159.7 160 32.3-32.4-127.3-127.6z" />
+          </svg>
+        </div>
+        <span class="post__nav-wrapper">
+          <div
+            class="post__nav-image"
+            style="background-image: url()"
+          ></div>
+          <h2 class="post__nav-title">
+            <time datetime="2020-01-04T00:05:55+09:00"
+              >Jan 04, 2020</time
+            >
+            <br />냥터레스트와 Mobx
+          </h2>
+        </span>
+      </a>
+       
+      <a class="next" href="/2020/01/08/webFont/">
+        <div class="next__post-icon">
+          <svg
+            enable-background="new 0 0 512 512"
+            height="512"
+            viewBox="0 0 512 512"
+            width="512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="m160 128.4 32.3-32.4 159.7 160-159.7 160-32.3-32.4 127.3-127.6z" />
+          </svg>
+        </div>
+        <span class="post__nav-wrapper">
+          <div
+            class="post__nav-image"
+            style="background-image: url()"
+          ></div>
+          <h2 class="post__nav-title">
+            <time datetime="2020-01-04T00:05:55+09:00"
+              >Jan 04, 2020</time
+            >
+            <br />웹성능 최적화 - 웹폰트
+          </h2>
+        </span>
+      </a>
+      
+    </div>
+    <!-- 
+    
+      <div class="show-comments">
+    <button class="disqus-button" id="show-comments-button" onclick="disqus();return false;">Leave a comment</button>
+</div>
+
+<div id="disqus_thread"></div>
+
+<script>
+var disqus_loaded = false;
+var disqus_shortname = 'Hyein'; // Add your shortname here
+function disqus() {
+  if (!disqus_loaded)  {
+      disqus_loaded = true;
+      var e = document.createElement("script");
+      e.type = "text/javascript";
+      e.async = true;
+      e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0])
+      .appendChild(e);
+      // Hide the button after opening
+      document.getElementById("show-comments-button").style.display = "none";
+  }
+}
+</script>
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+     -->
+  </article>
+  <!-- end post -->
+</div>
+
+  </main>
+  <!-- end content -->
+
+  <div class="container">
+  <!-- begin footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="contact">
+        <div class="contact__title">
+          Work inquiry, question or something else?
+          <a href="mailto:junghi0327@gmail.com" target="_blank">Email me</a>.
+        </div>
+        <ul class="contact__list list-reset">
+          
+          <li class="contact__item">
+            <a class="contact__link" href="https://twitter.com/">Twitter</a>
+          </li>
+          
+          <li class="contact__item">
+            <a class="contact__link" href="https://facebook.com/">Facebook</a>
+          </li>
+          
+          <li class="contact__item">
+            <a class="contact__link" href="https://instagram.com/">Instagram</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+</div>
+
+
+  <!-- begin js -->
+  <script src="/assets/js/vendors/jquery-3.3.1.min.js"></script>
+  <script src="/assets/js/vendors/aos.js"></script>
+  <script src="/assets/js/vendors/jquery.fitvids.js"></script>
+  <script src="/assets/js/common.js"></script>
+  
+  <!-- end js -->
+</body>
+
+</html>
