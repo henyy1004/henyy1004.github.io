@@ -8,13 +8,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>웹성능 최적화 - 웹폰트</title>
+  <title>jekyll 그리고 github-page</title>
   <meta
     name="description"
     content="웹퍼블리셔 정혜인 개인 포트폴리오"
   />
 
-  <link rel="canonical" href="https://henyy1004.github.io/2020/01/08/webFont/" />
+  <link rel="canonical" href="https://henyy1004.github.io/2020/01/01/jekyll/" />
   <link rel="alternate" type="application/rss+xml" title="Jung Hyein – Portfolio" href="/feed.xml">
     <!-- Fonts -->
     <link
@@ -140,10 +140,10 @@
       data-aos-easing="ease-out-quad"
       data-aos-duration="700"
     >
-      <h1 class="post__title">웹성능 최적화 - 웹폰트</h1>
+      <h1 class="post__title">jekyll 그리고 github-page</h1>
       <div class="post__date">
-        <time datetime="2020-01-08T00:05:55+09:00"
-          >Published Jan 08, 2020</time
+        <time datetime="2020-01-01T00:05:55+09:00"
+          >Published Jan 01, 2020</time
         >
       </div>
       
@@ -156,97 +156,101 @@
       data-aos-delay="100"
       data-aos-duration="700"
     >
-      <h2 id="웹폰트란">웹폰트란?</h2>
-<p>웹폰트란 방문자의 로컬 컴퓨터에 폰트 설치 여부와 상관 없이 온라인의 특정 서버에 위치한 폰트 파일을 다운로드하여 화면에 표시해주는 웹 전용 폰트.</p>
+      <h2 id="1jekyll-텝플릿을-사용하여-깃헙-블로그-만들기">1.jekyll 텝플릿을 사용하여 깃헙 블로그 만들기</h2>
 
-<h2 id="웹폰트로드를-개선해여-웹성능-최적화">웹폰트로드를 개선해여 웹성능 최적화</h2>
-<p>구글 웹폰트를 CDN으로 불러올시 외부네트워크에서 받아오기 때문에 네트워크 환경이나 용량에 따라 속도가 느려질 수 있다.
-웹성능을 최적화하기 위해서는 리소스들 역시 용량은 낮추고 다운로드 속도는 빠르게하여 최적화시켜주어야 한다. 그 방법으로는 여러가지가 있는데 포트폴리오에 실험해본 내용은 2가지이다.</p>
+<h3 id="jekyll이란">jekyll이란?</h3>
 
+<blockquote>
+  <p>Jekyll 은 아주 심플하고 블로그 지향적인 정적 사이트 생성기입니다.</p>
+
+  <p>텍스트(마크다운) 파일로 컨텐츠를 작성하고, 폴더로 그 파일들을 정리합니다. 다음, Liquid 기능이 추가된 HTML 템플릿을 사용해 사이트의 모양을 만듭니다. Jekyll 은 자동으로 내용물과 템플릿들을 함께 합쳐서, 어떤 서버에서도 올바르게 작동하는, 완전한 정적 웹사이트를 생성합니다.</p>
+
+  <p>Jekyll 은 GitHub Pages 의 내부 엔진이기 때문에, 당신의 프로젝트에 있는 Jekyll 페이지/블로그/웹사이트를 GitHub 서버에 무료로 호스팅 할 수 있습니다.</p>
+</blockquote>
+
+<p>이라고 jekyll 사이트에 기술되어있다.
+<code class="highlighter-rouge">폴더구조</code>와 <code class="highlighter-rouge">markdown</code>,<code class="highlighter-rouge">html</code>을 이용해서 <code class="highlighter-rouge">liquid</code>언어로 만드는 블로그 템플릿이다.</p>
+
+<h3 id="처음-알게된-것들">처음 알게된 것들</h3>
+
+<h3 id="ruby">Ruby</h3>
+<p>이름은 들어봤지만 직접적인 코드는 처음 봤다. 들여쓰기도 자유롭고 줄바꿈으로도 코드가 구분이 되고 굉장히 깨끗해보인다.</p>
+
+<h4 id="1-liquid">1. Liquid</h4>
 <ul>
-  <li>Google Web font loader</li>
-  <li>media=”none” 방법</li>
+  <li>Shopify에 의해 개발되고 Ruby로 작성된 오픈소스 템플릿 언어이다.</li>
+  <li>2006년 6월부터 웹페이지에 동적인 컨텐츠를 로드(load)하는 Shopify의 백본(backbone)으로 기능하고 있다.</li>
+  <li>html, markdown 파일에서 해석되고 처리된다.</li>
 </ul>
 
-<h3 id="google-web-font-loader">Google Web font loader</h3>
-<p>구글 폰트에서 제공하는 web font loader API이다.
-웹 글꼴 로더는 Google Fonts API가 제공하는 것보다 글꼴로드를보다 효과적으로 제어 할 수있는 JavaScript 라이브러리이다. 웹 글꼴 로더를 사용하면 여러 웹 글꼴을 불러올 수 있다. Google과 Typekit 이 공동 개발하였다.</p>
+<h4 id="2-gem">2. GEM</h4>
+<p>Ruby에서 사용되는 패키지</p>
 
-<h4 id="사용법">사용법</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"ko"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Google Web font loader<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
+<ul>
+  <li><strong>Bundler</strong>
+    <ul>
+      <li>gem의 의존성관리를 해주는 의존성관리 도구</li>
+    </ul>
+  </li>
+  <li><strong>Gemfile</strong>
+    <ul>
+      <li>rails로 프로젝트를 만들었을때 최상위루트에 생기는 파일</li>
+      <li>의존성프로그램들을 기술</li>
+      <li>node의 package.json과 같은 개념 같다.</li>
+    </ul>
+  </li>
+</ul>
 
-<span class="c">&lt;!-- webfont.js 불러오기 --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="c">&lt;!-- 불러올 webfont 설정 --&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-<span class="nx">WebFont</span><span class="p">.</span><span class="nx">load</span><span class="p">({</span>
-    <span class="na">google</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">families</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">Lora</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">IBM Plex Mono</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">Noto Serif KR</span><span class="dl">'</span><span class="p">]</span>
-    <span class="p">}</span>
-<span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<h3 id="bashrc">.bashrc</h3>
+
+<p>맥에는 시스템 ruby가 설치되어있었는데 이 시스템 ruby로는 jekyll을 사용할 수 없어 homebrew로 rbenv(버전관리시스템같음)를 설치하고 최신 버전의 ruby를 설치하였다.
+그리고 .bashrc파일을 만들어 아래 내용을 입력 하여 저장하였다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[ -d ~/.rbenv  ]] &amp;&amp; \
+  export PATH=${HOME}/.rbenv/bin:${PATH} &amp;&amp; \
+  eval "$(rbenv init -)"
 </code></pre></div></div>
-
-<p>web font loader는 위처럼 CDN으로 불러올 수 있고, npm 으로 install하여 사용할 수 있다.
-자세한 API Guide는 <a href="https://github.com/typekit/webfontloader">Github repository</a>에서 확인</p>
-
-<h3 id="medianone">media=”none”</h3>
-<p>조금 생소한 방법일 수 있는데 midea=”none”속성을 이용하면 리소스 블록킹을 막아준다고 한다.</p>
-
-<h4 id="사용법-1">사용법</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"reset.css"</span> <span class="na">media=</span><span class="s">"none"</span> <span class="na">onload=</span><span class="s">"this.media='all';"</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"font.css"</span> <span class="na">media=</span><span class="s">"none"</span> <span class="na">onload=</span><span class="s">"this.media='all';"</span><span class="nt">&gt;</span>
+<p>그리고 아래 명령어를 치면 jekyll을 사용 할 수 있다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source ~/.bashrc
 </code></pre></div></div>
-<p>불러올 css에 <code class="highlighter-rouge">media="none"</code>속성과 <code class="highlighter-rouge">onload="this.media='all'"</code>를 함께 적용해주면 된다.</p>
+<p>사실 이 부분이 제일 이해가 안되는 부분이다..
+.bashrc, .bash_profile, .profile 등 여러 파일이 있는데
+뭔가 환경변수를 설정하는 파일같고 source를 통해 파일을 불러들ㅇ이는 것 같다.
+어떤건 로그인 shell에서 쓰이는거고..언제 호출되고.. 등.. 
+좀 더 생각해봐야겠다..
+터미널에서 jekyll을 쓰려면 항상 <code class="highlighter-rouge">source ~/.bashrc</code>를 쳐서 사용했는데,
+.bashrc는 새로운 터미널일때마다 쳐줘야되는 파일인 것 같다.
+새로운 터미널을 열때마다 쳐주는건 뭔가 효율성이 떨이지는 것 같다.
+분명 고정시키는 법이 있을 것</p>
 
-<h2 id="결과">결과</h2>
-<h3 id="최적화하지-않은-cdn">최적화하지 않은 CDN</h3>
-<p><img src="/assets/img/post/cdn.png" alt="CDN적용" /></p>
-<h3 id="web-font-load-적용">web font load 적용</h3>
-<p><img src="/assets/img/post/fontload.png" alt="web font load 적용" /></p>
-<h3 id="medianone-적용">media=”none “적용</h3>
-<p><img src="/assets/img/post/media.png" alt="web font load 적용" /></p>
+<h3 id="작업중-문제">작업중 문제</h3>
+<p>나는 포트폴리오 게시물 목록과 일반 게시물 목록을 각각 별도의 페이지로 나누고싶었다.
+내가 받아온 테마는 나눠지지 않고 하나의 게시물 목록 페이지만 갖고 있었다.
+두개이상의 목록 페이지를 갖고있는 테마를 가져와도 됐지만 직접 셋팅해서 어떻게 돌아가고(?)있는지를 확인하고 싶었다.</p>
 
-<p>최종적으로 웹폰트를 최적화했을때 환경에서
-<code class="highlighter-rouge">FCP</code>,<code class="highlighter-rouge">FMP</code>,<code class="highlighter-rouge">TTF</code>의 속도가 단축되었다.
-<code class="highlighter-rouge">FCP</code>,<code class="highlighter-rouge">FMP</code>,<code class="highlighter-rouge">TTF</code>는 웹성능을 측정하는 기준인데 속도가 빠를수록 좋다.</p>
+<p>기존에는 <code class="highlighter-rouge">_post</code>폴더에 있는 <code class="highlighter-rouge">md</code>파일들을 게시물로 가져와 목록을 만들어 노출시키는 포스트 리스트페이지가 하나 있었다. 나는 이 페이지를 하나 더 만들고 싶었고 별도의 <code class="highlighter-rouge">portfolio</code>라는 폴더를 만들어 그 안에 게시물들을 <code class="highlighter-rouge">md</code>파일로 작성하여 목록으로 노출시키고 싶었다.</p>
 
-<p>포트폴리오에서 사용중인 웹폰트는 구글웹폰트이기 때문에 적용할 수 있는 두가지정도의 최적화 방법을 사용하였지만
-직접 파일을 올려 웹폰트를 불러오는 방식에서는 또 다른 여러가지 최적화방법이 존재한다.
-<code class="highlighter-rouge">Font Face Observer 라이브러리</code>, <code class="highlighter-rouge">CSS의 font-display 속성</code>, <code class="highlighter-rouge">서브셋폰트</code>사용, <code class="highlighter-rouge">unicode-range</code>속성 등
-그러나 무조건적인 사용보다는 고려하는 환경, 의존성을 생각하여 최적화를 진행하여야 한다.</p>
+<h4 id="첫번째-방법">첫번째 방법</h4>
+<p>post는 category를 가질 수 있다. 즉 게시물들은 대분류에서 하위분류로 나눠질 수 있다.
+하나의 <code class="highlighter-rouge">_post</code>폴더에서 <code class="highlighter-rouge">md</code>파일에 각각 두타입의 다른 카테고리를 지정해주고 nav메뉴를 추가하여 각각의 nav메뉴에 카테고리 url을 연결시켜주었다.
+메뉴는 두개로 나누어졌지만 <code class="highlighter-rouge">_post</code>폴더에서 게시물이 될 <code class="highlighter-rouge">md</code>파일들을 모두 관리해야된다는 점이 만족스럽지 못했다.</p>
 
-<p>예를 들어 구글웹폰트는 <code class="highlighter-rouge">woff</code>,<code class="highlighter-rouge">woff2</code>만 지원한다. 따라서 IE8이하의 브라우저를 고려하고 있는 환경에서는 적합하지 않기때문에
-구글 폰트를 사용할 수 없으며 따라서 <code class="highlighter-rouge">google web font loader</code>는 사용할 수 없다.</p>
-
-<p>또한 스크립트를 이용한 최적화방법을 쓸 때는 스크립트가 호환되지 않을 때도 고려해야한다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;noscript&gt;</span>
-    <span class="nt">&lt;link</span>
-        <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Lora:400,400i,700&amp;display=swap"</span>
-        <span class="na">rel=</span><span class="s">"stylesheet"</span>
-    <span class="nt">/&gt;</span>
-    <span class="nt">&lt;link</span>
-        <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=IBM+Plex+Mono&amp;display=swap"</span>
-        <span class="na">rel=</span><span class="s">"stylesheet"</span>
-    <span class="nt">/&gt;</span>
-    <span class="nt">&lt;link</span>
-        <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Noto+Serif+KR&amp;display=swap"</span>
-        <span class="na">rel=</span><span class="s">"stylesheet"</span>
-    <span class="nt">/&gt;</span>
-<span class="nt">&lt;/noscript&gt;</span>
+<h4 id="두번째-방법">두번째 방법</h4>
+<p>jekyll에 있는 <code class="highlighter-rouge">collections</code> API를 사용하기로 했다.
+기본적으로 사용되는 post말고 새로운 종류의 문서들를 정의할 수 있는 방법이다.
+<code class="highlighter-rouge">_config.yml</code>파일에 아래에 내용을 추가하고 <code class="highlighter-rouge">my_collection</code>부분은 내가 정의한 폴더 이름으로 변경한다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>collections:
+- my_collection
 </code></pre></div></div>
-<p>위처럼 스크립트 호환이 정지되어있는 브라우저를 고려하여 일반 cdn방식으로 불러오는 코드를 추가해주면 된다.</p>
+<p>그리고 최상위루트에 <code class="highlighter-rouge">_my_collection</code>폴더를 만들어주고 그 안에 <code class="highlighter-rouge">md</code>파일들을 넣어두었다.
+<code class="highlighter-rouge">_my_collection</code>의 파일들에 대한 접근은 아래코드처럼 하면 된다.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="sx">% for </span><span class="n">item</span> <span class="k">in</span> <span class="n">site</span><span class="p">.</span><span class="nf">my_collection</span> <span class="o">%</span> <span class="p">}</span>
+  <span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;&lt;</span><span class="sr">/h2&gt;
+  &lt;p&gt;&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">""</span><span class="o">&gt;&lt;</span><span class="sr">/a&gt;&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+<span class="p">{</span> <span class="sx">% endfor </span><span class="o">%</span> <span class="p">}</span>
+</code></pre></div></div>
+<p>두번째 방법으로 폴더도 별도로 관리할 수 있고 분류도 나눌 수 있어 만족하는 결과를 얻을 수 있었다.</p>
 
     </div>
 
@@ -257,7 +261,7 @@
         <li class="share__item">
           <a
             class="share__link share__facebook"
-            href="https://www.facebook.com/sharer/sharer.php?u=https://henyy1004.github.io/2020/01/08/webFont/"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://henyy1004.github.io/2020/01/01/jekyll/"
             onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
             title="Share on Facebook"
             rel="nofollow"
@@ -279,7 +283,7 @@
         <li class="share__item">
           <a
             class="share__link share__twitter"
-            href="https://twitter.com/intent/tweet?text=%EC%9B%B9%EC%84%B1%EB%8A%A5%20%EC%B5%9C%EC%A0%81%ED%99%94%20-%20%EC%9B%B9%ED%8F%B0%ED%8A%B8&url=https://henyy1004.github.io/2020/01/08/webFont/"
+            href="https://twitter.com/intent/tweet?text=jekyll%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20github-page&url=https://henyy1004.github.io/2020/01/01/jekyll/"
             onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
             title="Share on Twitter"
             rel="nofollow"
@@ -301,7 +305,7 @@
         <li class="share__item">
           <a
             class="share__link share__pinterest"
-            href="http://pinterest.com/pin/create/button/?url=https://henyy1004.github.io/2020/01/08/webFont/&amp;media=https://henyy1004.github.io&amp;description=%EC%9B%B9%EC%84%B1%EB%8A%A5%20%EC%B5%9C%EC%A0%81%ED%99%94%20-%20%EC%9B%B9%ED%8F%B0%ED%8A%B8"
+            href="http://pinterest.com/pin/create/button/?url=https://henyy1004.github.io/2020/01/01/jekyll/&amp;media=https://henyy1004.github.io&amp;description=jekyll%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20github-page"
             onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
             title="Share on Pinterest"
             rel="nofollow"
@@ -324,7 +328,7 @@
 
     <div class="post__navigation">
       
-      <a class="prev" href="/2020/01/08/reuse/">
+      <a class="prev" href="/2019/12/09/Mobx/">
         <div class="prev__post-icon">
           <svg
             enable-background="new 0 0 512 512"
@@ -342,15 +346,15 @@
             style="background-image: url()"
           ></div>
           <h2 class="post__nav-title">
-            <time datetime="2020-01-08T00:05:55+09:00"
-              >Jan 08, 2020</time
+            <time datetime="2020-01-01T00:05:55+09:00"
+              >Jan 01, 2020</time
             >
-            <br />재사용가능한 마크업
+            <br />냥터레스트와 Mobx
           </h2>
         </span>
       </a>
        
-      <a class="next" href="/2020/01/13/SASS/">
+      <a class="next" href="/2020/01/04/es6/">
         <div class="next__post-icon">
           <svg
             enable-background="new 0 0 512 512"
@@ -368,10 +372,10 @@
             style="background-image: url()"
           ></div>
           <h2 class="post__nav-title">
-            <time datetime="2020-01-08T00:05:55+09:00"
-              >Jan 08, 2020</time
+            <time datetime="2020-01-01T00:05:55+09:00"
+              >Jan 01, 2020</time
             >
-            <br />SASS
+            <br />IE와 ES6
           </h2>
         </span>
       </a>
