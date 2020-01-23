@@ -1,0 +1,33 @@
+I"<p>그라폴리오 후원이란 네이버 <code class="highlighter-rouge">그라폴리오</code> 내에 있는 서비스로 팬들과 크리에이터가 좀 더 가깝게 
+교류할 수 있고, 스토리 연재를 지속하는데 도움이 될 수 있도록 팬들이 크리에이터에게 후원할 수 있는 서비스.</p>
+
+<p>크리에이터(창작자)가 작품을 업로드하고 후원받은 내역을 관리할 수 있는 <code class="highlighter-rouge">창작자센터</code>와
+팬들이 크리에이터들에게 후원할 수 있는 후원서비스를 유지보수하였습니다. 
+기존에 작업된 마크업을 분석하고 사용할 수 있는 코드를 재사용하며 불필요한 코드가 추가되지 않게 관리하며 유지보수를 진행하였습니다.</p>
+
+<hr />
+
+<ul>
+  <li><a href="https://grafolio.naver.com/patron/creatorList.grfl" target="_blank"><strong>URL</strong></a></li>
+  <li>프로젝트 기간 : 2018/05 ~ 2018/07</li>
+  <li>프로젝트 유형 : 유지보수</li>
+  <li>크로스브라우징
+    <ul>
+      <li>PC : 익스(^10), 크롬, 엣지, 사파리, 파이어폭스, 오페라</li>
+      <li>MOBILE : android, ios 최신</li>
+    </ul>
+  </li>
+  <li>모바일 디바이스
+    <ul>
+      <li>삼성 갤럭시</li>
+      <li>애플 아이폰5 이상</li>
+    </ul>
+  </li>
+  <li>투입인원 : 2명</li>
+  <li>기여도 : 100%</li>
+  <li>소스코드관리 : git(scm: gitlab)</li>
+  <li>이슈관리 : ZIRA</li>
+  <li>사용 프로그램 : gulp.js, git(github,gitlab), sass, image sprite</li>
+</ul>
+
+:ET

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div
+    class="page__head"
+    data-aos="fade-up"
+    data-aos-easing="ease-out-quad"
+    data-aos-duration="700"
+  >
+    <h1 class="page__title">{{ page.title | escape }}</h1>
+  </div>
+
+  <!-- begin page -->
+  <article class="page">
+    {% for works in site.portfolio %}
+    <div class="article" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="800">
+      {% if works.thumbs %}
+      <div class="article__image-box">
+        <a
+          href="{{works.url | prepend: site.baseurl}}"
+          class="article__image"
+          style="background-image: url({{site.baseurl}}{{works.thumbs}})"
+        ></a>
+      </div>
+      {% endif %}
+      <div class="article__content">
+        <h2 class="article__title">
+          <a href="{{ works.url | prepend: site.baseurl }}">{{ works.title }}</a>
+        </h2>
+        <a href="{{ works.url | prepend: site.baseurl }}" class="read-more">View work</a>
+      </div>
+    </div>
+    {% endfor %}
+  </article>
+  <!-- end page -->
+</div>

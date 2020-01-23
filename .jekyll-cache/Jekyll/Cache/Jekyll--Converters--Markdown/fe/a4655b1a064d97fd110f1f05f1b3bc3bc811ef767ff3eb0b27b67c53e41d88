@@ -1,0 +1,44 @@
+I"~<p>크로스브라우징이란 일반적으로는 모든 브라우저에서 똑같이 그려내는 것이라고 알려져 있지만 개인적으로는 브라우저간의 이슈를 꼼꼼하게 체크하여 사용자들이 웹 정보에 접근함에 있어서 불편함을 느끼지 않게 호환성을 제공하는 작업이라고 생각한다.</p>
+
+<p>내가 진행했던 프로젝트의 초기 크로스브라우징 기준은 ie8이상, 모바일 안드로이드 v4.4.2 이상이었다.
+최근들어 ie9이상, ie10이상까지 상향했지만 꽤 오래 ie8까지 신경써야 했기 때문에 작업시 크로스브라우징에 공수가 많이 들어갔다.</p>
+
+<h2 id="1-displaytable">1. display:table</h2>
+
+<p>사실 <code class="highlighter-rouge">flex</code>나 <code class="highlighter-rouge">grid</code>를 쓰면 모든게 해결된다. 유연한 레이아웃을 위해 만들어진 css속성이기 때문이다. 우리가 원하는 레이아웃을 위해 최적화 되어있다. 하지만 그럼에도 불구하고 flex는 사용할 수 없었다.
+이유는 크로스브라우징의 기준이 ie8이상이었기 떄문이다.
+좋은 속성은 거의 브라우저의 최신 버전에서만 지원된다. <code class="highlighter-rouge">flex</code>는 <code class="highlighter-rouge">ie10</code>이상을 지원하고 <code class="highlighter-rouge">grid</code>는 ie를 지원하지 않는다.</p>
+
+<p>사용자와의 인터렉션이 대부분인 프로젝트에서는 유연한 레이아웃구조를 많이 생각하며 마크업을 진행해야 이슈가 적고 유지보수가 쉽다.
+따라서 <code class="highlighter-rouge">flex</code>와 비슷하고 <code class="highlighter-rouge">ie8</code>이상을 지원할 수 있는 방법으로 
+<code class="highlighter-rouge">display: table</code>을 선택하였다.</p>
+
+<p data-height="228" data-theme-id="0" data-slug-hash="pOYeJz" data-default-tab="result" data-user="mucamuca" class="codepen">See the Pen <a href="http://codepen.io/mucamuca/pen/pOYeJz/">layout table</a> by mucamuca (<a href="http://codepen.io/mucamuca">@mucamuca</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>위 codePen은 <code class="highlighter-rouge">display: table</code>을 사용하여 유연한 탭 리스트를 작업한 것이다. 마크업의 태그만 추가하고 제거하는 방법으로 탭 리스트들의 너비를 공통적으로 유지할 수 있다.</p>
+
+<h2 id="2-display--flex">2. display : flex</h2>
+<p>후반부에 작업들이 개편되면서 ie하위버전을 더 이상 지원하지 않아도 되는 상황이 되었다. ie10이상을 지원하게 되었기 때문이 <code class="highlighter-rouge">flex</code>사용이 자유로워졌다. PC에서는 굉장히 자유로웠지만 mobile 특히 <code class="highlighter-rouge">안드로이드 4.4.2</code>버전의 <code class="highlighter-rouge">내장 브라우저</code>에서 <code class="highlighter-rouge">flex</code>는 내가 원하는 레이아웃을 그려주지 않았다. pc도아닌 모바일에서 말썽인 부분이 조금 멘붕이었지만 해결 방법을 찾아 열심히 <code class="highlighter-rouge">flex</code>를 남발했다.</p>
+
+<p>왼쪽에는 <code class="highlighter-rouge">텍스트</code> 컨텐츠가 오른쪽에 컨텐츠가 있는 형식의 레이아웃일때 오른쪽 컨텐츠가 증가하면 왼쪽 텍스트가 줄어드는 유연한 레이아웃을 원했다. 이 부분은 최신 브라우저나 기기에서 <code class="highlighter-rouge">flex</code>속성으로 쉽게 구현할 수 있지만 위에 말했듯 <code class="highlighter-rouge">안드로이드 4.4.2</code>버전의 <code class="highlighter-rouge">내장 브라우저</code>에서는 구현되지 않았다.</p>
+
+<p data-height="228" data-theme-id="0" data-slug-hash="GRgGEZQ" data-default-tab="result" data-user="mucamuca" class="codepen">See the Pen <a href="http://codepen.io/mucamuca/pen/GRgGEZQ/">layout flex</a> by mucamuca (<a href="http://codepen.io/mucamuca">@mucamuca</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>따라서 위와 같이 flex를 사용하면 안드로이드 4.4.2 내장브라우저에서도 유연한 레이아웃이 표현된다.
+이 방법을 사용하여 실제 서비스에 적용하였고 table레이아웃보다 훨씬 효율적이고 유연하게 적용이 되었다.</p>
+
+<h2 id="3-폰트렌더링이-되지-않을-때">3. 폰트렌더링이 되지 않을 때</h2>
+<p>진행했던 프로젝트에서는 <code class="highlighter-rouge">나눔고딕</code>을 주로 사용하였는데 폰트 리소스가 제대로 받아지 않거나 심각하게 하위버전의 브라우저를 사용한다던가 브라우저 폰트설정을 막아두어 나눔고딕의 렌더링이 안되는 경우 기본 시스템폰트인 <code class="highlighter-rouge">맑은고딕</code>이 풀백폰트로 적용되게 작업이 진행되었다.</p>
+
+<p>나눔고딕이 받아지지 않았떄 대체될 폰트가 있기 때문에 화면이 깨지진 않았지만 문제는 맑은고딕은 나눔고딕보다 자간이 넓어(뚱뚱하고 글자사이에 간격이 넓다) 레아이아웃이 틀어진다는 점이었다.</p>
+
+<h3 id="방법1-기획자디자이너와의-커뮤니케이션">방법1. 기획자,디자이너와의 커뮤니케이션</h3>
+<p>주로 문제는 텍스트의 길이때문에 생긴다. 나눔고딕 기준으로 10글자까지 넣겠다라고했을때 맑은고딕으로 바뀌면 8~9글자까지가 한줄로 노출되고 9~10글자는 줄바꿈이 된다. 이로인해 다른 레이아웃이 깨지게 된다. 이럴때는 경험과 눈썰미가 조금 필요한데 글자로인한 이슈가 생길것 같은 부분을 미리 챙겨서
+기획자, 디자이너와 커뮤니케이션하여 초기에 글자수 제한을 정해두거나, 말줄임을 하거나 혹은 문장을 변경하도록 협의하는 방법이 있다.</p>
+
+<h3 id="방법2-나눔고딕과-비슷한-자간의-풀백폰트-찾기">방법2. 나눔고딕과 비슷한 자간의 풀백폰트 찾기</h3>
+<p>사실 이 방법을 적용하진 않았지만 프로젝트 종료 후 알게된 내용이라 나중에 실작업을 할 때 적용시키면 좋을 것 같아 작성한다.
+나눔고딕과 비슷한 자간의 시스템폰트를 찾아 적용시키면 레이아웃이 비교적 안전하게 유지될 수 있다.</p>
+:ET

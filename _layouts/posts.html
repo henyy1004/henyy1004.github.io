@@ -3,39 +3,23 @@ layout: default
 ---
 
 <div class="container">
-  <!-- begin author -->
-  <section
-    class="author"
+  <div
+    class="page__head"
     data-aos="fade-up"
     data-aos-easing="ease-out-quad"
     data-aos-duration="700"
   >
-    <div class="author__inner">
-      <img
-        src="{{site.baseurl}}{{site.author.image}}"
-        alt="{{site.author.name}}"
-        class="author__img"
-      />
-      <h1 class="author__job">{{ site.author.job }}</h1>
-      <p class="author__bio">{{ site.author.bio }}</p>
-      <div class="author__more">
-        <a href="{{site.baseurl}}/resume" class="say-hello">Resume</a>
-      <a href="{{site.baseurl}}/about/" class="know-more">About me</a>
-      </div>
-    </div>
-  </section>
-  <!-- end author -->
-</div>
-
-<div class="container">
-  {% if site.portfolio.size > 0 %} {% for post in site.portfolio %}
+    <h1 class="page__title">{{ page.title | escape }}</h1>
+  </div>
+  <article class="page">
+  {% if site.posts.size > 0 %} {% for post in site.posts %}
   <div class="article" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="800">
-    {% if post.thumbs %}
+    {% if post.image %}
     <div class="article__image-box">
       <a
         href="{{post.url | prepend: site.baseurl}}"
         class="article__image"
-        style="background-image: url({{site.baseurl}}{{post.thumbs}})"
+        style="background-image: url({{site.baseurl}}{{post.image}})"
       ></a>
     </div>
     {% endif %}
@@ -52,8 +36,13 @@ layout: default
           ></span
         >
       </div>
+      <p class="article__excerpt">
+        {% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html |
+        truncate: 130 }}{% endif %}
+      </p>
       <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Read the rest</a>
     </div>
   </div>
   {% endfor %} {% endif %}
+</article>
 </div>

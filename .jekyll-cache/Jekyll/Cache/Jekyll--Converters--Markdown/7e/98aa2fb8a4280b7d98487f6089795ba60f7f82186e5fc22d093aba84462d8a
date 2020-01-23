@@ -1,0 +1,266 @@
+I"*h<p>냥터레스트는 React와 Mobx 상태관리 라이브러리 제작된 유기묘리스트 웹프로젝트입니다.</p>
+
+<h2 id="react란">React란</h2>
+<p>리액트는 페이스북에서 제공해주는 프론트엔드 라이브러리입니다.
+<code class="highlighter-rouge">컴포넌트</code>기반으로 되어있어서 <code class="highlighter-rouge">컴포넌트</code>에 <code class="highlighter-rouge">데이터</code>를 내려주면 개발자가 설계한대로 UI가 만들어져 사용자에게 보여집니다.</p>
+
+<h2 id="react의-데이터-흐름은-단방향이다">React의 데이터 흐름은 단방향이다.</h2>
+<p>리액트의 데이터 흐름은 한방향으로만 흐릅니다. 부모컴포넌트에서 자식컴포넌트로 데이터를 보내며, 자식컴포넌트에서 부모컴포넌트로 데이터를 올려줄 수 없습니다.</p>
+
+<p>컴포넌트간의 데이터는 <code class="highlighter-rouge">props</code>를 사용해 전달시킬 수 있으며 부모의 데이터를 바꿔주기 위해서는 <code class="highlighter-rouge">state</code>를 이용해야합니다.</p>
+
+<h3 id="props와-state">Props와 State</h3>
+<p>리액트에서 다루는 데이터이며 데이터의 용도에 따라 다르게 사용됩니다.</p>
+
+<h4 id="props">Props</h4>
+<p>props란 부모 컴포넌트에서 자식 컴포넌트로 전달해 주는 데이터를 말하며 변동되지 않는 데이터를 전달할 때 사용됩니다.
+자식컴포넌트에서는 받은 props를 변경할 수 없으며 전달해준 최상위 부모컴포넌트만 props를 변경할 수 있습니다.</p>
+
+<h4 id="state">State</h4>
+<p>state는 유저와 상호작용을 하며 변동가능한 동적인 데이터를 다룰때 사용됩니다.
+state를 변경하기 위해서는 <code class="highlighter-rouge">setState</code>를 사용해야합니다.
+다른 컴포넌트에서의 직접적인 변경은 불가능하지만 자신보다 상위에 있는 state는 변경이 가능한데, state를 변경해주는 함수를 상위컴포넌트에서 props로 받는다면 state의 변경이 가능합니다.</p>
+
+<h2 id="mobx란">MobX란?</h2>
+<ul>
+  <li>Simple, Scalable State Management</li>
+  <li><code class="highlighter-rouge">state</code>를 관리해주는 간단하고 쉬운 라이브러리</li>
+  <li>비슷한 라이브러리로는 <code class="highlighter-rouge">redux</code>가 있음</li>
+  <li>타입스크립트기반</li>
+</ul>
+
+<p>상태 관리 라이브러리의 역할에 대해 간단히 말하자면 react의 트리 구조의 props 전달과 state가 아닌, 특정한 저장소에 데이터를 따로 모아놓고 관리하는 것</p>
+
+<h3 id="냥터레스트는-왜-redux가-아닌-mobx인가">냥터레스트는 왜 Redux가 아닌 MobX인가?</h3>
+<h4 id="냥터레스트-상태관리-고민의-시작">냥터레스트 상태관리 고민의 시작</h4>
+<p>리액트로 작업을 하다보니 자연스럽게 여러 컴포넌트 단위로 나누어 UI작업을 하게되었고, 자식컴포넌트에서 부모컴포넌트의 데이터를 컨트롤해야되는 상황이 계속되었습니다. 그럴때마다 부모컴포넌트에서 데이터를 컨트롤하는 함수를 만들어 자식컴포넌트에게 props로 넘겨주었습니다.
+이런 단방향성의 데이터 흐름이 답답하여 이 상황을 해결하는 법을 구글링해보았지만 자식컴포넌트에서 부모컴포넌트의 데이터를 컨트롤하는 방법은 위 방법을 제외하고는 없었습니다.
+(구글링하며 Redux, Context API 등 상태관리 라이브러리에 대해서 분명히 키워드가 나왔을텐데 기억이나지 않습니다. 어렵고 복잡한 내용일거라 생각하고 자체스킵한것이 틀림없습니다.)</p>
+
+<p>멘토링시간에 무작정 멘토님께 이럴땐 어떻게해야돼요? 라고 물어보았고(ㅎㅎ)
+멘토님께서는 <code class="highlighter-rouge">Redux</code>를 소개해주셨습니다. 저는 이때 처음 Redux를 알게되었던것같습니다.</p>
+
+<h4 id="mobx를-선택한-이유">MobX를 선택한 이유</h4>
+<p>처음엔 협의를 통해 냥터레스트도 <code class="highlighter-rouge">Redux</code>를 사용하여 상태관리를 해야겠다 했습니다.
+React에서 상태관리 라이브러리를 사용한다하면 대부분 Redux를 사용하기때문에 자연스러운 과정이었습니다.
+그럼에도 불구하고 MobX를 선택하게된 이유에는 같이 프로젝트를 진행하시는 윤우님께서 MobX라는 흑마법을 들고 나타나셨기 때문입니다.</p>
+
+<ul>
+  <li>MobX는 Redux보다 간결하다.</li>
+  <li>MobX는 Redux보다 난이도가 쉽다.</li>
+</ul>
+
+<p>처음은 위의 두가지의 단순하고도 강력한 이유때문에 MobX를 선택하였습니다.
+초보프론트엔드 입문자인 저희의 프로젝트에는 쉽고 간결한 MobX가 더 맞다고 생각했습니다.</p>
+
+<p>Redux가 좋다! MobX가 좋다! Context API가 좋다!가 아닌
+프로젝트의 목적과 상황에 맞는 선택이었습니다.</p>
+
+<h4 id="왜-mobx가-간결하고-쉬울까">왜 MobX가 간결하고 쉬울까?</h4>
+<ul>
+  <li><code class="highlighter-rouge">Redux</code>는 Flux개념을 바탕으로한 React에서 현재 가장 많이 사용되는 State 관리 라이브러리 입니다.</li>
+  <li>
+    <p>Redux는 많은 라이브러리가 필요하지만 MobX는 필요없음
+<img src="http://woowabros.github.io/img/2019-01-02/redux-with-libs.png" alt="리덕스라이브러리" /></p>
+
+    <p>MobX는 <code class="highlighter-rouge">mobx</code>,<code class="highlighter-rouge">react-mobx</code> 필요</p>
+  </li>
+  <li>Redux의 flow보다 MobX의 flow가 간결합니다.</li>
+  <li>redux에서 해줘야했던 action 선언, connect, mapStateToProps, mapDispatchToProps등 번거로운 작업들은 데코레이터로 간단하게 대체되어 특정 개체를 감시할 수 있습니다.
+    <ul>
+      <li>
+        <p><code class="highlighter-rouge">Redux Flow</code>
+  <img src="https://fullest-sway.me/blog/2017/06/21/redux-use/redux-cycle.png" alt="redux flow" /></p>
+
+        <p><a href="https://fullest-sway.me/blog/2017/06/21/redux-use/">redux 사용법</a></p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">MobX Flow</code>
+  <img src="https://bumbu.me/assets/images/2016/10/mobx-diagram-300x144.png" alt="mobx flow" /></p>
+      </li>
+    </ul>
+  </li>
+  <li>Redux는 단일스토어지만 MobX는 스토어를 여러개 만들 수 있습니다. 따라서 기능별,로직별로 원하는대로 store를 분리하여 깔끔하게 비즈니스로직을 작성할 수 있습니다.
+    <ul>
+      <li><strong>Store란</strong>
+        <ul>
+          <li>Global영역에서 애플리케이션의 State와 비즈니스로직을 가지고 있고 있는 주체를 Store라고 합니다.</li>
+          <li>
+            <p>State를 Global한 영역에서 관리한다는 말은 즉 State관리 라이브러리 사용의 목적중 한가지 입니다.</p>
+          </li>
+          <li>Redux에서는 State와 State를 핸들링하는 비즈니스로직을 가지고 있는 Reducer, Action등을 포함하는 의미 이기도 하지만, Mobx에서 Store는 명확히 State와 비즈니스로직을 포함하는 Class를 Store라고 부릅니다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="데코레이터-decorator">데코레이터 (Decorator)</h3>
+<p>MobX의 특징이라 하면 위에서 언급한 내요처럼 데코레이터<code class="highlighter-rouge">@</code>만으로 특정개체를 감시한다는 점이라 할 수 있습니다.
+Decorator는 ES7에 정의되어 있습니다. 아직은 어떠한 브라우저에서도 지원하지 않고, 심지어 정식으로 채택된 Spec도 아니지만, 사실상 많은 곳에서 이미 polyfill을 거쳐 사용되고 있다고 합니다.</p>
+
+<p>Java를 사용해 보셨다면 적어도 한번은 (@Override public void..) 봤을 눈에 익은 패턴인 Decorator가 Javascript에 들어왔습니다. 물론 아직은 정식 스펙이 아니기 때문에 Babel 이나 Typescript 와 같은 Transpiler를 거쳐 사용해야 합니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">MyObservable</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">observable</span> <span class="nx">myValue</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h4 id="observable">@observable</h4>
+<p>Mobx에서 Rerendering 대상이 되는 state(상태, 값)를 관찰 대상(observable value)라고 칭하며 @observable 데코레이터로 지정한 State는 관찰대상으로 지정되고 그 State는 값이 변경될 때 마다 Rerendering됩니다.</p>
+
+<h4 id="observer">@observer</h4>
+<p>observer는 react에서 state가 변경되면 리렌더링을 하듯이, 스토어에서 obserbvable로 선언해서 가져온 값이 변경될 때 컴포넌트를 리렌더링을 해주는 기능입니다.</p>
+
+<h4 id="action">@action</h4>
+<p>observable 값을 변경해주는 함수입니다. (setter)</p>
+
+<h4 id="computed">@computed</h4>
+<p>getter에 해당하는 함수입니다. 특징으로는 미리 값을 계산하고 캐싱해둔다는 점이 있어 성능을 최적화시킬 수 있습니다.</p>
+
+<h3 id="사용법">사용법</h3>
+<h4 id="로그인">로그인</h4>
+<p><code class="highlighter-rouge">Stores/loginStore.js</code></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">observable</span><span class="p">,</span> <span class="nx">action</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">mobx</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">loginStore</span> <span class="p">{</span>
+    <span class="c1">// @observable 데코레이터를 사용하여 stete를 생성</span>
+	<span class="p">@</span><span class="nd">observable</span> <span class="nx">userId</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+	<span class="p">@</span><span class="nd">observable</span> <span class="nx">userState</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">userInfo</span><span class="dl">'</span><span class="p">)?</span><span class="dl">"</span><span class="s2">login</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">logout</span><span class="dl">"</span>
+
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">root</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">root</span> <span class="o">=</span> <span class="nx">root</span><span class="p">;</span>
+	<span class="p">}</span>
+
+    <span class="c1">// MobX state를 변경할 함수에 @action 데코레이터를 사용하여 선언</span>
+	<span class="p">@</span><span class="nd">action</span>
+	<span class="nx">changeUserState</span> <span class="o">=</span> <span class="p">()</span><span class="o">=&gt;</span><span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">userState</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">logout</span><span class="dl">"</span><span class="p">){</span>
+			<span class="k">this</span><span class="p">.</span><span class="nx">userState</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">login</span><span class="dl">"</span>	
+		<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+			<span class="k">this</span><span class="p">.</span><span class="nx">userState</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">logout</span><span class="dl">"</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="p">@</span><span class="nd">action</span>
+	<span class="nx">changeUserId</span> <span class="o">=</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">userId</span><span class="o">=</span> <span class="nx">name</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">Stores/index.js</code></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">ListStore</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./listStore</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">SearchStore</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./searchStore</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">BtnStore</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./btnStore</span><span class="dl">"</span><span class="p">;</span>
+<span class="c1">// Stores/loginStore.js 가져오기</span>
+<span class="k">import</span> <span class="nx">loginStore</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./loginStore</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">PopupStore</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./popupStore</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">RootStore</span> <span class="p">{</span>
+	<span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">listStore</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ListStore</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">searchStore</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SearchStore</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">btnStore</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BtnStore</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="c1">// 생성한 loginStore를 binding시켜준다</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">loginStore</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">loginStore</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">popupStore</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PopupStore</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">RootStore</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">index.js</code></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-dom</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Provider</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">mobx-react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./Components/App</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">serviceWorker</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./serviceWorker</span><span class="dl">"</span><span class="p">;</span>
+<span class="c1">// Stores/index.js 가져오기</span>
+<span class="k">import</span> <span class="nx">RootStore</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./Stores</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="c1">// 스토어 인스턴스 생성</span>
+<span class="kd">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RootStore</span><span class="p">();</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Provider</span> <span class="p">{...</span><span class="nx">root</span><span class="p">}</span><span class="o">&gt;&lt;</span><span class="nx">App</span> <span class="o">/&gt;&lt;</span><span class="sr">/Provider&gt;, document.getElementById</span><span class="se">(</span><span class="sr">"root"</span><span class="se">))</span><span class="err">;
+</span>
+<span class="nx">serviceWorker</span><span class="p">.</span><span class="nx">unregister</span><span class="p">();</span>
+
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">Components/popup/LayerLogin.js</code></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">observer</span><span class="p">,</span> <span class="nx">inject</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">mobx-react</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="c1">// @inject 데코레이터로 사용할 Store를 가져와 연결</span>
+<span class="p">@</span><span class="nd">inject</span><span class="p">(</span><span class="dl">'</span><span class="s1">loginStore</span><span class="dl">'</span><span class="p">)</span>
+<span class="c1">// 변화감지에 따라 변경될 컴포넌트에 @observer 데코레이터를 선언</span>
+<span class="p">@</span><span class="nd">observer</span>
+<span class="kd">class</span> <span class="nx">LayerLogin</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="p">...</span><span class="err">생략</span>
+
+    <span class="nx">sendUserInfo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="p">{</span><span class="nx">changeUserId</span><span class="p">,</span><span class="nx">changeUserState</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">loginStore</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="nx">state</span><span class="p">.</span><span class="nx">userIdValidate</span> <span class="o">&amp;&amp;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">userPasswordValidate</span> <span class="p">){</span>
+            <span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">/login</span><span class="dl">'</span><span class="p">,{</span>
+                <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="dl">'</span><span class="s1">Accept</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">application/json</span><span class="dl">'</span><span class="p">,</span>
+                    <span class="dl">'</span><span class="s1">Content-Type</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">application/json</span><span class="dl">'</span>
+                <span class="p">},</span>
+                <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
+                <span class="na">body</span><span class="p">:</span> <span class="nx">stateTojson</span><span class="p">,</span>
+            <span class="p">})</span>
+            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span><span class="o">=&gt;</span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">()).</span><span class="nx">then</span><span class="p">(</span><span class="nx">json</span><span class="o">=&gt;</span><span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">json</span><span class="p">.</span><span class="nx">sucess</span><span class="p">){</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">로그인실패</span><span class="dl">'</span><span class="p">)</span>
+                <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">로그인성공</span><span class="dl">'</span><span class="p">)</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">.</span><span class="nx">_userId</span><span class="p">)</span>
+                    <span class="c1">// MobX @action을 사용한 예시</span>
+                    <span class="nx">changeUserState</span><span class="p">()</span>
+                    <span class="nx">changeUserId</span><span class="p">(</span><span class="nx">json</span><span class="p">.</span><span class="nx">_userId</span><span class="p">)</span>
+                    <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span>
+                        <span class="dl">"</span><span class="s2">userInfo</span><span class="dl">"</span><span class="p">,</span>
+                        <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">json</span><span class="p">.</span><span class="nx">_userId</span><span class="p">)</span>
+                    <span class="p">)</span>
+                    
+                    <span class="nx">onClose</span><span class="p">()</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+
+        <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">아이디와 패스워드를 알맞게 입력해주세요</span><span class="dl">"</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">render</span><span class="p">(){</span>
+         <span class="p">...</span><span class="err">생략</span>
+        <span class="p">)</span>
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">LayerLogin</span><span class="p">;</span>
+</code></pre></div></div>
+<h2 id="마치며">마치며</h2>
+<p>아직 Redux를 사용해보지않아서 MobX와의 차이점을 직접적으로 느끼진 못했지만 둘다 상태관리 라이브러리의 장단점이 존재한다는건 확실하다고 생각합니다.
+일단 MobX의 가장 매력적이고 인상적인 부분은 <code class="highlighter-rouge">데코레이터</code>가 아닐까 싶습니다.
+일단 저의 기준에서는 자바스크립트에서 데코레이터를 사용한다는 개념은 생각하지도 못했기 때문입니다.</p>
+
+<p>부모컴포넌트의 상태값에 접근하는게 어려운거구나라고만 생각을 했는데 MobX는 그런 생각을 산산조각 내준 진짜 <code class="highlighter-rouge">흑마법</code>이었습니다. 이렇게 쉽단말이야? 하며 약간 허무하기도 했습니다.(ㅎㅎ)</p>
+
+<p>진작 상태 관리의 개념을 알았더라면 설계 단계에서부터 라이브러리는 어떤 걸 쓰고 어떻게 접근해야 될지 계획이 잘 잡혔을 텐데라는 아쉬움도 많았습니다.
+하지만 이런 시행착오를 겪는 과정이 있어 더 발전할 수 있는 공부가 되었다고 생각합니다.</p>
+
+<h3 id="참조">참조</h3>
+<ul>
+  <li><a href="https://www.qcode.in/learn-react-by-creating-a-comment-app/">Learn React by creating a comment app(By Mohd Saqueib)</a></li>
+  <li><a href="https://velopert.com/921">[React.JS] 강좌 5편 컴포넌트의 State 와 Props 사용하기(By velopert)</a></li>
+  <li><a href="https://fullest-sway.me/blog/2017/06/21/redux-use/">Redux 코드로 이해하기 (By Jei’s blog)</a></li>
+  <li><a href="http://woowabros.github.io/experience/2019/01/02/kimcj-react-mobx.html">우아한형제들 블로그</a></li>
+  <li><a href="http://www.secmem.org/blog/2019/03/09/mobx-internals/">MobX 내부 살펴보기</a></li>
+  <li><a href="https://boxfoxs.tistory.com/383">MobX (By 박스여우)</a></li>
+</ul>
+:ET

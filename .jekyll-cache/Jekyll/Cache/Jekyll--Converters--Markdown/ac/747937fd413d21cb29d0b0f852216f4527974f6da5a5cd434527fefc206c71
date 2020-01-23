@@ -1,0 +1,269 @@
+I">Y<h2 id="sass란">SASS란</h2>
+<p>Sass는 문서의 구조를 깔끔하고 구조적으로 기술하는 데 사용하는 기술인 css의 상위에 있는 메타언어로, 자바스크립트처럼 특정 속성의 값을 변수로 선언하여 필요한 곳에 선언된 변수를 적용할 수도 있고, 반복되는 코드를 한 번의 선언으로 여러 곳에서 재사용할 수 있도록 도와주는 일종의 CSS 전처리기(pre-processor)이다. 따라서, 우리가 사용하는 일반 언어처럼 재사용성을 높이고 활용성을 높여주는 역할을 한다.</p>
+
+<h2 id="서비스에서-진행했던-sass-작업">서비스에서 진행했던 sass 작업</h2>
+
+<h2 id="mixin">mixin</h2>
+<p><code class="highlighter-rouge">m.talk/src/scss/common/_mixin.scss</code>
+서비스에서 자주 쓰는 말줄임 작업을 공통적으로 사용할 수 있게 mixin으로
+설정 하여 사용할 수 있게 작성</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">ellipsis</span> <span class="p">{</span>
+	<span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+	<span class="nl">text-overflow</span><span class="p">:</span> <span class="n">ellipsis</span><span class="p">;</span>
+	<span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@mixin</span> <span class="nf">ellipsisMulti</span><span class="p">(</span><span class="nv">$line_num</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+	<span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+	<span class="nl">text-overflow</span><span class="p">:</span> <span class="n">ellipsis</span><span class="p">;</span>
+	<span class="nl">word-break</span><span class="p">:</span> <span class="n">break-all</span><span class="p">;</span>
+	<span class="nl">word-wrap</span><span class="p">:</span> <span class="n">break-word</span><span class="p">;</span>
+	<span class="na">-webkit-line-clamp</span><span class="p">:</span> <span class="nv">$line_num</span><span class="p">;</span>
+	<span class="na">-webkit-box-orient</span><span class="p">:</span> <span class="n">vertical</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><code class="highlighter-rouge">m.talk/src/scss/import/_chat_card_delivery.scss</code></p>
+
+<p>@include를 사용하여 해당 mixin호출</p>
+
+<p>Input</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 배송정보 : 상품명</span>
+<span class="nc">.card_delivery</span> <span class="p">{</span>
+    <span class="nc">.txt_goods</span> <span class="p">{</span>
+        <span class="k">@include</span> <span class="nd">ellipsisMulti</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
+
+        <span class="nl">margin-top</span><span class="p">:</span> <span class="m">4</span><span class="mi">.5px</span><span class="p">;</span>
+        <span class="nl">padding-right</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+        <span class="nl">font-family</span><span class="p">:</span> <span class="s2">"Helvetica Neue Light"</span><span class="o">,</span> <span class="n">AppleSDGothicNeo-Light</span><span class="p">;</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+        <span class="nl">line-height</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Output</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.card_delivery</span> <span class="nc">.txt_goods</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="n">-webkit-box</span><span class="p">;</span>
+	<span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+	<span class="nl">text-overflow</span><span class="p">:</span> <span class="n">ellipsis</span><span class="p">;</span>
+	<span class="nl">word-break</span><span class="p">:</span> <span class="n">break-all</span><span class="p">;</span>
+	<span class="nl">word-wrap</span><span class="p">:</span> <span class="n">break-word</span><span class="p">;</span>
+	<span class="nl">-webkit-line-clamp</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
+	<span class="nl">-webkit-box-orient</span><span class="p">:</span> <span class="n">vertical</span><span class="p">;</span>
+	<span class="nl">margin-top</span><span class="p">:</span> <span class="m">4.5px</span><span class="p">;</span>
+	<span class="nl">padding-right</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+	<span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Helvetica Neue Light"</span><span class="p">,</span> <span class="n">AppleSDGothicNeo-Light</span><span class="p">;</span>
+	<span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+	<span class="nl">line-height</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="변수설정">변수설정</h2>
+
+<p><code class="highlighter-rouge">m.talk/src/scss/common/_variable.scss</code></p>
+
+<p>유지보수를 위해 서비스의 고유색상이나 공통요소로 사용되는 텍스트 사이즈등을 변수로 설정하여 사용하였다.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$color-primary</span><span class="p">:</span> <span class="mh">#00c73c</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="sprite-설정">sprite 설정</h2>
+<p>톡톡서비스에서 <code class="highlighter-rouge">Image Sprite</code>를 사용하며 유지보수를 하였는데 매번 변경되는 sprite이미지 파일의 좌표를 설정해줄 수 없기때문에 sass를 사용하여 자동으로 업데이트되는 sprite이미지의 좌표를 변경할 수 있도록 설정하였다.</p>
+
+<p><code class="highlighter-rouge">m.talk/src/scss/lib/_sprite_mixins.scss</code></p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@charset</span> <span class="s2">"UTF-8"</span><span class="p">;</span>
+
+<span class="c1">// sprite image</span>
+<span class="nc">...</span><span class="err">중략</span>
+<span class="o">//</span> <span class="nt">svg_mixin</span>
+<span class="o">@</span><span class="nt">mixin</span> <span class="nt">svg_spriteImageSize</span><span class="o">(</span><span class="err">$</span><span class="nt">sprite</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="nf">nth</span><span class="p">(</span><span class="nv">$sprite</span><span class="o">,</span> <span class="m">3</span><span class="p">)</span> <span class="o">/</span> <span class="m">2</span><span class="p">;</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="nf">nth</span><span class="p">(</span><span class="nv">$sprite</span><span class="o">,</span> <span class="m">4</span><span class="p">)</span> <span class="o">/</span> <span class="m">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@mixin</span> <span class="nf">svg_spriteBackgroundPosition</span><span class="p">(</span><span class="nv">$sprite</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nl">background-position</span><span class="p">:</span> <span class="p">(</span><span class="nf">nth</span><span class="p">(</span><span class="nv">$sprite</span><span class="o">,</span> <span class="m">1</span><span class="p">)</span><span class="o">/</span><span class="m">2</span><span class="p">)</span> <span class="p">(</span><span class="nf">nth</span><span class="p">(</span><span class="nv">$sprite</span><span class="o">,</span> <span class="m">2</span><span class="p">)</span><span class="o">/</span><span class="m">2</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">/Users/heny/work/m.talk/src/scss/lib/sprite.support_svg.mustache</code></p>
+
+<p>전처리기는 이 템플릿과 _sprite_mixins.scss 적용하여 <code class="highlighter-rouge">_sp_svg_filename.scss</code>파일을 생성한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@charset "UTF-8";
+
+// how to use : Use following mixins.
+// variable : [offset_x] [offset_y] [width] [height]
+
+$-: (-px) (-px) px px;
+
+
+// ancestor
+$-shapes: ($-, );
+$-width: px;
+$-height: px;
+$-png: str-slice('}', 0, -5);
+
+// extend
+%sp_ {
+	background-image: url(#{$-png}.png);
+	background-image: linear-gradient(transparent, transparent), url(});
+	background-size: (px / 2) (px / 2);
+	background-repeat: no-repeat;
+}
+
+@mixin sp_($sprite) {
+	@extend %sp_;
+	@include svg_spriteImageSize($sprite);
+	@include svg_spriteBackgroundPosition($sprite);
+}
+
+@mixin sp__on($sprite) {
+	@extend %sp_;
+	@include svg_spriteBackgroundPosition($sprite);
+}
+</code></pre></div></div>
+<p><code class="highlighter-rouge">Output</code></p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@charset</span> <span class="s2">"UTF-8"</span><span class="p">;</span>
+
+<span class="c1">// how to use : Use following mixins.</span>
+<span class="c1">// variable : [offset_x] [offset_y] [width] [height]</span>
+<span class="nv">$chat_svg_ico-bg_tail_up_yellow</span><span class="p">:</span> <span class="p">(</span><span class="m">-230-10px</span><span class="p">)</span> <span class="p">(</span><span class="m">-190-10px</span><span class="p">)</span> <span class="m">18px</span> <span class="m">12px</span><span class="p">;</span>
+<span class="nv">$chat_svg_ico-ico_alarm</span><span class="p">:</span> <span class="p">(</span><span class="m">-292-10px</span><span class="p">)</span> <span class="p">(</span><span class="m">-180-10px</span><span class="p">)</span> <span class="m">40px</span> <span class="m">40px</span><span class="p">;</span>
+<span class="nv">$chat_svg_ico-ico_alarm_bell</span><span class="p">:</span> <span class="p">(</span><span class="m">-460-10px</span><span class="p">)</span> <span class="p">(</span><span class="m">-360-10px</span><span class="p">)</span> <span class="m">30px</span> <span class="m">30px</span><span class="p">;</span>
+
+<span class="c1">// ...중략</span>
+
+<span class="c1">// extend</span>
+<span class="nv">%sp_chat_svg_ico</span> <span class="p">{</span>
+	<span class="nl">background-image</span><span class="p">:</span> <span class="sx">url(</span><span class="si">#{</span><span class="nv">$chat_svg_ico-png</span><span class="si">}</span><span class="sx">.png)</span><span class="p">;</span>
+	<span class="nl">background-image</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="nb">transparent</span><span class="o">,</span> <span class="nb">transparent</span><span class="p">)</span><span class="o">,</span> <span class="sx">url(../img/sp_chat_svg_ico.svg)</span><span class="p">;</span>
+	<span class="nl">background-size</span><span class="p">:</span> <span class="p">(</span><span class="m">580px</span> <span class="o">/</span> <span class="m">2</span><span class="p">)</span> <span class="p">(</span><span class="m">548px</span> <span class="o">/</span> <span class="m">2</span><span class="p">);</span>
+	<span class="nl">background-repeat</span><span class="p">:</span> <span class="nb">no-repeat</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@mixin</span> <span class="nf">sp_chat_svg_ico</span><span class="p">(</span><span class="nv">$sprite</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">@extend</span> <span class="nv">%sp_chat_svg_ico</span><span class="p">;</span>
+	<span class="k">@include</span> <span class="nd">svg_spriteImageSize</span><span class="p">(</span><span class="nv">$sprite</span><span class="p">);</span>
+	<span class="k">@include</span> <span class="nd">svg_spriteBackgroundPosition</span><span class="p">(</span><span class="nv">$sprite</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">@mixin</span> <span class="nf">sp_chat_svg_ico_on</span><span class="p">(</span><span class="nv">$sprite</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">@extend</span> <span class="nv">%sp_chat_svg_ico</span><span class="p">;</span>
+	<span class="k">@include</span> <span class="nd">svg_spriteBackgroundPosition</span><span class="p">(</span><span class="nv">$sprite</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>해당 코드를 적용한 서비스는 <code class="highlighter-rouge">gulp.js</code>로 페이지들이 빌드되어지는데
+<code class="highlighter-rouge">gulp-sprite</code>를 사용하여 sprite 이미지 폴더내의 개별의 이미지를 srpite이미지로 생성하고 <code class="highlighter-rouge">gulp-sass</code>를 사용하여 컴파일 후 생성된 sprite scss파일을 참고하여 @include로 사용하고싶은 이미지를 변수로 불러오면 자동으로 이미지의 해당 좌표들이 적용된다.</p>
+
+<p>이 후 폴더내의 sprite이미지가 추가되어 다시 산출된다면 @include로 불러와진 좌표들이 새로운 좌표로 업데이트 된다.</p>
+
+<p>사용법은 아래와 같다.</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 하단배너 : 배너 닫기 X버튼</span>
+	<span class="nc">.btn_clse</span> <span class="p">{</span>
+		<span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+		<span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+		<span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+		<span class="nl">z-index</span><span class="p">:</span> <span class="m">12</span><span class="p">;</span>
+		<span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+
+		<span class="c1">// 아이콘</span>
+		<span class="k">&amp;</span><span class="nd">:after</span> <span class="p">{</span>
+			<span class="k">@include</span> <span class="nd">sp_chat_svg_ico</span> <span class="p">(</span><span class="nv">$chat_svg_ico-bg_tail_up_yellow</span><span class="p">)</span>
+			<span class="n">display</span><span class="o">:</span> <span class="nb">block</span><span class="p">;</span>
+			<span class="nl">content</span><span class="p">:</span> <span class="s1">''</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+</code></pre></div></div>
+<p><code class="highlighter-rouge">Output</code></p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* SVG 스프라이트 */</span>
+<span class="c">/* 공통적인 부분 */</span>
+<span class="nc">.btn_clse</span><span class="nd">:after</span> <span class="p">{</span>
+	<span class="nl">background-image</span><span class="p">:</span> <span class="sx">url(../img/sp_chat_svg_ico.png)</span><span class="p">;</span>
+	<span class="nl">background-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="nb">transparent</span><span class="p">,</span> <span class="nb">transparent</span><span class="p">),</span> <span class="sx">url(../img/sp_chat_svg_ico.svg)</span><span class="p">;</span>
+	<span class="nl">background-size</span><span class="p">:</span> <span class="m">290px</span> <span class="m">274px</span><span class="p">;</span>
+	<span class="nl">background-repeat</span><span class="p">:</span> <span class="nb">no-repeat</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* 사이즈, 배경 좌표 설정 */</span>
+<span class="nc">.btn_clse</span><span class="nd">:after</span> <span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+	<span class="nl">background-position</span><span class="p">:</span> <span class="m">-235px</span> <span class="m">-210px</span><span class="p">;</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+	<span class="nl">content</span><span class="p">:</span> <span class="s2">''</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="sass-최근-동향">Sass 최근 동향</h2>
+<h3 id="use-forward-기능-업데이트">@use, @forward 기능 업데이트</h3>
+<p>최근 scss에서 <code class="highlighter-rouge">@use</code>, <code class="highlighter-rouge">@forward</code> 기능이 업데이트 되었다.
+기존 scss는 <code class="highlighter-rouge">@import</code>로 scss파일들을 가져오는 방식을 사용하고 있었다.</p>
+
+<p><code class="highlighter-rouge">@import</code>의 문제는 여러개의 scss파일이 import되었을때 import된 scss파일에서 변수나 mixin을 가져왔을 때 어떤 파일에서 가져오는지 모르는 것이었는데 이번 업데이트로 인해서 그 문제를 해결할 수 있게 되었다.</p>
+
+<p>또한 변수가 같은 이름으로 선언되었을 때 나중에 선언된 scss파일이 우선으로 처리되어 데이터 치환이 일어나게 되어 문제가 생길 수 있다.
+이런 부분도 이번 업데이트의 기능올 해결할 수 있게 되었다.</p>
+
+<h3 id="use-사용법">@use 사용법</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// box.scss</span>
+<span class="nv">$background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+
+<span class="k">@function</span> <span class="nf">getBorder</span><span class="p">(</span><span class="nv">$is-black</span><span class="o">:</span> <span class="bp">true</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@if</span> <span class="nv">$is-black</span> <span class="p">{</span>
+    <span class="k">@return</span> <span class="m">4px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">@else</span> <span class="p">{</span>
+    <span class="k">@return</span> <span class="m">2px</span> <span class="nb">dashed</span> <span class="no">blue</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$background-color</span><span class="p">;</span> <span class="c1">// red</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// card.scss</span>
+<span class="nv">$background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+
+<span class="k">@function</span> <span class="nf">getBorder</span><span class="p">(</span><span class="nv">$is-black</span><span class="o">:</span> <span class="bp">true</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@if</span> <span class="nv">$is-black</span> <span class="p">{</span>
+    <span class="k">@return</span> <span class="m">1px</span> <span class="nb">dashed</span> <span class="no">black</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">@else</span> <span class="p">{</span>
+    <span class="k">@return</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.card</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$background-color</span><span class="p">;</span> <span class="c1">// blue</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="nf">getBorder</span><span class="p">(</span><span class="bp">true</span><span class="p">);</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// main.scss</span>
+<span class="k">@use</span> <span class="s1">'box'</span><span class="p">;</span>
+<span class="k">@use</span> <span class="s1">'card'</span> <span class="nt">as</span> <span class="nt">c</span><span class="p">;</span> <span class="c1">// namespace를 사용할 수도 있다.</span>
+
+<span class="nc">.big-box</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="n">box</span><span class="o">.</span><span class="nv">$background-color</span><span class="p">;</span> <span class="c1">// red</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="n">box</span><span class="o">.</span><span class="nf">getBorder</span><span class="p">(</span><span class="bp">true</span><span class="p">);</span> 
+  <span class="nl">width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="참조">참조</h2>
+<ul>
+  <li>[CSS] SCSS에 새로 추가된 Module System (@use, @forward)](https://blueshw.github.io/2019/10/27/scss-module-system/)</li>
+</ul>
+:ET

@@ -1,0 +1,144 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-size: 16px;
+  color: $dark;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  input, textarea {
+    border: 1px solid #f9f9f9;
+    outline: none;
+    &:focus:required:invalid {
+      border-color: #e02f40;
+    }
+    &:required:valid {
+      border-color: #34a74e;
+    }
+    }
+}
+
+::placeholder {
+	color: #666;
+}
+
+*::selection {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 45px 0 30px;
+  font-weight: 400;
+  line-height: initial;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+blockquote {
+  padding-left: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  border-left: 1px solid $secondary-color;
+}
+
+pre,
+code {
+  font-family: $font-family;
+}
+
+code {
+  position: relative;
+  color: black;
+  
+  &:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    height: 5px;
+    background-color: $primary-color;
+    content: '';
+    opacity: .3;
+  }
+}
+
+pre {
+  padding: 15px;
+  margin-bottom: 0;
+  font-size: 14px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  code {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  &+em {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: $gray-dark;
+    text-align: center;
+  }
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: color 200ms;
+
+    &:hover {
+        color: $dark;
+    }
+}
+
+hr {
+  display: block;
+  width: 40px;
+  margin: 45px auto;
+  border: 0;
+  border-top: 7px dotted $secondary-color;
+}
