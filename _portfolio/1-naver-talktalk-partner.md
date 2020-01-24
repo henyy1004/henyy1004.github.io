@@ -3,6 +3,7 @@ layout: post
 title: "네이버 톡톡 파트너센터"
 permalink: /works/:name
 thumbs: '/assets/img/portfolio/thumb_talktalk.jpg'
+order: 1
 ---
 
 네이버 톡톡 파트너센터란 고객과 웹 채팅서비스로 커뮤니케이션하며 말풍선을 커스터마이징하여 마케팅을 할 수 있는 플랫폼입니다.
@@ -15,6 +16,7 @@ thumbs: '/assets/img/portfolio/thumb_talktalk.jpg'
 
 
 - [**URL**](https://partner.talk.naver.com){:target="_blank"}
+- [**마크업 작업 관련 POST**](/2020/01/07/reuse/){:target="_blank"}
 - 프로젝트 기간 : 2017/09 ~ 2019/06
 - 프로젝트 유형 : 유지보수
 - 크로스브라우징

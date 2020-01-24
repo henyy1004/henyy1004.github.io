@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 image: '/assets/img/0.jpg'
-order: 1
+order: 3
 ---
 
 > 안녕하세요. 마크업 개발을 하고있는 정혜인입니다.

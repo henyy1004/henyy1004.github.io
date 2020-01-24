@@ -79,19 +79,8 @@ code {
 }
 
 code {
-  position: relative;
   color: black;
-  
-  &:before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 3px;
-    height: 5px;
-    background-color: $primary-color;
-    content: '';
-    opacity: .3;
-  }
+  box-shadow: inset 0px -4px 0px 0px rgba(0, 141, 86, .3); 
 }
 
 pre {

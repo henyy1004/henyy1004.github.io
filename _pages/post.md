@@ -2,5 +2,5 @@
 layout: posts
 title: Post
 permalink: /post/
-order: 3
+order: 2
 ---
